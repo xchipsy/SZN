@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Super zoo nápovědník</title>
+  <link rel="stylesheet" href="style.css" />
+
+ <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+<img id="pravitko" src="images/pravitko.png" style="display: none; position: fixed; top: 0; left: 0; width: 47.04cm; object-fit: cover; z-index: 1000;" alt="Pravítko">
+<div id="pravitko-space" style="display: none; height: 15px;"></div>
+
+  <header>
+    <div class="header-content">
+      <h1>Super zoo nápovědník</h1>
+      <img src="logo.png" alt="Super zoo logo" class="logo" />
+    </div>
+  </header>
+
+  <div id="store-selector" style="margin-bottom: 15px;">
+  <label for="store-id">Číslo prodejny</label>
+  <input type="text" id="store-id" placeholder="Zadejte číslo prodejny" />
+  <button id="save-store-id">Uložit</button>
+  <div id="store-message" style="color: green; margin-top: 5px;"></div>
+</div>
+
+  <div class="search-and-filter">
+
+  <label style="margin-right: 10px;">
+  <input type="checkbox" id="filter-instock" />
+  Pouze skladem
+</label>
+<input type="text" id="search" placeholder="Vyhledat..." />
+</div>
+
+  <div id="categories"></div>
+  <div id="container"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
