@@ -498,6 +498,11 @@ searchInput.addEventListener("input", () => {
   debounceTimer = setTimeout(render, 200);
 });
 
+// -- TADY přidáno automatické označení textu při focus na vyhledávací pole --
+searchInput.addEventListener("focus", () => {
+  searchInput.select();
+});
+
 filterInstock.addEventListener("change", render);
 
 saveStoreBtn.addEventListener("click", () => {
@@ -519,11 +524,6 @@ saveStoreBtn.addEventListener("click", () => {
 });
 
 createCategoryButtons();
-
-const pravitko = document.getElementById("pravitko");
-if (pravitko) {
-  pravitko.style.display = (activeCategory === "Pamlsky") ? "block" : "none";
-}
 
 render();
 
