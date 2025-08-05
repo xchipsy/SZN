@@ -526,3 +526,17 @@ if (pravitko) {
 }
 
 render();
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.style.display = "flex";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+});
+
+scrollTopBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};

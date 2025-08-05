@@ -242,3 +242,24 @@ body, html {
   background-color: #fff8e1;
   font-family: Arial, sans-serif;
 }
+
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: #ffcc00;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+
+  /* Pro perfektní centrování SVG */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}

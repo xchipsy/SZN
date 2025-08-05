@@ -6,41 +6,88 @@
   <meta name="robots" content="noindex,nofollow" />
   <title>Super zoo nápovědník</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  
+  <style>
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 50%;
+      background: #ffcc00;
+      cursor: pointer;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 
- <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
 
 <img id="pravitko" src="images/pravitko.png" style="display: none; position: fixed; top: 0; left: 0; width: 47.04cm; object-fit: cover; z-index: 1000;" alt="Pravítko">
 <div id="pravitko-space" style="display: none; height: 15px;"></div>
 
-  <header>
-    <div class="header-content">
-      <h1>Super zoo nápovědník</h1>
-      <img src="logo.png" alt="Super zoo logo" class="logo" />
-    </div>
-  </header>
+<header>
+  <div class="header-content">
+    <h1>Super zoo nápovědník</h1>
+    <img src="logo.png" alt="Super zoo logo" class="logo" />
+  </div>
+</header>
 
-  <div id="store-selector" style="margin-bottom: 15px;">
+<div id="store-selector" style="margin-bottom: 15px;">
   <label for="store-id">Číslo prodejny</label>
   <input type="text" id="store-id" placeholder="Zadejte číslo prodejny" />
   <button id="save-store-id">Uložit</button>
   <div id="store-message" style="color: green; margin-top: 5px;"></div>
 </div>
 
-  <div class="search-and-filter">
-
+<div class="search-and-filter">
   <label style="margin-right: 10px;">
-  <input type="checkbox" id="filter-instock" />
-  Pouze skladem
-</label>
-<input type="text" id="search" placeholder="Vyhledat..." />
+    <input type="checkbox" id="filter-instock" />
+    Pouze skladem
+  </label>
+  <input type="text" id="search" placeholder="Vyhledat..." />
 </div>
 
-  <div id="categories"></div>
-  <div id="container"></div>
+<div id="categories"></div>
+<div id="container"></div>
 
-  <script src="script.js"></script>
+<button id="scrollTopBtn" title="Nahoru">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="42" height="42" fill="#5c3b00">
+    <path d="M12 4L6 10h4v6h4v-6h4z"/>
+  </svg>
+</button>
+
+<script src="script.js"></script>
+
+<script>
+  // Scroll tlačítko - zobrazí se po posunu dolů >300px
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.style.display = "flex";  // flex kvůli centrování svg
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  });
+
+  // Při kliknutí scroll nahoru hladce
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
 </body>
 </html>
