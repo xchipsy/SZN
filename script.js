@@ -315,8 +315,13 @@ const items = [
   { name: "Alpha Spirit kost šunková<span>střední</span>", image: "kosti/a2.jpg", code: "944-30905", ean: "8437013576109", category: "Kosti" },
   { name: "Alpha Spirit kost šunková<span>velká</span>", image: "kosti/a3.jpg", code: "944-30907", ean: "8437013576123", category: "Kosti" },
 
-  { name: "Krabička Superzoo<span>MALÁ</span>", image: "ostatni/sz1.jpg", code: "REK-S027", ean: "", category: "Ostatní" },
-  { name: "Krabička Superzoo<span>VELKÁ</span>", image: "ostatni/sz2.jpg", code: "REK-S028", ean: "", category: "Ostatní" },
+  { name: "Taška igelitová<span>žlutá</span>", image: "ostatni/tas1.jpg", code: "REK-S001", ean: "2001509999916", category: "Ostatní" },
+  { name: "Taška papírová", image: "ostatni/tas2.jpg", code: "REK-S011", ean: "2001509999145", category: "Ostatní" },
+  { name: "Taška látková", image: "ostatni/tas3.jpg", code: "REK-S019", ean: "2001509999213", category: "Ostatní" },
+  { name: "Taška BIO", image: "ostatni/tas4.jpg", code: "REK-S022", ean: "2001509999244", category: "Ostatní" },
+
+  { name: "Krabička Superzoo<span>MALÁ</span>", image: "ostatni/sz1.jpg", code: "REK-S027", ean: "2001509990272", category: "Ostatní" },
+  { name: "Krabička Superzoo<span>VELKÁ</span>", image: "ostatni/sz2.jpg", code: "REK-S028", ean: "2001509990289", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>PTÁCI</span>", image: "ostatni/v1.jpg", code: "492-91461", ean: "4008239914613", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>KŘEČEK</span>", image: "ostatni/v2.jpg", code: "495-95032", ean: "4008239629913", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>MORČE / KRÁLÍK</span>", image: "ostatni/v3.jpg", code: "495-95033", ean: "4008239950338", category: "Ostatní" },
@@ -541,4 +546,5 @@ scrollTopBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 
 };
+
 
