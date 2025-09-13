@@ -329,6 +329,8 @@ const items = [
   { name: "Krabice Beaphar Care+ transportní<span>HLODAVCI</span>", image: "ostatni/bea2.jpg", code: "245-14103", ean: "8711231141036", category: "Ostatní" },
   { name: "Trixie kalciový kámen<span>11cm / 40g</span>", image: "ostatni/kamen.jpg", code: "G12-50541", ean: "4011905505411", category: "Ostatní" },
   { name: "Rostlina JK malá<span>mix druhů 6cm</span>", image: "ostatni/jk.jpg", code: "8101-441269", ean: "8595159441269", category: "Ostatní" },
+    { name: "Braktické rybičky<span>6-8cm 70g</span>", image: "ostatni/mraz.jpg", code: "0211-42026", ean: "4038358220265", category: "Ostatní" },
+
 
 ];
 
@@ -546,5 +548,6 @@ scrollTopBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 
 };
+
 
 
