@@ -277,6 +277,26 @@ const items = [
   { name: "Miramar tyč natural<span>s dršťkami</span>", image: "pamlsky/tdr.jpg", code: "614-BW309", ean: "8595042660340", category: "Pamlsky" },
   { name: "Miramar kost natural<span>s yuccou</span>", image: "pamlsky/kyu.jpg", code: "614-BW301A", ean: "8595042660425", category: "Pamlsky" },
   { name: "Miramar kost natural<span>s L-carnitinem</span>", image: "pamlsky/kkar.jpg", code: "614-BW305A", ean: "8595042660449", category: "Pamlsky" },
+    { name: "Trixie preclíky s kuřecím masem<span>6x4cm, 10g</span>", image: "pamlsky/precl.jpg", code: "G14-448933", ean: "4053032448933", category: "Pamlsky" },
+    { name: "Trixie kost v kachním mase s trskou<span>7,5cm, 9g</span>", image: "pamlsky/kosti.jpg", code: "G14-679283", ean: "4053032679283", category: "Pamlsky" },
+    { name: "Trixie Tripe cake<span>8cm</span>", image: "pamlsky/cake1.jpg", code: "G14-2703", ean: "4011905027036", category: "Pamlsky" },
+    { name: "Trixie placička z býčích penisů<span>45g</span>", image: "pamlsky/cake2.jpg", code: "G14-027047", ean: "4057589027047", category: "Pamlsky" },
+    { name: "Trixie žvýkací pochoutka s kuřecím<span>150g</span>", image: "pamlsky/rolka.jpg", code: "G14-315102", ean: "4011905315102", category: "Pamlsky" },
+    { name: "Trixie žvýkací cop s býčím penisem<span>15cm, 35g</span>", image: "pamlsky/cop1.jpg", code: "G14-276489", ean: "4011905276489", category: "Pamlsky" },
+    { name: "Trixie žvýkací cop s býčím penisem<span>25cm, 58g</span>", image: "pamlsky/cop2.jpg", code: "G14-276496", ean: "4011905276496", category: "Pamlsky" },
+    { name: "Trixie monoproteinová tyč - příchuť salám<span>20cm, 80g</span>", image: "pamlsky/tycsa.jpg", code: "G14-031811", ean: "4011905031811", category: "Pamlsky" },
+    { name: "Trixie monoproteinová tyč - plněná dršťkami<span>20cm, 80g</span>", image: "pamlsky/tycdr.jpg", code: "G14-027081", ean: "4011905027081", category: "Pamlsky" },
+    { name: "Trixie žvýkací sýrová tyč S<span>45g</span>", image: "pamlsky/syrtyc1.jpg", code: "G14-312613", ean: "4011905312613", category: "Pamlsky" },
+    { name: "Trixie žvýkací sýrová tyč L<span>95g</span>", image: "pamlsky/syrtyc.jpg", code: "G14-312637", ean: "4011905312637", category: "Pamlsky" },
+    { name: "Trixie pochoutka veganská Safari<span>28g</span>", image: "pamlsky/safari.jpg", code: "G14-614321", ean: "4053032614321", category: "Pamlsky" },
+    { name: "Trixie pochoutka veganská čelist<span>12cm, 35g</span>", image: "pamlsky/celist.jpg", code: "G14-312835", ean: "4011905312835", category: "Pamlsky" },
+    { name: "Trixie pochoutka veganská kost s mořskou řasou<span>8,5cm, 28g</span>", image: "pamlsky/kost01.jpg", code: "G14-312811", ean: "4011905312811", category: "Pamlsky" },
+    { name: "Trixie veganská kost s mořskou řasou<span>12cm, 58g</span>", image: "pamlsky/kost1.jpg", code: "G14-312828", ean: "4011905312828", category: "Pamlsky" },
+    { name: "Trixie Bull pizzle sušený<span>12cm</span>", image: "pamlsky/pizzle.jpg", code: "G14-2705", ean: "4011905027050", category: "Pamlsky" },
+    { name: "Trixie hovězí penis sušený<span>70-80cm</span>", image: "pamlsky/mulec.jpg", code: "G14--027074", ean: "4011905027074", category: "Pamlsky" },
+    { name: "Trixie žvýkací kopyto s náplní<span>115g</span>", image: "pamlsky/kopyto.jpg", code: "G14-2763", ean: "4011905027630", category: "Pamlsky" },
+    { name: "Trixie buvolí roh plněný rohovinou a šlachou<span>1cm0-14</span>", image: "pamlsky/roh.jpg", code: "G14-277516", ean: "4011905277516", category: "Pamlsky" },
+    { name: "Trixie sušená průdušnice<span>, kost 10cmx35g, 2ks</span>", image: "pamlsky/prudus.jpg", code: "G14-27615", ean: "4011905276151", category: "Pamlsky" },
   { name: "Trixie Munchy tyčinka<span>barevná mix 12cm (100ks)</span>", image: "pamlsky/mun100.jpg", code: "G14-2610", ean: "4011905026107", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>mléčné</span>", image: "pamlsky/mlec.jpg", code: "664-250039", ean: "8590467250039", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>čokoládové</span>", image: "pamlsky/coko.jpg", code: "664-25001", ean: "8590467250015", category: "Pamlsky" },
@@ -548,6 +568,7 @@ scrollTopBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 
 };
+
 
 
 
