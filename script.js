@@ -295,7 +295,7 @@ const items = [
     { name: "Trixie Bull pizzle sušený<span>12cm</span>", image: "pamlsky/pizzle.jpg", code: "G14-2705", ean: "4011905027050", category: "Pamlsky" },
     { name: "Trixie hovězí penis sušený<span>70-80cm</span>", image: "pamlsky/mulec.jpg", code: "G14--027074", ean: "4011905027074", category: "Pamlsky" },
     { name: "Trixie žvýkací kopyto s náplní<span>115g</span>", image: "pamlsky/kopyto.jpg", code: "G14-2763", ean: "4011905027630", category: "Pamlsky" },
-    { name: "Trixie buvolí roh plněný rohovinou a šlachou<span>1cm0-14</span>", image: "pamlsky/roh.jpg", code: "G14-277516", ean: "4011905277516", category: "Pamlsky" },
+    { name: "Trixie buvolí roh plněný rohovinou a šlachou<span>10-14cm</span>", image: "pamlsky/roh.jpg", code: "G14-277516", ean: "4011905277516", category: "Pamlsky" },
     { name: "Trixie sušená průdušnice<span>, kost 10cmx35g, 2ks</span>", image: "pamlsky/prudus.jpg", code: "G14-27615", ean: "4011905276151", category: "Pamlsky" },
   { name: "Trixie Munchy tyčinka<span>barevná mix 12cm (100ks)</span>", image: "pamlsky/mun100.jpg", code: "G14-2610", ean: "4011905026107", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>mléčné</span>", image: "pamlsky/mlec.jpg", code: "664-250039", ean: "8590467250039", category: "Pamlsky" },
@@ -568,6 +568,7 @@ scrollTopBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 
 };
+
 
 
 
