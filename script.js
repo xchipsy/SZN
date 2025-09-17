@@ -280,7 +280,7 @@ const items = [
     { name: "Trixie preclíky s kuřecím masem<span>6x4cm</span>", image: "pamlsky/precl.jpg", code: "G14-448933", ean: "4053032448933", category: "Pamlsky" },
     { name: "Trixie kost v kachním mase 7,5cm<span>s treskou</span>", image: "pamlsky/kosti.jpg", code: "G14-679283", ean: "4053032679283", category: "Pamlsky" },
     { name: "Trixie Tripe cake 8cm", image: "pamlsky/cake1.jpg", code: "G14-2703", ean: "4011905027036", category: "Pamlsky" },
-    { name: "Trixie placička z býčích penisů<span>45g</span>", image: "pamlsky/cake2.jpg", code: "G14-027047", ean: "4057589027047", category: "Pamlsky" },
+    { name: "Trixie placička z býčích penisů<span>45g</span>", image: "pamlsky/cake2.jpg", code: "G14-2704", ean: "4057589027047", category: "Pamlsky" },
     { name: "Trixie žvýkací pochoutka s kuřecím<span>150g</span>", image: "pamlsky/rolka.jpg", code: "G14-315102", ean: "4011905315102", category: "Pamlsky" },
     { name: "Trixie žvýkací cop 15cm<span>s býčím penicem</span>", image: "pamlsky/cop1.jpg", code: "G14-276489", ean: "4011905276489", category: "Pamlsky" },
     { name: "Trixie žvýkací cop 25cm<span>s býčím penisem</span>", image: "pamlsky/cop2.jpg", code: "G14-276496", ean: "4011905276496", category: "Pamlsky" },
@@ -568,6 +568,7 @@ scrollTopBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 
 };
+
 
 
 
