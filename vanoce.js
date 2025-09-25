@@ -44,6 +44,20 @@ function renderVanoce() {
 
   formDiv.appendChild(table);
 
+  // --- Volba oddělovače ---
+  const separatorDiv = document.createElement("div");
+  separatorDiv.style.marginTop = "10px";
+  separatorDiv.style.display = "flex";
+  separatorDiv.style.gap = "10px";
+  separatorDiv.style.alignItems = "center";
+  separatorDiv.innerHTML = `
+    <span>Oddělovač EANů:</span>
+    <label><input type="radio" name="ean-separator" value="," checked> Čárka</label>
+    <label><input type="radio" name="ean-separator" value=";"> Středník</label>
+    <label><input type="radio" name="ean-separator" value="\\n"> Nový řádek</label>
+  `;
+  formDiv.appendChild(separatorDiv);
+
   const saveBtn = document.createElement("button");
   saveBtn.textContent = "💾 Uložit a vygenerovat QR";
   saveBtn.style.marginTop = "12px";
@@ -60,9 +74,13 @@ function renderVanoce() {
       return;
     }
 
+    // zjistíme zvolený oddělovač
+    const sep = document.querySelector('input[name="ean-separator"]:checked').value;
+    let text = sep === "\\n" ? eans.join("\n") : eans.join(sep);
+
     qrDiv.innerHTML = "";
     new QRCode(qrDiv, {
-      text: eans.join(";"),  // <<< středník místo čárky
+      text: text,
       width: 200,
       height: 200,
       colorDark: "#000000",
