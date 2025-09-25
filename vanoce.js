@@ -6,14 +6,21 @@ if (!categories.includes("Vánoce")) {
 
 // --- Definice Vánočních balíčků ---
 const vanoceBalicky = [
-  { id: "vanoce_pes1", name: "Vánoční balíček<br> PES", image: "vanoce/stene.jpg", number: 1 },
-  { id: "vanoce_pes2", name: "Vánoční balíček<br> PES", image: "vanoce/pes1.jpg", number: 2 },
-  { id: "vanoce_pes3", name: "Vánoční balíček<br> PES", image: "vanoce/pes2.jpg", number: 3 },
-  { id: "vanoce_pes4", name: "Vánoční balíček<br> PES", image: "vanoce/pes3.jpg", number: 4 },
-  { id: "vanoce_kocka1", name: "Vánoční balíček<br> KOČKA", image: "vanoce/kocka1.jpg", number: 1 },
-  { id: "vanoce_kocka2", name: "Vánoční balíček<br> KOČKA", image: "vanoce/kocka2.jpg", number: 2 },
-  { id: "vanoce_hlodavec1", name: "Vánoční balíček<br> HLODAVEC", image: "vanoce/krecek.jpg", number: 1 },
-  { id: "vanoce_ptak1", name: "Vánoční balíček<br> PTÁK", image: "vanoce/ptaci.jpg", number: 1 }
+  { id: "vanoce_pes1", name: "Vánoční balíček<br><br> PES", image: "vanoce/stene.jpg", number: 1 },
+  { id: "vanoce_pes2", name: "Vánoční balíček<br><br> PES", image: "vanoce/pes04.jpg", number: 2 },
+  { id: "vanoce_pes3", name: "Vánoční balíček<br><br> PES", image: "vanoce/pes03.jpg", number: 3 },
+  { id: "vanoce_pes4", name: "Vánoční balíček<br><br> PES", image: "vanoce/pes02.jpg", number: 4 },
+  { id: "vanoce_pes4", name: "Vánoční balíček<br><br> PES", image: "vanoce/pes01.jpg", number: 5 },
+  { id: "vanoce_kocka1", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka5.jpg", number: 1 },
+  { id: "vanoce_kocka1", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka3.jpg", number: 2 },
+  { id: "vanoce_kocka2", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka1.jpg", number: 3 },
+  { id: "vanoce_kocka1", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka4.jpg", number: 4 },
+  { id: "vanoce_kocka1", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka2.jpg", number: 5 },
+  { id: "vanoce_hlodavec1", name: "Vánoční balíček<br><br> HLODAVEC", image: "vanoce/krecek.jpg", number: 1 },
+  { id: "vanoce_hlodavec1", name: "Vánoční balíček<br><br> HLODAVEC", image: "vanoce/hlodavec.jpg", number: 2 },
+  { id: "vanoce_ptak1", name: "Vánoční balíček<br><br> PTÁK", image: "vanoce/ptaci.jpg", number: 1 },
+  { id: "vanoce_ptak1", name: "Vánoční balíček<br><br> PTÁK", image: "vanoce/ptaci2.jpg", number: 2 }
+
 ];
 
 // --- Uložení / načtení ---
