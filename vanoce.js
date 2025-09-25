@@ -4,147 +4,74 @@ if (!categories.includes("Vánoce")) {
   createCategoryButtons();
 }
 
-// --- Definice Vánočních balíčků ---
-const vanoceBalicky = [
-  { id: "vanoce_pes1", name: "Vánoční balíček<br><br> PES", image: "vanoce/stene.jpg", number: 1 },
-  { id: "vanoce_pes2", name: "Vánoční balíček<br><br> PES", image: "vanoce/pes04.jpg", number: 2 },
-  { id: "vanoce_pes3", name: "Vánoční balíček<br><br> PES", image: "vanoce/pes03.jpg", number: 3 },
-  { id: "vanoce_pes4", name: "Vánoční balíček<br><br> PES", image: "vanoce/pes02.jpg", number: 4 },
-  { id: "vanoce_pes4", name: "Vánoční balíček<br><br> PES", image: "vanoce/pes01.jpg", number: 5 },
-  { id: "vanoce_kocka1", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka5.jpg", number: 1 },
-  { id: "vanoce_kocka1", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka3.jpg", number: 2 },
-  { id: "vanoce_kocka2", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka1.jpg", number: 3 },
-  { id: "vanoce_kocka1", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka4.jpg", number: 4 },
-  { id: "vanoce_kocka1", name: "Vánoční balíček<br><br> KOČKA", image: "vanoce/kocka2.jpg", number: 5 },
-  { id: "vanoce_hlodavec1", name: "Vánoční balíček<br><br> HLODAVEC", image: "vanoce/krecek.jpg", number: 1 },
-  { id: "vanoce_hlodavec1", name: "Vánoční balíček<br><br> HLODAVEC", image: "vanoce/hlodavec.jpg", number: 2 },
-  { id: "vanoce_ptak1", name: "Vánoční balíček<br><br> PTÁK", image: "vanoce/ptaci.jpg", number: 1 },
-  { id: "vanoce_ptak1", name: "Vánoční balíček<br><br> PTÁK", image: "vanoce/ptaci2.jpg", number: 2 }
-
-];
-
-// --- Uložení / načtení ---
-function loadBalicek(id) {
-  const data = localStorage.getItem("balicek_" + id);
-  return data ? JSON.parse(data) : { eans: [] };
-}
-function saveBalicek(id, eans) {
-  localStorage.setItem("balicek_" + id, JSON.stringify({ eans }));
-}
-
-// --- Karta balíčku ---
-function vytvorKartu(b, target) {
-  const ulozeny = loadBalicek(b.id);
-
-  const itemDiv = document.createElement("div");
-  itemDiv.className = "item";
-
-  const card = document.createElement("div");
-  card.className = "card";
-
-  // --- Přední strana ---
-  const front = document.createElement("div");
-  front.className = "front";
-  front.innerHTML = `
-    <button class="edit-btn">✎</button>
-    <div class="front-spacer"></div>
-    <img src="${b.image}" alt="${b.name}" />
-    <div class="item-name">${b.name.replace(/<br>/g,'<br>')}</div>
-    <div class="item-number">${b.number}</div>
-  `;
-
-  // --- Zadní strana ---
-  const back = document.createElement("div");
-  back.className = "back";
-  const qrDiv = document.createElement("div");
-  qrDiv.className = "qrcode";
-  back.appendChild(qrDiv);
-
-  function renderQR() {
-    qrDiv.innerHTML = "";
-    if (ulozeny.eans.length) {
-      new QRCode(qrDiv, {
-        text: ulozeny.eans.join(","),
-        width: 150,
-        height: 150,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
-      });
-    } else {
-      qrDiv.innerHTML = "<p>Žádné EANy</p>";
-    }
-  }
-  renderQR();
-
-  card.appendChild(front);
-  card.appendChild(back);
-  itemDiv.appendChild(card);
-  target.appendChild(itemDiv);
-
-  // --- Otočení ---
-  let flipped = false;
-  itemDiv.addEventListener("click", e => {
-    if (!e.target.classList.contains("edit-btn") && e.target.tagName.toLowerCase() !== "input") {
-      flipped = !flipped;
-      itemDiv.classList.toggle("flipped", flipped);
-    }
-  });
-
-  // --- Editace ---
-  front.querySelector(".edit-btn").addEventListener("click", e => {
-    e.stopPropagation();
-    const existForm = front.querySelector(".balicek-form");
-    if (existForm) existForm.remove();
-
-    const formDiv = document.createElement("div");
-    formDiv.className = "balicek-form";
-
-    const table = document.createElement("table");
-    table.innerHTML = `<thead><tr><th>EAN</th></tr></thead>`;
-    const tbody = document.createElement("tbody");
-
-    const inputs = [];
-    for (let i = 0; i < 10; i++) {
-      const tr = document.createElement("tr");
-
-      const tdEAN = document.createElement("td");
-      const inputEAN = document.createElement("input");
-      inputEAN.type = "text";
-      inputEAN.value = ulozeny.eans[i] || "";
-      tdEAN.appendChild(inputEAN);
-      tr.appendChild(tdEAN);
-
-      inputs.push(inputEAN);
-      tbody.appendChild(tr);
-    }
-
-    table.appendChild(tbody);
-    formDiv.appendChild(table);
-
-    const saveBtn = document.createElement("button");
-    saveBtn.textContent = "💾 Uložit";
-    saveBtn.style.marginTop = "10px";
-    formDiv.appendChild(saveBtn);
-
-    front.appendChild(formDiv);
-
-    saveBtn.addEventListener("click", ev => {
-      ev.stopPropagation();
-      const eans = inputs.map(inp => inp.value.trim()).filter(v => v);
-      saveBalicek(b.id, eans);
-      ulozeny.eans = eans;
-      renderQR();
-      formDiv.remove();
-    });
-  });
-}
-
-// --- Render Vánoce ---
+// --- Vykreslení Vánoční tabulky ---
 function renderVanoce() {
   if (activeCategory !== "Vánoce") return;
   container.innerHTML = "";
-  vanoceBalicky.forEach(b => vytvorKartu(b, container));
+
+  const formDiv = document.createElement("div");
+  formDiv.className = "vanoce-form";
+
+  const table = document.createElement("table");
+  table.style.width = "100%";
+  table.style.borderCollapse = "collapse";
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th style="border:1px solid #ccc;padding:6px;">EAN</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  `;
+  const tbody = table.querySelector("tbody");
+
+  // 7 řádků
+  const inputs = [];
+  for (let i = 0; i < 7; i++) {
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.style.border = "1px solid #ccc";
+    td.style.padding = "4px";
+    const inp = document.createElement("input");
+    inp.type = "text";
+    inp.style.width = "100%";
+    inp.style.fontSize = "16px";
+    td.appendChild(inp);
+    tr.appendChild(td);
+    tbody.appendChild(tr);
+    inputs.push(inp);
+  }
+
+  formDiv.appendChild(table);
+
+  const saveBtn = document.createElement("button");
+  saveBtn.textContent = "💾 Uložit a vygenerovat QR";
+  saveBtn.style.marginTop = "12px";
+  formDiv.appendChild(saveBtn);
+
+  const qrDiv = document.createElement("div");
+  qrDiv.style.marginTop = "15px";
+  formDiv.appendChild(qrDiv);
+
+  saveBtn.addEventListener("click", () => {
+    const eans = inputs.map(i => i.value.trim()).filter(v => v);
+    if (!eans.length) {
+      alert("Zadej aspoň jeden EAN.");
+      return;
+    }
+
+    qrDiv.innerHTML = "";
+    new QRCode(qrDiv, {
+      text: eans.join(";"),  // <<< středník místo čárky
+      width: 200,
+      height: 200,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  });
+
+  container.appendChild(formDiv);
 }
 
 // --- Přepíšeme render ---
