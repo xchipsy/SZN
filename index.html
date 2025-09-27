@@ -87,5 +87,29 @@
   });
 </script>
 
+<!-- --- Nový skript: checkbox "Pouze skladem" zatržený po načtení --- -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const filterCheckbox = document.getElementById("filter-instock");
+
+    // Načteme uložený stav z localStorage
+    const savedState = localStorage.getItem("filterInStockChecked");
+    if (savedState === null) {
+      // pokud nic není uloženo, checkbox zatrhneme
+      filterCheckbox.checked = true;
+    } else {
+      filterCheckbox.checked = savedState === "true";
+    }
+
+    // Uložíme změnu checkboxu do localStorage
+    filterCheckbox.addEventListener("change", () => {
+      localStorage.setItem("filterInStockChecked", filterCheckbox.checked);
+    });
+
+    // Vyvoláme změnu, aby se okamžitě filtrovaly položky
+    filterCheckbox.dispatchEvent(new Event("change"));
+  });
+</script>
+
 </body>
 </html>
