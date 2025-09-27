@@ -8,9 +8,9 @@ const items = [
   { name: "Ampulárka argentinská", latin: "Ampullaria australis", image: "ryby/00400.jpg", code: "LA1-00400", ean: "21004001", category: "Akvaristika"},
   { name: "Bichirek kalabarský", latin: "Erpetoichthys calabaricus", image: "ryby/13191.jpg", code: "LA1-13191", ean: "21131912", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samice",  latin: "Betta splendens female",  image: "ryby/01900.jpg",  code: "LA1-01900", ean: "21019005", category: "Akvaristika"},
-  { name: "Bojovnice pestrá - samice COLOR",  latin: "Betta splendens female",  image: "ryby/02410.jpg",  code: "LA1-02410", ean: "21024108", category: "Akvaristika"},
-  { name: "Bojovnice pestrá - samec",  latin: "Betta splendens male",  image: "ryby/02100.jpg",  code: "LA1-02100", ean: "21021008", category: "Akvaristika"},
-  { name: "Bojovnice pestrá - samec COLOR",  latin: "Betta splendens male",  image: "ryby/02400.jpg",  code: "LA1-02400", ean: "21024009", category: "Akvaristika"},
+  { name: "Bojovnice pestrá - samice COLOR",  latin: "Betta splendens female",  image: "ryby/02410.jpg",  code: "LA1-02410",  category: "Akvaristika"},
+  { name: "Bojovnice pestrá - samec",  latin: "Betta splendens male",  image: "ryby/02100.jpg",  code: "LA1-02100",  category: "Akvaristika"},
+  { name: "Bojovnice pestrá - samec COLOR",  latin: "Betta splendens male",  image: "ryby/02400.jpg",  code: "LA1-02400",  category: "Akvaristika"},
   { name: "Brotia pagodula", latin: "Brotia pagodula", image: "ryby/00410.jpg", code: "LA1-00410", ean: "21004100", category: "Akvaristika"},
   { name: "Cichlida papouščí", latin: "Cichlasoma red parrot", image: "ryby/07800.jpg", code: "LA1-07800", ean: "21078002", category: "Akvaristika"},
   { name: "Cichlidka papouščí", latin: "Apistogramma cacatuoides<br>var. double red", image: "ryby/00910.jpg", code: "LA1-00910", ean: "21009105", category: "Akvaristika"},
@@ -277,29 +277,9 @@ const items = [
   { name: "Miramar tyč natural<span>s dršťkami</span>", image: "pamlsky/tdr.jpg", code: "614-BW309", ean: "8595042660340", category: "Pamlsky" },
   { name: "Miramar kost natural<span>s yuccou</span>", image: "pamlsky/kyu.jpg", code: "614-BW301A", ean: "8595042660425", category: "Pamlsky" },
   { name: "Miramar kost natural<span>s L-carnitinem</span>", image: "pamlsky/kkar.jpg", code: "614-BW305A", ean: "8595042660449", category: "Pamlsky" },
-    { name: "Trixie preclíky s kuřecím masem<span>6x4cm</span>", image: "pamlsky/precl.jpg", code: "G14-448933", ean: "4053032448933", category: "Pamlsky" },
-    { name: "Trixie kost v kachním mase 7,5cm<span>s treskou</span>", image: "pamlsky/kosti.jpg", code: "G14-679283", ean: "4053032679283", category: "Pamlsky" },
-    { name: "Trixie Tripe cake 8cm", image: "pamlsky/cake1.jpg", code: "G14-2703", ean: "4011905027036", category: "Pamlsky" },
-    { name: "Trixie placička z býčích penisů<span>45g</span>", image: "pamlsky/cake2.jpg", code: "G14-2704", ean: "4057589027047", category: "Pamlsky" },
-    { name: "Trixie žvýkací pochoutka s kuřecím<span>150g</span>", image: "pamlsky/rolka.jpg", code: "G14-315102", ean: "4011905315102", category: "Pamlsky" },
-    { name: "Trixie žvýkací cop 15cm<span>s býčím penicem</span>", image: "pamlsky/cop1.jpg", code: "G14-276489", ean: "4011905276489", category: "Pamlsky" },
-    { name: "Trixie žvýkací cop 25cm<span>s býčím penisem</span>", image: "pamlsky/cop2.jpg", code: "G14-276496", ean: "4011905276496", category: "Pamlsky" },
-    { name: "Trixie monoproteinová tyč - příchuť salám<span>20cm, 80g</span>", image: "pamlsky/tycsa.jpg", code: "G14-031811", ean: "4011905031811", category: "Pamlsky" },
-    { name: "Trixie monoproteinová tyč - plněná dršťkami<span>20cm, 80g</span>", image: "pamlsky/tycdr.jpg", code: "G14-027081", ean: "4011905027081", category: "Pamlsky" },
-    { name: "Trixie žvýkací sýrová tyč S<span>45g</span>", image: "pamlsky/syrtyc1.jpg", code: "G14-312613", ean: "4011905312613", category: "Pamlsky" },
-    { name: "Trixie žvýkací sýrová tyč L<span>95g</span>", image: "pamlsky/syrtyc.jpg", code: "G14-312637", ean: "4011905312637", category: "Pamlsky" },
-    { name: "Trixie pochoutka veganská Safari<span>28g</span>", image: "pamlsky/safari.jpg", code: "G14-614321", ean: "4053032614321", category: "Pamlsky" },
-    { name: "Trixie pochoutka veganská čelist<span>12cm, 35g</span>", image: "pamlsky/celist.jpg", code: "G14-312835", ean: "4011905312835", category: "Pamlsky" },
-    { name: "Trixie veganská kost 8,5cm<span>s mořskou řasiu, 28g</span>", image: "pamlsky/kost01.jpg", code: "G14-312811", ean: "4011905312811", category: "Pamlsky" },
-    { name: "Trixie veganská kost 12cm<span>s mořskou řasou, 58g</span>", image: "pamlsky/kost1.jpg", code: "G14-312828", ean: "4011905312828", category: "Pamlsky" },
-    { name: "Trixie Bull pizzle 12cm<span>sušený</span>", image: "pamlsky/pizzle.jpg", code: "G14-2705", ean: "4011905027050", category: "Pamlsky" },
-    { name: "Trixie hovězí penis 70-80cm<span>sušený</span>", image: "pamlsky/mulec.jpg", code: "G14--027074", ean: "4011905027074", category: "Pamlsky" },
-    { name: "Trixie žvýkací kopyto<span>s náplní, 115g</span>", image: "pamlsky/kopyto.jpg", code: "G14-2763", ean: "4011905027630", category: "Pamlsky" },
-    { name: "Trixie buvolí roh 10-14cm<span>plněný rohovinou a šlachou</span>", image: "pamlsky/roh.jpg", code: "G14-277516", ean: "4011905277516", category: "Pamlsky" },
-    { name: "Trixie sušená průdušnice<span>, kost 10cmx35g, 2ks</span>", image: "pamlsky/prudus.jpg", code: "G14-27615", ean: "4011905276151", category: "Pamlsky" },
   { name: "Trixie Munchy tyčinka<span>barevná mix 12cm (100ks)</span>", image: "pamlsky/mun100.jpg", code: "G14-2610", ean: "4011905026107", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>mléčné</span>", image: "pamlsky/mlec.jpg", code: "664-250039", ean: "8590467250039", category: "Pamlsky" },
-  { name: "Mlsoun čokosy<span>čokoládové</span>", image: "pamlsky/coko.jpg", code: "664-25001", ean: "8590467250015", category: "Pamlsky" },
+  { name: "Mlsoun čokosy<span>čokoládové</span>", image: "pamlsky/coko.jpg", code: "664-25001", ean: "85904467250016", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>vanilkové</span>", image: "pamlsky/vani.jpg", code: "664-250022", ean: "8590467250022", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>hovězí</span>", image: "pamlsky/hov.jpg", code: "664-25004", ean: "8590467250046", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>lososové</span>", image: "pamlsky/los.jpg", code: "664-250053", ean: "8590467250053", category: "Pamlsky" },
@@ -335,13 +315,8 @@ const items = [
   { name: "Alpha Spirit kost šunková<span>střední</span>", image: "kosti/a2.jpg", code: "944-30905", ean: "8437013576109", category: "Kosti" },
   { name: "Alpha Spirit kost šunková<span>velká</span>", image: "kosti/a3.jpg", code: "944-30907", ean: "8437013576123", category: "Kosti" },
 
-  { name: "Taška igelitová<span>žlutá</span>", image: "ostatni/tas1.jpg", code: "REK-S001", ean: "2001509999916", category: "Ostatní" },
-  { name: "Taška papírová", image: "ostatni/tas2.jpg", code: "REK-S011", ean: "2001509999145", category: "Ostatní" },
-  { name: "Taška látková", image: "ostatni/tas3.jpg", code: "REK-S019", ean: "2001509999213", category: "Ostatní" },
-  { name: "Taška BIO", image: "ostatni/tas4.jpg", code: "REK-S022", ean: "2001509999244", category: "Ostatní" },
-
-  { name: "Krabička Superzoo<span>MALÁ</span>", image: "ostatni/sz1.jpg", code: "REK-S027", ean: "2001509990272", category: "Ostatní" },
-  { name: "Krabička Superzoo<span>VELKÁ</span>", image: "ostatni/sz2.jpg", code: "REK-S028", ean: "2001509990289", category: "Ostatní" },
+  { name: "Krabička Superzoo<span>MALÁ</span>", image: "ostatni/sz1.jpg", code: "REK-S027", ean: "", category: "Ostatní" },
+  { name: "Krabička Superzoo<span>VELKÁ</span>", image: "ostatni/sz2.jpg", code: "REK-S028", ean: "", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>PTÁCI</span>", image: "ostatni/v1.jpg", code: "492-91461", ean: "4008239914613", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>KŘEČEK</span>", image: "ostatni/v2.jpg", code: "495-95032", ean: "4008239629913", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>MORČE / KRÁLÍK</span>", image: "ostatni/v3.jpg", code: "495-95033", ean: "4008239950338", category: "Ostatní" },
@@ -349,7 +324,8 @@ const items = [
   { name: "Krabice Beaphar Care+ transportní<span>HLODAVCI</span>", image: "ostatni/bea2.jpg", code: "245-14103", ean: "8711231141036", category: "Ostatní" },
   { name: "Trixie kalciový kámen<span>11cm / 40g</span>", image: "ostatni/kamen.jpg", code: "G12-50541", ean: "4011905505411", category: "Ostatní" },
   { name: "Rostlina JK malá<span>mix druhů 6cm</span>", image: "ostatni/jk.jpg", code: "8101-441269", ean: "8595159441269", category: "Ostatní" },
-    { name: "Braktické rybičky<span>6-8cm 70g</span>", image: "ostatni/mraz.jpg", code: "0211-42026", ean: "4038358220265", category: "Ostatní" },
+
+ { name: "Braktické rybičky<span>6-8cm 70g</span>", image: "ostatni/mraz.jpg", code: "0211-42026", ean: "4038358220265", category: "Ostatní" },
 
 
 ];
@@ -479,16 +455,17 @@ function render() {
     itemDiv.appendChild(card);
     container.appendChild(itemDiv);
 
-    // QR kód se generuje až při kliknutí (1x)
+    // --- Klik pro otáčení a generování QR
     let qrCreated = false;
     itemDiv.addEventListener("click", e => {
       if (!e.target.classList.contains("toggle-stock")) {
+        // zavřít ostatní
         document.querySelectorAll(".item").forEach(el => {
           if (el !== itemDiv) el.classList.remove("flipped");
         });
         itemDiv.classList.toggle("flipped");
 
-        if (!qrCreated) {
+        if (!qrCreated && item.ean) {
           new QRCode(qrCodeDiv, {
             text: item.ean,
             width: 150,
@@ -502,6 +479,7 @@ function render() {
       }
     });
 
+    // --- Toggle skladem
     front.querySelector(".toggle-stock").addEventListener("click", e => {
       e.stopPropagation();
       const btn = e.target;
@@ -511,27 +489,21 @@ function render() {
       btn.classList.toggle("outstock", !newStock);
       itemDiv.dataset.stock = newStock ? "instock" : "outstock";
       saveStock(storeId, item.code, newStock);
-      if (filterInstock.checked && !newStock) {
-        itemDiv.style.display = "none";
-      }
+      if (filterInstock.checked && !newStock) itemDiv.style.display = "none";
     });
   });
 }
 
-// ✅ DEBOUNCE pro vyhledávání
+// ✅ Debounce
 let debounceTimer;
 searchInput.addEventListener("input", () => {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(render, 200);
 });
-
-// -- TADY přidáno automatické označení textu při focus na vyhledávací pole --
-searchInput.addEventListener("focus", () => {
-  searchInput.select();
-});
-
+searchInput.addEventListener("focus", () => searchInput.select());
 filterInstock.addEventListener("change", render);
 
+// --- Uložení prodejny
 saveStoreBtn.addEventListener("click", () => {
   const id = storeIdInput.value.trim();
   if (!id) {
@@ -545,33 +517,16 @@ saveStoreBtn.addEventListener("click", () => {
   storeId = id;
   updateStoreDisplay(storeId);
   render();
-  setTimeout(() => {
-    storeMessage.textContent = "";
-  }, 3000);
+  setTimeout(() => storeMessage.textContent = "", 3000);
 });
 
+// --- Inicializace
 createCategoryButtons();
-
 render();
 
+// scroll button
 const scrollTopBtn = document.getElementById("scrollTopBtn");
-
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollTopBtn.style.display = "flex";
-  } else {
-    scrollTopBtn.style.display = "none";
-  }
+  scrollTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
 });
-
-scrollTopBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
-};
-
-
-
-
-
-
-
+scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
