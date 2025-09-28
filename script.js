@@ -318,7 +318,7 @@ const items = [
   { name: "Taška igelitová žlutá<span>Superzoo</span>", image: "ostatni/tas1.jpg", code: "REK-S001", ean: "2001509999916", category: "Ostatní" },
   { name: "Taška BIO<span>Superzoo</span>", image: "ostatni/tas4.jpg", code: "REK-S022", ean: "2001509999244", category: "Ostatní" },
   { name: "Taška papírová<span>Superzoo</span>", image: "ostatni/tas2.jpg", code: "REK-S011", ean: "2001509999145", category: "Ostatní" },
-  { name: "Taška látková<span>SuperzooMALÁ</span>", image: "ostatni/tas3.jpg", code: "REK-S019", ean: "2001509999213", category: "Ostatní" },
+  { name: "Taška látková<span>Superzoo</span>", image: "ostatni/tas3.jpg", code: "REK-S019", ean: "2001509999213", category: "Ostatní" },
   { name: "Krabička Superzoo<span>MALÁ</span>", image: "ostatni/sz1.jpg", code: "REK-S027", ean: "2001509990272", category: "Ostatní" },
   { name: "Krabička Superzoo<span>VELKÁ</span>", image: "ostatni/sz2.jpg", code: "REK-S028", ean: "2001509990289", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>PTÁCI</span>", image: "ostatni/v1.jpg", code: "492-91461", ean: "4008239914613", category: "Ostatní" },
@@ -533,4 +533,5 @@ const scrollTopBtn = document.getElementById("scrollTopBtn");
 window.addEventListener("scroll", () => {
   scrollTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
 });
+
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
