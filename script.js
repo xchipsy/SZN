@@ -9,7 +9,7 @@ const items = [
   { name: "Bichirek kalabarský", latin: "Erpetoichthys calabaricus", image: "ryby/13191.jpg", code: "LA1-13191", ean: "21131912", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samice",  latin: "Betta splendens female",  image: "ryby/01900.jpg",  code: "LA1-01900", ean: "21019005", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samice COLOR",  latin: "Betta splendens female",  image: "ryby/02410.jpg",  code: "LA1-02410", ean: "21024108", category: "Akvaristika"},
-  { name: "Bojovnice pestrá - samec",  latin: "Betta splendens male",  image: "ryby/02100.jpg",  code: "LA1-02100", ean: "21021008"," category: "Akvaristika"},
+  { name: "Bojovnice pestrá - samec",  latin: "Betta splendens male",  image: "ryby/02100.jpg",  code: "LA1-02100", ean: "21021008", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samec COLOR",  latin: "Betta splendens male",  image: "ryby/02400.jpg",  code: "LA1-02400", ean: "21024009",  category: "Akvaristika"},
   { name: "Brotia pagodula", latin: "Brotia pagodula", image: "ryby/00410.jpg", code: "LA1-00410", ean: "21004100", category: "Akvaristika"},
   { name: "Cichlida papouščí", latin: "Cichlasoma red parrot", image: "ryby/07800.jpg", code: "LA1-07800", ean: "21078002", category: "Akvaristika"},
@@ -213,7 +213,7 @@ const items = [
   { name: "Želva",  latin: "Pseudemys concinna/<br>floridana peninsularis",  image: "tera/peninsularis.jpg",  code: "LA7-02310", ean: "27023105", category: "Teraristika"},
   { name: "Želva",  latin: "Pseudemys concinna/<br>floridana hieroglyphica",  image: "tera/hieroglyfica.jpg",  code: "LA7-02320", ean: "27023204", category: "Teraristika"},
   { name: "Želva",  latin: "Pseudemys nelsoni",  image: "tera/nelsoni.jpg",  code: "LA7-02340", ean: "27023402", category: "Teraristika", orderOnly: true},
-  { name: "Želva mapová",  latin: "Graptemys pseudogeographica kohnii",  image: "tera/mapova.jpg",  code: "LA7-02500", ean: "", category: "Teraristika"},
+  { name: "Želva mapová",  latin: "Graptemys pseudogeographica kohnii",  image: "tera/mapova.jpg",  code: "LA7-02500", ean: "27025000", category: "Teraristika"},
   { name: "Štír",  latin: "Heterometrus petersii",  image: "tera/stir.jpg",  code: "LA7-04130", ean: "27041307", category: "Teraristika"},
   { name: "Sklípkan",  latin: "Grammostola",  image: "tera/grammostola.jpg",  code: "LA7-04200", ean: "27042007", category: "Teraristika"},
   { name: "Sklípkan",  latin: "Acanthoscurria geniculata",  image: "tera/geniculata.jpg",  code: "LA7-04210", ean: "27042106", category: "Teraristika"},
@@ -297,7 +297,7 @@ const items = [
   { name: "Mlsoun kukuřičky", image: "pamlsky/kuku.jpg", code: "664-02700", ean: "8590467027006", category: "Pamlsky" },
   { name: "Apetit tyčinka<span>pro hlodavce</span>", image: "pamlsky/atyc.jpg", code: "385-052", ean: "8595093501203", category: "Pamlsky" },
   { name: "Apetit srdce<span>pro hlodavce</span>", image: "pamlsky/asrd.jpg", code: "385-051", ean: "8595093500480", category: "Pamlsky" },
-  { name: "Vitakraft lojová koule<span>pro ptáky</span>", image: "pamlsky/loj.jpg", code: "492-13567", ean: "", category: "Pamlsky" },
+  { name: "Vitakraft lojová koule<span>pro ptáky</span>", image: "pamlsky/loj.jpg", code: "492-13567", ean: "3023610135679", category: "Pamlsky" },
 
   { name: "Ontario šunková kost<span>S</span>", image: "kosti/onts.jpg", code: "214-5900", ean: "8595091776825", category: "Kosti" },
   { name: "Ontario šunková kost<span>M</span>", image: "kosti/ontm.jpg", code: "214-5903", ean: "8595091776832", category: "Kosti" },
@@ -315,8 +315,12 @@ const items = [
   { name: "Alpha Spirit kost šunková<span>střední</span>", image: "kosti/a2.jpg", code: "944-30905", ean: "8437013576109", category: "Kosti" },
   { name: "Alpha Spirit kost šunková<span>velká</span>", image: "kosti/a3.jpg", code: "944-30907", ean: "8437013576123", category: "Kosti" },
 
-  { name: "Krabička Superzoo<span>MALÁ</span>", image: "ostatni/sz1.jpg", code: "REK-S027", ean: "", category: "Ostatní" },
-  { name: "Krabička Superzoo<span>VELKÁ</span>", image: "ostatni/sz2.jpg", code: "REK-S028", ean: "", category: "Ostatní" },
+  { name: "Taška igelitová žlutá<span>Superzoo</span>", image: "ostatni/tas1.jpg", code: "REK-S001", ean: "2001509999916", category: "Ostatní" },
+  { name: "Taška BIO<span>Superzoo</span>", image: "ostatni/tas4.jpg", code: "REK-S022", ean: "2001509999244", category: "Ostatní" },
+  { name: "Taška papírová<span>Superzoo</span>", image: "ostatni/tas2.jpg", code: "REK-S011", ean: "2001509999145", category: "Ostatní" },
+  { name: "Taška látková<span>SuperzooMALÁ</span>", image: "ostatni/tas3.jpg", code: "REK-S019", ean: "2001509999213", category: "Ostatní" },
+  { name: "Krabička Superzoo<span>MALÁ</span>", image: "ostatni/sz1.jpg", code: "REK-S027", ean: "2001509990272", category: "Ostatní" },
+  { name: "Krabička Superzoo<span>VELKÁ</span>", image: "ostatni/sz2.jpg", code: "REK-S028", ean: "2001509990289", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>PTÁCI</span>", image: "ostatni/v1.jpg", code: "492-91461", ean: "4008239914613", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>KŘEČEK</span>", image: "ostatni/v2.jpg", code: "495-95032", ean: "4008239629913", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>MORČE / KRÁLÍK</span>", image: "ostatni/v3.jpg", code: "495-95033", ean: "4008239950338", category: "Ostatní" },
@@ -529,5 +533,4 @@ const scrollTopBtn = document.getElementById("scrollTopBtn");
 window.addEventListener("scroll", () => {
   scrollTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
 });
-
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });

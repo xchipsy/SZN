@@ -300,36 +300,47 @@ img {
 
 /* --- Formulář balíčku --- */
 .balicek-form {
-  width: auto;
+  width: 100%;
   margin-top: 10px;
 }
 
 .balicek-form table {
-  width: auto;
-  max-width: 250px;
+  width: 100%;             /* vyplní modal */
   border-collapse: collapse;
-  margin: 0 auto;
+  table-layout: fixed;      /* pevné sloupce */
 }
 
 .balicek-form th, .balicek-form td {
   border: 1px solid #ccc;
-  padding: 3px 5px;
+  padding: 4px 6px;
   font-size: 12px;
   text-align: center;
 }
 
+/* --- Pevné šířky sloupců --- */
+.balicek-form th:first-child,
+.balicek-form td:first-child { width: 60px; }   /* ID */
+.balicek-form th:nth-child(2),
+.balicek-form td:nth-child(2) { width: 80px; }  /* EAN */
+.balicek-form th:nth-child(3),
+.balicek-form td:nth-child(3) { width: auto; }  /* Název vyplní zbytek */
+
+/* --- Hlavička tabulky --- */
 .balicek-form th {
   color: #999;
+  background-color: #ffecb3;
 }
 
+/* --- Inputy --- */
 .balicek-form input[type="text"] {
-  width: 100%;
+  width: 100%;           /* vyplní svůj sloupec */
   box-sizing: border-box;
   padding: 3px 5px;
   font-size: 12px;
   color: #333;
 }
 
+/* --- Tlačítka --- */
 .balicek-form button {
   margin-top: 5px;
   padding: 5px 10px;
@@ -363,7 +374,7 @@ img {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  max-width: 620px;
+  max-width: 650px;       /* dostatečně široký, aby se projevil rozdíl sloupců */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -380,12 +391,29 @@ img {
 /* --- Vánoční modal QR kódy --- */
 .vanoce-qr-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;       /* horizontální mezera */
-  row-gap: 30px;    /* vertikální mezera */
+  flex-wrap: wrap;          /* QR kódy se automaticky zalamují */
+  justify-content: center;  /* centrování řádků */
+  gap: 15px 20px;           /* vertikální a horizontální mezery */
   padding: 15px;
   box-sizing: border-box;
+  max-width: 100%;          /* nepřesahuje šířku okna */
+}
+
+.vanoce-qr-box {
+  flex: 0 0 auto;           /* zachová pevnou velikost */
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Responsivní úprava QR kódů pro menší monitory --- */
+@media (max-width: 500px) {
+  .vanoce-qr-box {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 /* --- Balíčky - otočená karta --- */
@@ -407,3 +435,89 @@ img {
   height: 80px;
   flex: 0 0 auto;
 }
+
+/* --- Modal overlay a obsah --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-overlay .modal-content {
+  background-color: #fff3cd;
+  padding: 15px;
+  border-radius: 10px;
+  width: 90vw;           /* zabere 90% šířky obrazovky */
+  max-width: 800px;     /* nikdy širší než 1000px */
+  min-width: 500px;      /* nikdy užší než 500px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.modal-overlay .modal-title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* --- Flexbox balíčky --- */
+.balicek-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;               /* mezery mezi řádky */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.balicek-row {
+  display: flex;
+  gap: 6px;
+}
+
+.balicek-row input {
+  padding: 4px 6px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.balicek-row input.id { width: 120px; }      /* ID */
+.balicek-row input.ean { width: 120px; }    /* EAN */
+.balicek-row input.name { flex: 1; }        /* Název vyplní zbytek */
+
+/* --- Tlačítko Uložit --- */
+.balicek-form button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.balicek-form button:hover {
+  background-color: #ffb300;
+}
+
+.item-name span:first-child {
+  font-size: 13px;      /* jemný první řádek */
+  font-weight: normal;
+}
+
+.item-name .item-type {
+  display: block;        /* vždy pod názvem */
+  font-weight: bold;
+  font-size: 15px;       /* stejně jako item-number */
+  color: #333;
+}
+

@@ -6,22 +6,23 @@ if (!categories.includes("Vánoce")) {
 
 // --- Definice Vánočních balíčků ---
 const vanoceBalicky = [
-  { id: "vanoce_pes1", name: "Vánoční balíček<span> PES</span>", image: "vanoce/stene.jpg", number: 1 },
-  { id: "vanoce_pes2", name: "Vánoční balíček PES", image: "vanoce/pes03.jpg", number: 2 },
-  { id: "vanoce_pes3", name: "Vánoční balíček PES", image: "vanoce/pes04.jpg", number: 3 },
-  { id: "vanoce_pes4", name: "Vánoční balíček PES", image: "vanoce/pes02.jpg", number: 4 },
-  { id: "vanoce_pes5", name: "Vánoční balíček PES", image: "vanoce/pes01.jpg", number: 5 },
+  { id: "vanoce_pes1", name: "Vánoční balíček", type: "PES", image: "vanoce/stene.jpg", number: 1 },
+  { id: "vanoce_pes2", name: "Vánoční balíček", type: "PES", image: "vanoce/pes03.jpg", number: 2 },
+  { id: "vanoce_pes3", name: "Vánoční balíček", type: "PES", image: "vanoce/pes04.jpg", number: 3 },
+  { id: "vanoce_pes4", name: "Vánoční balíček", type: "PES", image: "vanoce/pes02.jpg", number: 4 },
+  { id: "vanoce_pes6", name: "Vánoční balíček", type: "PES", image: "vanoce/pes01.jpg", number: 5 },
 
-  { id: "vanoce_kocka1", name: "Vánoční balíček KOČKA", image: "vanoce/kocka5.jpg", number: 1 },
-  { id: "vanoce_kocka2", name: "Vánoční balíček KOČKA", image: "vanoce/kocka3.jpg", number: 2 },
-  { id: "vanoce_kocka3", name: "Vánoční balíček KOČKA", image: "vanoce/kocka1.jpg", number: 3 },
-  { id: "vanoce_kocka4", name: "Vánoční balíček KOČKA", image: "vanoce/kocka4.jpg", number: 4 },
-  { id: "vanoce_kocka5", name: "Vánoční balíček KOČKA", image: "vanoce/kocka2.jpg", number: 5 },
+  { id: "vanoce_kocka1", name: "Vánoční balíček", type: "KOČKA", image: "vanoce/kocka5.jpg", number: 1 },
+  { id: "vanoce_kocka2", name: "Vánoční balíček", type: "KOČKA", image: "vanoce/kocka3.jpg", number: 2 },
+  { id: "vanoce_kocka3", name: "Vánoční balíček", type: "KOČKA", image: "vanoce/kocka1.jpg", number: 3 },
+  { id: "vanoce_kocka4", name: "Vánoční balíček", type: "KOČKA", image: "vanoce/kocka4.jpg", number: 4 },
+  { id: "vanoce_kocka5", name: "Vánoční balíček", type: "KOČKA", image: "vanoce/kocka2.jpg", number: 5 },
 
-  { id: "vanoce_hlodavec1", name: "Vánoční balíček HLODAVEC", image: "vanoce/krecek.jpg", number: 1 },
-  { id: "vanoce_hlodavec2", name: "Vánoční balíček HLODAVEC", image: "vanoce/hlodavec.jpg", number: 2 },
-  { id: "vanoce_ptak1", name: "Vánoční balíček PTÁK", image: "vanoce/ptaci.jpg", number: 1 },
-  { id: "vanoce_ptak2", name: "Vánoční balíček PTÁK", image: "vanoce/ptaci2.jpg", number: 2 }
+  { id: "vanoce_hlodavec1", name: "Vánoční balíček", type: "HLODAVEC", image: "vanoce/krecek.jpg", number: 1 },
+  { id: "vanoce_hlodavec2", name: "Vánoční balíček", type: "HLODAVEC", image: "vanoce/hlodavec.jpg", number: 2 },
+
+  { id: "vanoce_ptak1", name: "Vánoční balíček", type: "PTÁK", image: "vanoce/ptaci.jpg", number: 1 },
+  { id: "vanoce_ptak2", name: "Vánoční balíček", type: "PTÁK", image: "vanoce/ptaci2.jpg", number: 2 }
 ];
 
 // --- Uložení / načtení ---
@@ -31,6 +32,85 @@ function loadBalicek(id) {
 }
 function saveBalicek(id, eans, instock = true) {
   localStorage.setItem("balicek_" + id, JSON.stringify({ eans, instock }));
+}
+
+// --- Načtení dat z data.json ---
+let dataJsonMap = {};
+let dataJsonLoaded = false;
+
+fetch("data.json")
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(item => {
+      const id = item.kod?.trim();
+      const ean = item.ean || "";
+      const name = item.popis || "";
+      if (id) dataJsonMap[id] = { ean, name };
+    });
+    dataJsonLoaded = true;
+    console.log("Načtená mapa:", dataJsonMap);
+  })
+  .catch(err => console.error("Chyba při načítání data.json:", err));
+
+// --- Modal QR kódů ---
+function showQRModal(ulozenaData, b) {
+  const overlay = document.createElement("div");
+  overlay.className = "modal-overlay";
+
+  const modalDiv = document.createElement("div");
+  modalDiv.className = "modal-content";
+
+  // Titulek – vždy název balíčku + číslo
+  const title = document.createElement("div");
+  title.className = "modal-title";
+  title.textContent = `${b.name} ${b.type} ${b.number}`;
+  modalDiv.appendChild(title);
+
+  // --- Filtrujeme jen položky s neprázdným EAN ---
+  const validEans = (ulozenaData || []).filter(item => item.ean && item.ean.trim() !== "");
+
+  if (!validEans.length) {
+    // --- Žádné EANy → malé okno jen na text ---
+    modalDiv.style.width = "auto";
+    modalDiv.style.minWidth = "unset";
+    modalDiv.style.maxWidth = "unset";
+
+    const p = document.createElement("p");
+    p.textContent = "Žádná data";
+    p.style.fontWeight = "bold";
+    p.style.textAlign = "center";
+    modalDiv.appendChild(p);
+  } else {
+    // --- QR kódy ---
+    modalDiv.style.width = "90vw";
+    modalDiv.style.maxWidth = "1000px";
+    modalDiv.style.minWidth = "500px";
+
+    const qrContainer = document.createElement("div");
+    qrContainer.className = "vanoce-qr-container";
+
+    validEans.forEach(item => {
+      const qrBox = document.createElement("div");
+      qrBox.className = "vanoce-qr-box";
+      new QRCode(qrBox, {
+        text: item.ean,
+        width: 100,
+        height: 100,
+        colorDark: "#000",
+        colorLight: "#fff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+      qrContainer.appendChild(qrBox);
+    });
+
+    modalDiv.appendChild(qrContainer);
+  }
+
+  overlay.appendChild(modalDiv);
+  document.body.appendChild(overlay);
+
+  overlay.addEventListener("click", () => overlay.remove());
+  modalDiv.addEventListener("click", e => e.stopPropagation());
 }
 
 // --- Karta balíčku ---
@@ -44,72 +124,32 @@ function vytvorKartu(b, target) {
   const card = document.createElement("div");
   card.className = "card";
 
-// --- Přední strana ---
-const front = document.createElement("div");
-front.className = "front";
-front.innerHTML = `
-  <button class="toggle-stock ${ulozeny.instock ? "instock" : "outstock"}">${ulozeny.instock ? "✓" : "✗"}</button>
-  <div class="front-spacer"></div>
-  <img src="${b.image}" alt="${b.name}" />
-  <div class="item-name">${b.name}</div>
-  <div class="item-number">${b.number}</div>
-  <button class="edit-btn">✎</button>
-`;
+  const front = document.createElement("div");
+  front.className = "front";
+  front.innerHTML = `
+    <button class="toggle-stock ${ulozeny.instock ? "instock" : "outstock"}">
+      ${ulozeny.instock ? "✓" : "✗"}
+    </button>
+    <div class="front-spacer"></div>
+    <img src="${b.image}" alt="${b.name}" />
+    <div class="item-name">
+  <span>${b.name}</span>
+  ${b.type ? `<span class="item-type">${b.type}</span>` : ""}
+</div>
+    <div class="item-number">${b.number}</div>
+    <button class="edit-btn">✎</button>
+  `;
 
   card.appendChild(front);
   itemDiv.appendChild(card);
   target.appendChild(itemDiv);
 
-  // --- Funkce pro modal s QR kódy ---
-  function showQRModal(eans) {
-    const overlay = document.createElement("div");
-    overlay.className = "modal-overlay";
-
-    const modalDiv = document.createElement("div");
-    modalDiv.className = "modal-content";
-
-    const title = document.createElement("div");
-    title.className = "modal-title";
-    title.textContent = `${b.name} ${b.number}`;
-    modalDiv.appendChild(title);
-
-    if (!eans.length) {
-      const p = document.createElement("p");
-      p.textContent = "Žádné EANy";
-      modalDiv.appendChild(p);
-    } else {
-      const qrContainer = document.createElement("div");
-      qrContainer.className = "vanoce-qr-container";
-      eans.forEach(ean => {
-        const qrBox = document.createElement("div");
-        qrBox.className = "vanoce-qr-box";
-        new QRCode(qrBox, {
-          text: ean,
-          width: 100,
-          height: 100,
-          colorDark: "#000000",
-          colorLight: "#ffffff",
-          correctLevel: QRCode.CorrectLevel.H
-        });
-        qrContainer.appendChild(qrBox);
-      });
-      modalDiv.appendChild(qrContainer);
-    }
-
-    overlay.appendChild(modalDiv);
-    document.body.appendChild(overlay);
-
-    // Kliknutí mimo modal zavře overlay
-    overlay.addEventListener("click", () => overlay.remove());
-    modalDiv.addEventListener("click", e => e.stopPropagation());
-  }
-
   // --- Kliknutí na kartu otevře QR modal ---
   itemDiv.addEventListener("click", e => {
-    if (!e.target.classList.contains("edit-btn") && !e.target.classList.contains("toggle-stock")) {
-      showQRModal(ulozeny.eans);
-    }
-  });
+  if (!e.target.classList.contains("edit-btn") && !e.target.classList.contains("toggle-stock")) {
+    showQRModal(ulozeny.eans, b);
+  }
+});
 
   // --- Toggle skladem/neskladem ---
   const toggleBtn = front.querySelector(".toggle-stock");
@@ -121,7 +161,6 @@ front.innerHTML = `
     toggleBtn.classList.toggle("outstock", !ulozeny.instock);
     itemDiv.dataset.stock = ulozeny.instock ? "instock" : "outstock";
     saveBalicek(b.id, ulozeny.eans, ulozeny.instock);
-
     if (document.getElementById("filter-instock").checked) {
       itemDiv.style.display = ulozeny.instock ? "" : "none";
     }
@@ -130,6 +169,7 @@ front.innerHTML = `
   // --- Editace ---
   front.querySelector(".edit-btn").addEventListener("click", e => {
     e.stopPropagation();
+
     const overlay = document.createElement("div");
     overlay.className = "modal-overlay";
 
@@ -141,35 +181,78 @@ front.innerHTML = `
     title.textContent = `${b.name} ${b.number}`;
     modalDiv.appendChild(title);
 
-    const table = document.createElement("table");
-    const tbody = document.createElement("tbody");
-    const inputs = [];
+    const balicekForm = document.createElement("div");
+    balicekForm.className = "balicek-form";
+
+    const ulozenaData = ulozeny.eans || [];
+
     for (let i = 0; i < 10; i++) {
-      const tr = document.createElement("tr");
-      const td = document.createElement("td");
-      const input = document.createElement("input");
-      input.type = "text";
-      input.placeholder = "EAN";
-      input.value = ulozeny.eans[i] || "";
-      td.appendChild(input);
-      tr.appendChild(td);
-      tbody.appendChild(tr);
-      inputs.push(input);
+      const row = document.createElement("div");
+      row.className = "balicek-row";
+
+      const inputId = document.createElement("input");
+      inputId.type = "text";
+      inputId.placeholder = "ID";
+      inputId.className = "id";
+
+      const inputEan = document.createElement("input");
+      inputEan.type = "text";
+      inputEan.placeholder = "EAN";
+      inputEan.className = "ean";
+
+      const inputName = document.createElement("input");
+      inputName.type = "text";
+      inputName.placeholder = "Název";
+      inputName.readOnly = true;
+      inputName.className = "name";
+
+      if (ulozenaData[i]) {
+        inputId.value = ulozenaData[i].id || "";
+        if (inputId.value && dataJsonMap[inputId.value]) {
+          inputEan.value = dataJsonMap[inputId.value].ean || "";
+          inputName.value = dataJsonMap[inputId.value].name || "";
+        } else {
+          inputEan.value = ulozenaData[i].ean || "";
+          inputName.value = ulozenaData[i].name || "";
+        }
+      }
+
+      inputId.addEventListener("input", () => {
+        const val = inputId.value.trim();
+        if (val && dataJsonMap[val]) {
+          inputEan.value = dataJsonMap[val].ean || "";
+          inputName.value = dataJsonMap[val].name || "";
+        } else {
+          inputEan.value = "";
+          inputName.value = "";
+        }
+      });
+
+      row.appendChild(inputId);
+      row.appendChild(inputEan);
+      row.appendChild(inputName);
+
+      balicekForm.appendChild(row);
     }
-    table.appendChild(tbody);
-    modalDiv.appendChild(table);
 
     const saveBtn = document.createElement("button");
     saveBtn.textContent = "💾 Uložit";
     saveBtn.addEventListener("click", ev => {
       ev.stopPropagation();
-      const eans = inputs.map(inp => inp.value.trim()).filter(v => v);
+      const eans = Array.from(balicekForm.querySelectorAll(".balicek-row")).map(row => {
+        const id = row.querySelector("input.id").value.trim();
+        const ean = row.querySelector("input.ean").value.trim();
+        const name = row.querySelector("input.name").value.trim();
+        return id || ean || name ? { id, ean, name } : null;
+      }).filter(v => v !== null);
+
       ulozeny.eans = eans;
       saveBalicek(b.id, eans, ulozeny.instock);
       overlay.remove();
     });
-    modalDiv.appendChild(saveBtn);
 
+    balicekForm.appendChild(saveBtn);
+    modalDiv.appendChild(balicekForm);
     overlay.appendChild(modalDiv);
     document.body.appendChild(overlay);
   });
@@ -201,3 +284,7 @@ if (activeCategory === "Vánoce") {
 
 // --- Checkbox Pouze skladem reaguje okamžitě ---
 document.getElementById("filter-instock").addEventListener("change", renderVanoce);
+
+
+
+
