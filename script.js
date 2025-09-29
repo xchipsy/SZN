@@ -310,7 +310,7 @@ const items = [
 { name: "Trixie sýrová tyč L", image: "pamlsky/syrtyc.jpg", code: "G14-312637", ean: "4011905312637", category: "Pamlsky" },
 { name: "Trixie hovězí kopyto plněné <span>115g</span>", image: "pamlsky/kopyto.jpg", code: "G14-2763", ean: "4011905027630", category: "Pamlsky" },
 { name: "Trixie buvolí roh plněný <span>rohovinou a šlachou 10-14cm</span>", image: "pamlsky/roh.jpg", code: "G14-277516", ean: "4011905277516", category: "Pamlsky" },
-{ name: "Trixie žvýkací kosti z průdušnice<span>10cm 22x35g</span>", image: "pamlsky/prudus.jpg", code: "G14-27615", ean: "4011905276151", category: "Pamlsky" },
+{ name: "Trixie žvýkací kosti z průdušnice<span>10cm 2x35g</span>", image: "pamlsky/prudus.jpg", code: "G14-27615", ean: "4011905276151", category: "Pamlsky" },
 { name: "Trixie hovězí penis<span>sušený 12cm</span>", image: "pamlsky/pizzle.jpg", code: "G14-2705", ean: "4011905027050", category: "Pamlsky" },
 { name: "Trixie hovězí penis sušený<span> 70-80 cm</span>", image: "pamlsky/mulec.jpg", code: "G14-027074", ean: "4011905027074", category: "Pamlsky" },
   { name: "Mlsoun mrkvičky", image: "pamlsky/mrk.jpg", code: "665-260090", ean: "8590467026009", category: "Pamlsky" },
@@ -555,6 +555,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
