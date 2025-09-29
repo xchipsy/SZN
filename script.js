@@ -306,7 +306,7 @@ const items = [
   { name: "Trixie sýrová tyč L", image: "pamlsky/syrtyc.jpg", code: "G14-312637", ean: "4011905312637", category: "Pamlsky" },
   { name: "Trixie vegan kost 8,5cm <span>s mořskou řasu</span>s", image: "pamlsky/kost01.jpg", code: "G14-312811", ean: "4011905312811", category: "Pamlsky" },
   { name: "Trixie vegan kost 12cm <span>s mořskou řasou</span>s", image: "pamlsky/kost1.jpg", code: "G14-312828", ean: "4011905312828", category: "Pamlsky" },
-  { name: "Trixie vegan kost <span>"čelist" 12 cm 35g</celistspan>", image: "pamlsky/.jpg", code: "G14-312835", ean: "4011905312835", category: "Pamlsky" },
+  { name: "Trixie vegan kost <span>čelist 12 cm 35g</span>", image: "pamlsky/celist.jpg", code: "G14-312835", ean: "4011905312835", category: "Pamlsky" },
   { name: "Trixie žvýkací kuř. maso 150 g", image: "pamlsky/.jpg", code: "G14-315102", ean: "4011905315102", category: "Pamlsky" },
   { name: "Trixie mini preclík<span> kuřecí maso 6x4cm 10g</span>", image: "pamlsky/precl.jpg", code: "G14-448933", ean: "4053032448933", category: "Pamlsky" },
   { name: "Trixie vegan Safari", image: "pamlsky/safari.jpg", code: "G14-614321", ean: "4053032614321", category: "Pamlsky" },
@@ -553,5 +553,3 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-
