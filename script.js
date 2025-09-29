@@ -293,6 +293,23 @@ const items = [
   { name: "Trixie buolí bota<span>7cm</span>", image: "pamlsky/bb7.jpg", code: "G14-2629", ean: "4011905026299", category: "Pamlsky" },
   { name: "Trixie buvolí bota<span>12cm</span>", image: "pamlsky/bb12.jpg", code: "G14-2630", ean: "4011905026305", category: "Pamlsky" },
   { name: "Trixie buvolí kost<span>32cm</span>", image: "pamlsky/tbk.jpg", code: "G14-2651", ean: "4011905026510", category: "Pamlsky" },
+  { name: "Pochoutka Trixie placička z býčích penisů 45g", image: "pamlsky/.jpg", code: "G14-027047", ean: "4057589027047", category: "Pamlsky" },
+  { name: "Pochoutka Trixie hovězí penis sušený 70-80 cm", image: "pamlsky/.jpg", code: "G14-027074", ean: "4011905027074", category: "Pamlsky" },
+  { name: "Pochoutka Trixie žvýkací tyč s dršťkami 20 cm 80g", image: "pamlsky/.jpg", code: "G14-027081", ean: "4011905027081", category: "Pamlsky" },
+  { name: "Pochoutka Trixie tyč z hovězí kůže salám 20cm 80g", image: "pamlsky/.jpg", code: "G14-031811", ean: "4011905031811", category: "Pamlsky" },
+  { name: "Pochoutka Trixie placička s dršťkami, 8 cm, 45g", image: "pamlsky/.jpg", code: "G14-2703", ean: "4011905027036", category: "Pamlsky" },
+  { name: "Pochoutka Trixie hovězí penis, sušený 12cm", image: "pamlsky/.jpg", code: "G14-2705", ean: "4011905027050", category: "Pamlsky" },
+  { name: "Pochoutka Trixie hovězí kopyto plněné 115g", image: "pamlsky/.jpg", code: "G14-2763", ean: "4011905027630", category: "Pamlsky" },
+  { name: "Pochoutka Trixie žvýkací cop býčí penis 15cm 35g", image: "pamlsky/.jpg", code: "G14-276489", ean: "4011905276489", category: "Pamlsky" },
+  { name: "Pochoutka Trixie žvýkací cop býčí penis 25cm 58g", image: "pamlsky/.jpg", code: "G14-276496", ean: "4011905276496", category: "Pamlsky" },
+  { name: "Pochoutka Trixie žvýkací sýrová tyč L 95g", image: "pamlsky/.jpg", code: "G14-312637", ean: "4011905312637", category: "Pamlsky" },
+  { name: "Pochoutka Trixie DentaFun vegan moř řasa 8,5cm 28g", image: "pamlsky/.jpg", code: "G14-312811", ean: "4011905312811", category: "Pamlsky" },
+  { name: "Pochoutka Trixie DentaFun vegan moř řasa 12cm 58g", image: "pamlsky/.jpg", code: "G14-312828", ean: "4011905312828", category: "Pamlsky" },
+  { name: "Pochoutka Trixie Denta Fun vegan kost 12 cm 35g", image: "pamlsky/.jpg", code: "G14-312835", ean: "4011905312835", category: "Pamlsky" },
+  { name: "Pochoutka Trixie žvýkací kuř. maso 150 g", image: "pamlsky/.jpg", code: "G14-315102", ean: "4011905315102", category: "Pamlsky" },
+  { name: "Pochoutka Trixie mini preclík kuř. maso 6x4cm 10g", image: "pamlsky/.jpg", code: "G14-448933", ean: "4053032448933", category: "Pamlsky" },
+  { name: "Pochoutka Trixie vegan Safari 28g", image: "pamlsky/.jpg", code: "G14-614321", ean: "4053032614321", category: "Pamlsky" },
+  { name: "Pochoutka Trixie kost kach. Maso treska 7,5cm, 9g", image: "pamlsky/.jpg", code: "G14-679283", ean: "4053032679283", category: "Pamlsky" },
   { name: "Mlsoun mrkvičky", image: "pamlsky/mrk.jpg", code: "665-260090", ean: "8590467026009", category: "Pamlsky" },
   { name: "Mlsoun kukuřičky", image: "pamlsky/kuku.jpg", code: "664-02700", ean: "8590467027006", category: "Pamlsky" },
   { name: "Apetit tyčinka<span>pro hlodavce</span>", image: "pamlsky/atyc.jpg", code: "385-052", ean: "8595093501203", category: "Pamlsky" },
@@ -535,3 +552,4 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
