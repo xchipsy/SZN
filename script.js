@@ -304,8 +304,8 @@ const items = [
 { name: "Trixie tyč z hovězí kůže <span>salám 20cm 80g</span>", image: "pamlsky/tycsa.jpg", code: "G14-031811", ean: "4011905031811", category: "Pamlsky" },
 { name: "Trixie vegan kost <span>čelist 12 cm 35g</span>", image: "pamlsky/celist.jpg", code: "G14-312835", ean: "4011905312835", category: "Pamlsky" },
 { name: "Trixie vegan Safari", image: "pamlsky/safari.jpg", code: "G14-614321", ean: "4053032614321", category: "Pamlsky" },
-{ name: "Trixie vegan kost 8,5cm <span>s mořskou řasu</span>s", image: "pamlsky/kost01.jpg", code: "G14-312811", ean: "4011905312811", category: "Pamlsky" },
-{ name: "Trixie vegan kost 12cm <span>s mořskou řasou</span>s", image: "pamlsky/kost1.jpg", code: "G14-312828", ean: "4011905312828", category: "Pamlsky" },
+{ name: "Trixie vegan kost 8,5cm <span>s mořskou řasu</span>", image: "pamlsky/kost01.jpg", code: "G14-312811", ean: "4011905312811", category: "Pamlsky" },
+{ name: "Trixie vegan kost 12cm <span>s mořskou řasou</span>", image: "pamlsky/kost1.jpg", code: "G14-312828", ean: "4011905312828", category: "Pamlsky" },
 { name: "Trixie sýrová tyč S", image: "pamlsky/syrtyc1.jpg", code: "G14-312613", ean: "4011905312613", category: "Pamlsky" },
 { name: "Trixie sýrová tyč L", image: "pamlsky/syrtyc.jpg", code: "G14-312637", ean: "4011905312637", category: "Pamlsky" },
 { name: "Trixie hovězí kopyto plněné <span>115g</span>", image: "pamlsky/kopyto.jpg", code: "G14-2763", ean: "4011905027630", category: "Pamlsky" },
@@ -555,5 +555,6 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
