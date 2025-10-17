@@ -293,7 +293,7 @@ const items = [
   { name: "Trixie buolí bota<span>7cm</span>", image: "pamlsky/bb7.jpg", code: "G14-2629", ean: "4011905026299", category: "Pamlsky" },
   { name: "Trixie buvolí bota<span>12cm</span>", image: "pamlsky/bb12.jpg", code: "G14-2630", ean: "4011905026305", category: "Pamlsky" },
   { name: "Trixie buvolí kost<span>32cm</span>", image: "pamlsky/tbk.jpg", code: "G14-2651", ean: "4011905026510", category: "Pamlsky" },
-  { name: "Trixie placička z býčích penisů<span> 45g</span>", image: "pamlsky/cake2.jpg", code: "G14-027047", ean: "4057589027047", category: "Pamlsky" },
+  { name: "Trixie placička z býčích penisů<span> 45g</span>", image: "pamlsky/cake2.jpg", code: "G14-2704", ean: "4057589027047", category: "Pamlsky" },
   { name: "Trixie placička s dršťkami <span>8 cm, 45g</span>", image: "pamlsky/cake1.jpg", code: "G14-2703", ean: "4011905027036", category: "Pamlsky" },
 { name: "Trixie mini preclík<span> kuřecí maso 6x4cm 10g</span>", image: "pamlsky/precl.jpg", code: "G14-448933", ean: "4053032448933", category: "Pamlsky" },
 { name: "Trixie kost kachní s treskou <span>7,5cm, 9g</span>", image: "pamlsky/kosti.jpg", code: "G14-679283", ean: "4053032679283", category: "Pamlsky" },
@@ -555,6 +555,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
