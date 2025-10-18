@@ -279,7 +279,7 @@ const items = [
   { name: "Miramar kost natural<span>s L-carnitinem</span>", image: "pamlsky/kkar.jpg", code: "614-BW305A", ean: "8595042660449", category: "Pamlsky" },
   { name: "Trixie Munchy tyčinka<span>barevná mix 12cm (100ks)</span>", image: "pamlsky/mun100.jpg", code: "G14-2610", ean: "4011905026107", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>mléčné</span>", image: "pamlsky/mlec.jpg", code: "664-250039", ean: "8590467250039", category: "Pamlsky" },
-  { name: "Mlsoun čokosy<span>čokoládové</span>", image: "pamlsky/coko.jpg", code: "664-25001", ean: "85904467250016", category: "Pamlsky" },
+  { name: "Mlsoun čokosy<span>čokoládové</span>", image: "pamlsky/coko.jpg", code: "664-25001", ean: "8590467250016", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>vanilkové</span>", image: "pamlsky/vani.jpg", code: "664-250022", ean: "8590467250022", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>hovězí</span>", image: "pamlsky/hov.jpg", code: "664-25004", ean: "8590467250046", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>lososové</span>", image: "pamlsky/los.jpg", code: "664-250053", ean: "8590467250053", category: "Pamlsky" },
@@ -555,6 +555,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
