@@ -271,5 +271,3 @@ if (activeCategory === "Vánoce") {
 document.getElementById("filter-instock").addEventListener("change", renderVanoce);
 
 
-
-
