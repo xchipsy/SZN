@@ -43,7 +43,7 @@ fetch("data.json")
   .then(data => {
     data.forEach(item => {
       const id = item.kod?.trim();
-      const ean = item.ean || "";
+      const ean = item.ean != null ? String(item.ean) : "";
       const name = item.popis || "";
       if (id) dataJsonMap[id] = { ean, name };
     });
@@ -60,28 +60,21 @@ function showQRModal(ulozenaData, b) {
   const modalDiv = document.createElement("div");
   modalDiv.className = "modal-content";
 
-  // Titulek – vždy název balíčku + číslo
   const title = document.createElement("div");
   title.className = "modal-title";
   title.textContent = `${b.name} ${b.type} ${b.number}`;
   modalDiv.appendChild(title);
 
-  // --- Filtrujeme jen položky s neprázdným EAN ---
   const validEans = (ulozenaData || []).filter(item => item.ean && item.ean.trim() !== "");
 
   if (!validEans.length) {
-    // --- Žádné EANy → malé okno jen na text ---
     modalDiv.style.width = "auto";
-    modalDiv.style.minWidth = "unset";
-    modalDiv.style.maxWidth = "unset";
-
     const p = document.createElement("p");
     p.textContent = "Žádná data";
     p.style.fontWeight = "bold";
     p.style.textAlign = "center";
     modalDiv.appendChild(p);
   } else {
-    // --- QR kódy ---
     modalDiv.style.width = "90vw";
     modalDiv.style.maxWidth = "1000px";
     modalDiv.style.minWidth = "500px";
@@ -133,9 +126,9 @@ function vytvorKartu(b, target) {
     <div class="front-spacer"></div>
     <img src="${b.image}" alt="${b.name}" />
     <div class="item-name">
-  <span>${b.name}</span>
-  ${b.type ? `<span class="item-type">${b.type}</span>` : ""}
-</div>
+      <span>${b.name}</span>
+      ${b.type ? `<span class="item-type">${b.type}</span>` : ""}
+    </div>
     <div class="item-number">${b.number}</div>
     <button class="edit-btn">✎</button>
   `;
@@ -146,10 +139,10 @@ function vytvorKartu(b, target) {
 
   // --- Kliknutí na kartu otevře QR modal ---
   itemDiv.addEventListener("click", e => {
-  if (!e.target.classList.contains("edit-btn") && !e.target.classList.contains("toggle-stock")) {
-    showQRModal(ulozeny.eans, b);
-  }
-});
+    if (!e.target.classList.contains("edit-btn") && !e.target.classList.contains("toggle-stock")) {
+      showQRModal(ulozeny.eans, b);
+    }
+  });
 
   // --- Toggle skladem/neskladem ---
   const toggleBtn = front.querySelector(".toggle-stock");
@@ -206,32 +199,35 @@ function vytvorKartu(b, target) {
       inputName.readOnly = true;
       inputName.className = "name";
 
+      // --- Nová bezpečná logika ---
       if (ulozenaData[i]) {
         inputId.value = ulozenaData[i].id || "";
-        if (inputId.value && dataJsonMap[inputId.value]) {
+
+        // EAN: ruční hodnota má přednost
+        if (ulozenaData[i].ean && ulozenaData[i].ean.trim() !== "") {
+          inputEan.value = ulozenaData[i].ean;
+        } else if (inputId.value && dataJsonMap[inputId.value]) {
           inputEan.value = dataJsonMap[inputId.value].ean || "";
-          inputName.value = dataJsonMap[inputId.value].name || "";
         } else {
-          inputEan.value = ulozenaData[i].ean || "";
-          inputName.value = ulozenaData[i].name || "";
+          inputEan.value = "";
         }
+
+        // Název: ruční hodnota má přednost
+        inputName.value = ulozenaData[i].name || (inputId.value && dataJsonMap[inputId.value] ? dataJsonMap[inputId.value].name : "");
       }
 
+      // --- Po změně ID doplnit jen pokud EAN/název nejsou vyplněny ---
       inputId.addEventListener("input", () => {
         const val = inputId.value.trim();
         if (val && dataJsonMap[val]) {
-          inputEan.value = dataJsonMap[val].ean || "";
-          inputName.value = dataJsonMap[val].name || "";
-        } else {
-          inputEan.value = "";
-          inputName.value = "";
+          if (!inputEan.value) inputEan.value = dataJsonMap[val].ean || "";
+          if (!inputName.value) inputName.value = dataJsonMap[val].name || "";
         }
       });
 
       row.appendChild(inputId);
       row.appendChild(inputEan);
       row.appendChild(inputName);
-
       balicekForm.appendChild(row);
     }
 
@@ -284,6 +280,8 @@ if (activeCategory === "Vánoce") {
 
 // --- Checkbox Pouze skladem reaguje okamžitě ---
 document.getElementById("filter-instock").addEventListener("change", renderVanoce);
+
+
 
 
 
