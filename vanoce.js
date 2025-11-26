@@ -160,76 +160,96 @@ function vytvorKartu(b, target) {
   });
 
   // --- Editace ---
-  front.querySelector(".edit-btn").addEventListener("click", e => {
-    e.stopPropagation();
+front.querySelector(".edit-btn").addEventListener("click", e => {
+  e.stopPropagation();
 
-    const overlay = document.createElement("div");
-    overlay.className = "modal-overlay";
+  const overlay = document.createElement("div");
+  overlay.className = "modal-overlay";
 
-    const modalDiv = document.createElement("div");
-    modalDiv.className = "modal-content";
+  const modalDiv = document.createElement("div");
+  modalDiv.className = "modal-content";
 
-    const title = document.createElement("div");
-    title.className = "modal-title";
-    title.textContent = `${b.name} ${b.number}`;
-    modalDiv.appendChild(title);
+  const title = document.createElement("div");
+  title.className = "modal-title";
+  title.textContent = `${b.name} ${b.number}`;
+  modalDiv.appendChild(title);
 
-    const balicekForm = document.createElement("div");
-    balicekForm.className = "balicek-form";
+  const balicekForm = document.createElement("div");
+  balicekForm.className = "balicek-form";
 
-    const ulozenaData = ulozeny.eans || [];
+  const ulozenaData = ulozeny.eans || [];
 
-    for (let i = 0; i < 10; i++) {
-      const row = document.createElement("div");
-      row.className = "balicek-row";
+  for (let i = 0; i < 10; i++) {
+    const row = document.createElement("div");
+    row.className = "balicek-row";
 
-      const inputId = document.createElement("input");
-      inputId.type = "text";
-      inputId.placeholder = "ID";
-      inputId.className = "id";
+    const inputId = document.createElement("input");
+    inputId.type = "text";
+    inputId.placeholder = "ID";
+    inputId.className = "id";
 
-      const inputEan = document.createElement("input");
-      inputEan.type = "text";
-      inputEan.placeholder = "EAN";
-      inputEan.className = "ean";
+    const inputEan = document.createElement("input");
+    inputEan.type = "text";
+    inputEan.placeholder = "EAN";
+    inputEan.className = "ean";
 
-      const inputName = document.createElement("input");
-      inputName.type = "text";
-      inputName.placeholder = "Název";
-      inputName.readOnly = true;
-      inputName.className = "name";
+    const inputName = document.createElement("input");
+    inputName.type = "text";
+    inputName.placeholder = "Název";
+    inputName.readOnly = true;
+    inputName.className = "name";
 
-      // --- Nová bezpečná logika ---
-      if (ulozenaData[i]) {
-        inputId.value = ulozenaData[i].id || "";
-
-        // EAN: ruční hodnota má přednost
-        if (ulozenaData[i].ean && ulozenaData[i].ean.trim() !== "") {
-          inputEan.value = ulozenaData[i].ean;
-        } else if (inputId.value && dataJsonMap[inputId.value]) {
-          inputEan.value = dataJsonMap[inputId.value].ean || "";
-        } else {
-          inputEan.value = "";
-        }
-
-        // Název: ruční hodnota má přednost
-        inputName.value = ulozenaData[i].name || (inputId.value && dataJsonMap[inputId.value] ? dataJsonMap[inputId.value].name : "");
-      }
-
-      // --- Po změně ID doplnit jen pokud EAN/název nejsou vyplněny ---
-      inputId.addEventListener("input", () => {
-        const val = inputId.value.trim();
-        if (val && dataJsonMap[val]) {
-          if (!inputEan.value) inputEan.value = dataJsonMap[val].ean || "";
-          if (!inputName.value) inputName.value = dataJsonMap[val].name || "";
-        }
-      });
-
-      row.appendChild(inputId);
-      row.appendChild(inputEan);
-      row.appendChild(inputName);
-      balicekForm.appendChild(row);
+    // --- naplnění polí z uložených dat ---
+    if (ulozenaData[i]) {
+      inputId.value = ulozenaData[i].id || "";
+      inputEan.value = ulozenaData[i].ean || "";
+      inputName.value = ulozenaData[i].name || "";
     }
+
+    // --- změny při zadání/mazání ID ---
+    inputId.addEventListener("input", () => {
+      const val = inputId.value.trim();
+      if (val && dataJsonMap[val]) {
+        // doplnění EANu a názvu jen pokud existuje v data.json
+        inputEan.value = dataJsonMap[val].ean || "";
+        inputName.value = dataJsonMap[val].name || "";
+      } else {
+        // pokud ID prázdné nebo neexistuje v data.json, nechat ručně vyplněné hodnoty
+        // ale nezapomenout je vymazat, pokud uživatel smaže
+        inputEan.value = inputEan.value || "";
+        inputName.value = inputName.value || "";
+      }
+    });
+
+    row.appendChild(inputId);
+    row.appendChild(inputEan);
+    row.appendChild(inputName);
+
+    balicekForm.appendChild(row);
+  }
+
+  const saveBtn = document.createElement("button");
+  saveBtn.textContent = "💾 Uložit";
+  saveBtn.addEventListener("click", ev => {
+    ev.stopPropagation();
+    const eans = Array.from(balicekForm.querySelectorAll(".balicek-row")).map(row => {
+      const id = row.querySelector("input.id").value.trim();
+      const ean = row.querySelector("input.ean").value.trim();
+      const name = row.querySelector("input.name").value.trim();
+      return id || ean || name ? { id, ean, name } : null;
+    }).filter(v => v !== null);
+
+    ulozeny.eans = eans;
+    saveBalicek(b.id, eans, ulozeny.instock);
+    overlay.remove();
+  });
+
+  balicekForm.appendChild(saveBtn);
+  modalDiv.appendChild(balicekForm);
+  overlay.appendChild(modalDiv);
+  document.body.appendChild(overlay);
+});
+
 
     const saveBtn = document.createElement("button");
     saveBtn.textContent = "💾 Uložit";
@@ -280,6 +300,7 @@ if (activeCategory === "Vánoce") {
 
 // --- Checkbox Pouze skladem reaguje okamžitě ---
 document.getElementById("filter-instock").addEventListener("change", renderVanoce);
+
 
 
 
