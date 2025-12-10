@@ -346,6 +346,8 @@ const items = [
   { name: "Krabice Vitakraft transportní<span>MORČE / KRÁLÍK</span>", image: "ostatni/v3.jpg", code: "495-95033", ean: "4008239950338", category: "Ostatní" },
   { name: "Krabice Beaphar transportní<span>PTÁCI</span>", image: "ostatni/bea1.jpg", code: "245-140220", ean: "8711231140220", category: "Ostatní" },
   { name: "Krabice Beaphar Care+ transportní<span>HLODAVCI</span>", image: "ostatni/bea2.jpg", code: "245-14103", ean: "8711231141036", category: "Ostatní" },
+  { name: "Probiotika Purina ProPlan Fortiflora<span>PES</span>", image: "ostatni/ffpes.jpg", code: "344-041012", ean: "8445290041012", category: "Ostatní" },
+  { name: "Probiotika Purina ProPlan Fortiflora<span>KOČKA</span>", image: "ostatni/ffkocka.jpg", code: "343-025234", ean: "8445290025234", category: "Ostatní" },
   { name: "Trixie kalciový kámen<span>11cm / 40g</span>", image: "ostatni/kamen.jpg", code: "G12-50541", ean: "4011905505411", category: "Ostatní" },
   { name: "Rostlina JK malá<span>mix druhů 6cm</span>", image: "ostatni/jk.jpg", code: "8101-441269", ean: "8595159441269", category: "Ostatní" },
 
@@ -555,6 +557,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
