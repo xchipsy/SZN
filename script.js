@@ -284,6 +284,7 @@ const items = [
   { name: "Mlsoun čokosy<span>hovězí</span>", image: "pamlsky/hov.jpg", code: "664-25004", ean: "8590467250046", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>lososové</span>", image: "pamlsky/los.jpg", code: "664-250053", ean: "8590467250053", category: "Pamlsky" },
   { name: "Tlapky uzené", image: "pamlsky/tlapky.jpg", code: "664-99453", ean: "8590467994537", category: "Pamlsky" },
+  { name: "Trixie Valentine lízátko<span>kuře 12cm 15g</span>", image: "pamlsky/trixievalentyn.jpg", code: "G14-919942", ean: "4053032658370", category: "Pamlsky" },
   { name: "Trixie Premio Picknicks<span>hovězí 8cm</span>", image: "pamlsky/parho.jpg", code: "G14-2748", ean: "4011905274812", category: "Pamlsky" },
   { name: "Trixie Premio Picknicks<span>jehněčí 8cm</span>", image: "pamlsky/parje.jpg", code: "G14-2755", ean: "4011905275512", category: "Pamlsky" },
   { name: "Trixie rolka plněná<span>se sýrem 12cm</span>", image: "pamlsky/rosy.jpg", code: "G14-2757", ean: "4011905027579", category: "Pamlsky" },
@@ -557,6 +558,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
