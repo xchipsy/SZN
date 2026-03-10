@@ -1,8 +1,8 @@
 const items = [
-  { name: "Africká cichlida<br><br>M", image: "ryby/30200.jpg", code: "LA1-30200", ean: "21302008", category: "Akvaristika"},
-  { name: "Africká cichlida<br><br>L", image: "ryby/30100.jpg", code: "LA1-30100", ean: "21301001", category: "Akvaristika"},
-  { name: "Africká cichlida<br><br>XL", image: "ryby/30300.jpg", code: "LA1-30300", ean: "21303005", category: "Akvaristika"},
-  { name: "Africká cichlida<br><br>XXL<br>ZRUŠENO - DOPRODEJ", image: "ryby/30400.jpg", code: "LA1-30400", ean: "21304002", category: "Akvaristika"},
+  { name: "Africká cichlida<br>M", image: "ryby/30200.jpg", code: "LA1-30200", ean: "21302008", category: "Akvaristika"},
+  { name: "Africká cichlida<br>L", image: "ryby/30100.jpg", code: "LA1-30100", ean: "21301001", category: "Akvaristika"},
+  { name: "Africká cichlida<br>XL", image: "ryby/30300.jpg", code: "LA1-30300", ean: "21303005", category: "Akvaristika"},
+  { name: "Africká cichlida<br>XXL", status: "ZRUŠENO - DOPRODEJ", image: "ryby/30400.jpg", code: "LA1-30400", ean: "21304002", category: "Akvaristika"},
   { name: "Akara hnědá", latin: "Cleithracara maronii", image: "ryby/00100.jpg", code: "LA1-00100", ean: "21001000", category: "Akvaristika"},
   { name: "Akara modrá", latin: "Andinoacara pulcher var. electric blue", image: "ryby/00200.jpg", code: "LA1-00200", ean: "21002007", category: "Akvaristika"},
   { name: "Ampulárka argentinská", latin: "Ampullaria australis", image: "ryby/00400.jpg", code: "LA1-00400", ean: "21004001", category: "Akvaristika"},
@@ -17,7 +17,7 @@ const items = [
   { name: "Cichlida papouščí", latin: "Cichlasoma red parrot", image: "ryby/07800.jpg", code: "LA1-07800", ean: "21078002", category: "Akvaristika"},
   { name: "Cichlidka papouščí", latin: "Apistogramma cacatuoides<br>var. double red", image: "ryby/00910.jpg", code: "LA1-00910", ean: "21009105", category: "Akvaristika"},
   { name: "Cichlidka Ramirezova", latin: "Mikrogeophagus ramirezi", image: "ryby/07600.jpg", code: "LA1-07600", ean: "21076008", category: "Akvaristika"},
-  { name: "Cichlidka ramirezova<br>var. electric blue", latin: "Mikrogeophagus ramirezi", image: "ryby/13330.jpg", code: "LA1-13330", ean: "21133305", category: "Akvaristika"},
+  { name: "Cichlidka ramirezova<br>var. electric blue<br>ZRUŠENO - DOPRODEJ", latin: "Mikrogeophagus ramirezi", image: "ryby/13330.jpg", code: "LA1-13330", ean: "21133305", category: "Akvaristika"},
   { name: "Čichavec perleťový", latin: "Trichogaster leeri", image: "ryby/10800.jpg", code: "LA1-10800", ean: "21108006", category: "Akvaristika"},
   { name: "Čichavec šedý", latin: "Trichogaster trichopterus", image: "ryby/10810.jpg", code: "LA1-10810", ean: "21108105", category: "Akvaristika"},
   { name: "Čichavec šedý<br>XL", latin: "Trichogaster trichopterus", image: "ryby/10820.jpg", code: "LA1-10820", ean: "21108204", category: "Akvaristika"},
@@ -65,7 +65,7 @@ const items = [
   { name: "Neonka obecná", latin: "Paracheirodon innesi", image: "ryby/07700.jpg", code: "LA1-07700", ean: "21077005", category: "Akvaristika"},
   { name: "Neritina natalensis", latin: "Neritina natalensis", image: "ryby/07300.jpg", code: "LA1-07300", ean: "21073007", category: "Akvaristika"},
   { name: "Neritina parallela", latin: "Neritina parallela", image: "ryby/07310.jpg", code: "LA1-07310", ean: "21073106", category: "Akvaristika"},
-  { name: "Pancéřníček zlatopásý XL", latin: "Corydoras aeneus/shultzei", image: "ryby/03310.jpg", code: "LA1-03310", ean: "21033100", category: "Akvaristika"},
+  { name: "Pancéřníček zlatopásý XL", latin: "Corydoras aeneus/shultzei", status: "ZRUŠENO - DOPRODEJ", image: "ryby/03310.jpg", code: "LA1-03310", ean: "21033100", category: "Akvaristika"},
   { name: "Pancéřníček kropenatý", latin: "Hoplosternum thoracatum", image: "ryby/04700.jpg", code: "LA1-04700", ean: "21047008", category: "Akvaristika"},
   { name: "Pancéřníček leopardí", latin: "Corydoras julii", image: "ryby/03400.jpg", code: "LA1-03400", ean: "21034008", category: "Akvaristika"},
   { name: "Pancéřníček malý", latin: "Corydoras pygmaeus", image: "ryby/03610.jpg", code: "LA1-03610", ean: "21036101", category: "Akvaristika"},
@@ -561,6 +561,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
