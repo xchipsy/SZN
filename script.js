@@ -12,7 +12,7 @@ const items = [
   { name: "Bojovnice pestrá - samice COLOUR",  latin: "Betta splendens female",  image: "ryby/02430.jpg",  code: "LA1-02430", ean: "21024306", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samec",  latin: "Betta splendens male",  image: "ryby/02100.jpg",  code: "LA1-02100", ean: "21021008", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samec SPECIAL",  latin: "Betta splendens male",  image: "ryby/02400.jpg",  code: "LA1-02400", ean: "21024009",  category: "Akvaristika"},
-  { name: "Bojovnice pestrá - samec COLOUR",  latin: "Betta splendens male",  image: "ryby/02420.jpg",  code: "LA1-02400", ean: "21024207",  category: "Akvaristika"},
+  { name: "Bojovnice pestrá - samec COLOUR",  latin: "Betta splendens male",  image: "ryby/02420.jpg",  code: "LA1-02420", ean: "21024207",  category: "Akvaristika"},
   { name: "Brotia pagodula", latin: "Brotia pagodula", image: "ryby/00410.jpg", code: "LA1-00410", ean: "21004100", category: "Akvaristika"},
   { name: "Cichlida papouščí", latin: "Cichlasoma red parrot", image: "ryby/07800.jpg", code: "LA1-07800", ean: "21078002", category: "Akvaristika"},
   { name: "Cichlidka papouščí", latin: "Apistogramma cacatuoides<br>var. double red", image: "ryby/00910.jpg", code: "LA1-00910", ean: "21009105", category: "Akvaristika"},
@@ -561,6 +561,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
