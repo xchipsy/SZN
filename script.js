@@ -2,7 +2,7 @@ const items = [
   { name: "Africká cichlida<br><br>M", image: "ryby/30200.jpg", code: "LA1-30200", ean: "21302008", category: "Akvaristika"},
   { name: "Africká cichlida<br><br>L", image: "ryby/30100.jpg", code: "LA1-30100", ean: "21301001", category: "Akvaristika"},
   { name: "Africká cichlida<br><br>XL", image: "ryby/30300.jpg", code: "LA1-30300", ean: "21303005", category: "Akvaristika"},
-  { name: "Africká cichlida<br><br>XXL", image: "ryby/30400.jpg", code: "LA1-30400", ean: "21304002", category: "Akvaristika"},
+  { name: "Africká cichlida<br><br>XXL<br>ZRUŠENO - DOPRODEJ", image: "ryby/30400.jpg", code: "LA1-30400", ean: "21304002", category: "Akvaristika"},
   { name: "Akara hnědá", latin: "Cleithracara maronii", image: "ryby/00100.jpg", code: "LA1-00100", ean: "21001000", category: "Akvaristika"},
   { name: "Akara modrá", latin: "Andinoacara pulcher var. electric blue", image: "ryby/00200.jpg", code: "LA1-00200", ean: "21002007", category: "Akvaristika"},
   { name: "Ampulárka argentinská", latin: "Ampullaria australis", image: "ryby/00400.jpg", code: "LA1-00400", ean: "21004001", category: "Akvaristika"},
@@ -561,6 +561,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
