@@ -34,6 +34,7 @@ const items = [
   { name: "Dánio pruhované-dlouhoploutvé", latin: "Brachydanio rerio", image: "ryby/02800.jpg", code: "LA1-02800", ean: "21028007", category: "Akvaristika"},
   { name: "Drobnoústka pruhovaná", latin: "Nannostomus beckfordi", image: "ryby/07000.jpg", code: "LA1-07000", ean: "21070006", category: "Akvaristika"},
   { name: "Duhounek vidloocasý", latin: "Pseudomugil furcatus", image: "ryby/38000.jpg", code: "LA1-38000", ean: "21380006", category: "Akvaristika"},
+  { name: "Duhovka lososová", latin: "Glossolepis incisus", image: "ryby/03901.jpg", code: "LA1-03901", ean: "21039010", category: "Akvaristika"}, 
   { name: "Filopaludina sp.", latin: "Filopaludina sp.", image: "ryby/13270.jpg", code: "LA1-13270", ean: "21132704", category: "Akvaristika"},
   { name: "Gara rudohnědá", latin: "Garra rufa", image: "ryby/20400.jpg", code: "LA1-20400", ean: "21204005", category: "Akvaristika"},
   { name: "Halančík pestý", latin: "Aphyosemion australe", image: "ryby/13380.jpg", code: "LA1-13380", ean: "21133800", category: "Akvaristika"},
@@ -65,6 +66,7 @@ const items = [
   { name: "Krunýřovec zlatý<br>XL", latin: "Ancistrus sp. gold", image: "ryby/00510.jpg", code: "LA1-00510", ean: "21005107", category: "Akvaristika"},
   { name: "Mečovka mexická - COLOR", latin: "Xiphophorus helleri", image: "ryby/11210.jpg", code: "LA1-11210", ean: "21112102", category: "Akvaristika"},
   { name: "Mečovka mexická", latin: "Xiphophorus helleri", image: "ryby/11300.jpg", code: "LA1-11300", ean: "21113000", category: "Akvaristika"},
+  { name: "Motýlkovec africký", latin: "Pantodon buchholzi", image: "ryby/03660.jpg", code: "LA1-03660", ean: "21036606", category: "Akvaristika"},  
   { name: "Neonka černá", latin: "Hyphessobrycon herbertaxelrodi", image: "ryby/05300.jpg", code: "LA1-05300", ean: "21053009", category: "Akvaristika"},
   { name: "Neonka červená", latin: "Paracheirodon axelrodi", image: "ryby/05600.jpg", code: "LA1-05600", ean: "21056000", category: "Akvaristika"},
   { name: "Neonka modrá", latin: "Paracheirodon simulans", image: "ryby/13150.jpg", code: "LA1-13150", ean: "21131509", category: "Akvaristika"},
@@ -151,6 +153,7 @@ const items = [
   { name: "Tetra konžská", latin: "Phenacogrammus interruptus", image: "ryby/08000.jpg", code: "LA1-08000", ean: "21080005", category: "Akvaristika"},
   { name: "Tetra konžská<br>XL", latin: "Phenacogrammus interruptus", image: "ryby/08010.jpg", code: "LA1-08010", ean: "21080104", category: "Akvaristika", status: "zruseno"},
   { name: "Tetra kosočtverečná", latin: "Hemigrammus caudovittatus", image: "ryby/04400.jpg", code: "LA1-04400", ean: "21044007", category: "Akvaristika"},
+  { name: "Tetra kosočtverečná - ALBÍN", latin: "Hemigrammus caudovittatus albin", image: "ryby/04405.jpg", code: "LA1-04405", ean: "21044052", category: "Akvaristika"},  
   { name: "Tetra královská", latin: "Inpaichthys kerri", image: "ryby/05700.jpg", code: "LA1-05700", ean: "21057007", category: "Akvaristika"},
   { name: "Tetra královská superblue", latin: "Inpaichthys kerri var. superblue", image: "ryby/05710.jpg", code: "LA1-05710", ean: "21057106", category: "Akvaristika"},
   { name: "Tetra krvavá", latin: "Hyphessobrycon eques", image: "ryby/05100.jpg", code: "LA1-05100", ean: "21051005", category: "Akvaristika"},
@@ -584,6 +587,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
