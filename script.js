@@ -15,10 +15,12 @@ const items = [
   { name: "Bojovnice pestrá - samec SPECIAL",  latin: "Betta splendens male",  image: "ryby/02400.jpg",  code: "LA1-02400", ean: "21024009",  category: "Akvaristika"},
   { name: "Bojovnice pestrá - samec COLOUR",  latin: "Betta splendens male",  image: "ryby/02420.jpg",  code: "LA1-02420", ean: "21024207",  category: "Akvaristika"},
   { name: "Brotia pagodula", latin: "Brotia pagodula", image: "ryby/00410.jpg", code: "LA1-00410", ean: "21004100", category: "Akvaristika"},
+  { name: "Brotia herculea", latin: "Brotia herculea", image: "ryby/00440.jpg", code: "LA1-00440", ean: "21004407", category: "Akvaristika"},
   { name: "Cichlida papouščí", latin: "Cichlasoma red parrot", image: "ryby/07800.jpg", code: "LA1-07800", ean: "21078002", category: "Akvaristika"},
   { name: "Cichlidka papouščí", latin: "Apistogramma cacatuoides<br>var. double red", image: "ryby/00910.jpg", code: "LA1-00910", ean: "21009105", category: "Akvaristika"},
   { name: "Cichlidka Ramirezova", latin: "Mikrogeophagus ramirezi", image: "ryby/07600.jpg", code: "LA1-07600", ean: "21076008", category: "Akvaristika"},
   { name: "Cichlidka ramirezova<br>var. electric blue", latin: "Mikrogeophagus ramirezi", image: "ryby/13330.jpg", code: "LA1-13330", ean: "21133305", category: "Akvaristika", status: "zruseno"},
+  { name: "Clithon Sp.", latin: "Clithon Sp.", image: "ryby/00455.jpg", code: "LA1-00455", ean: "21004551", category: "Akvaristika"},
   { name: "Čichavec perleťový", latin: "Trichogaster leeri", image: "ryby/10800.jpg", code: "LA1-10800", ean: "21108006", category: "Akvaristika"},
   { name: "Čichavec šedý", latin: "Trichogaster trichopterus", image: "ryby/10810.jpg", code: "LA1-10810", ean: "21108105", category: "Akvaristika"},
   { name: "Čichavec šedý<br>XL", latin: "Trichogaster trichopterus", image: "ryby/10820.jpg", code: "LA1-10820", ean: "21108204", category: "Akvaristika"},
@@ -575,6 +577,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
