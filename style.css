@@ -204,16 +204,6 @@ img {
   font-style: italic;
   color: red;
   text-align: center;
-  margin: 5px 0;
-  padding: 0 5px;
-  word-break: break-word;
-  line-height: 1.2;
-}
-  text-align: center;
-  margin: 5px 0;
-  padding: 0 5px;
-  word-break: break-word;
-  line-height: 1.2;
 }
 
 /* --- Editace a toggle skladem --- */
@@ -538,5 +528,6 @@ img {
   font-size: 15px;       /* stejně jako item-number */
   color: #333;
 }
+
 
 
