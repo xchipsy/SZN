@@ -199,11 +199,11 @@ img {
 }
 
 .item-status {
-  font-size: 13px;
-  font-weight: bold;
-  font-style: italic;
-  color: red;
-  text-align: center;
+  color:#cc0000;
+  font-weight:bold;
+  text-align:center;
+  margin-top:4px;
+  font-size:13px;
 }
 
 /* --- Editace a toggle skladem --- */
@@ -528,6 +528,7 @@ img {
   font-size: 15px;       /* stejně jako item-number */
   color: #333;
 }
+
 
 
 
