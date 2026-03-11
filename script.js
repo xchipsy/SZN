@@ -3,6 +3,8 @@ const items = [
   { name: "Africká cichlida<br>L", image: "ryby/30100.jpg", code: "LA1-30100", ean: "21301001", category: "Akvaristika"},
   { name: "Africká cichlida<br>XL", image: "ryby/30300.jpg", code: "LA1-30300", ean: "21303005", category: "Akvaristika"},
   { name: "Africká cichlida<br>XXL", image: "ryby/30400.jpg", code: "LA1-30400", ean: "21304002", category: "Akvaristika", status: "zruseno"},
+  { name: "Africká cichlida<br>Tanganika M", image: "ryby/30550.jpg", code: "LA1-30550", ean: "21305504", category: "Akvaristika"},
+  { name: "Africká cichlida<br>Tanganika L", image: "ryby/30520.jpg", code: "LA1-30520", ean: "21305207", category: "Akvaristika"},  
   { name: "Akara hnědá", latin: "Cleithracara maronii", image: "ryby/00100.jpg", code: "LA1-00100", ean: "21001000", category: "Akvaristika"},
   { name: "Akara modrá", latin: "Andinoacara pulcher var. electric blue", image: "ryby/00200.jpg", code: "LA1-00200", ean: "21002007", category: "Akvaristika"},
   { name: "Ampulárka argentinská", latin: "Ampullaria australis", image: "ryby/00400.jpg", code: "LA1-00400", ean: "21004001", category: "Akvaristika"},
@@ -32,6 +34,7 @@ const items = [
   { name: "Čichavec zakrslý", latin: "Colisa lalia", image: "ryby/10840.jpg", code: "LA1-10840", ean: "21108402", category: "Akvaristika"},
   { name: "Čichavec zakrslý<br>COLOR", latin: "Colisa lalia", image: "ryby/10850.jpg", code: "LA1-10850", ean: "21108501", category: "Akvaristika"},
   { name: "Čtverzubec trpasličí", latin: "Carinotetraodon travacoricus", image: "ryby/13060.jpg", code: "LA1-13060", ean: "21130601", category: "Akvaristika"},
+  { name: "Čtverzubec zelený", latin: "Tetraodon nigroviridis", image: "ryby/39030.jpg", code: "LA1-39030", ean: "21390302", category: "Akvaristika"},  
   { name: "Dánio leopardí - dlouhoploutvé", latin: "Brachydanio frankei", image: "ryby/02700.jpg", code: "LA1-02700", ean: "21027000", category: "Akvaristika"},
   { name: "Dánio malabarské", latin: "Devario aequipinnatus", image: "ryby/02820.jpg", code: "LA1-02820", ean: "21028205", category: "Akvaristika"},
   { name: "Dánio myanmarské", latin: "Danio choprai", image: "ryby/02810.jpg", code: "LA1-02810", ean: "21028106", category: "Akvaristika"},
@@ -42,7 +45,9 @@ const items = [
   { name: "Duhovka lososová", latin: "Glossolepis incisus", image: "ryby/03901.jpg", code: "LA1-03901", ean: "21039010", category: "Akvaristika"}, 
   { name: "Filopaludina sp.", latin: "Filopaludina sp.", image: "ryby/13270.jpg", code: "LA1-13270", ean: "21132704", category: "Akvaristika"},
   { name: "Gara rudohnědá", latin: "Garra rufa", image: "ryby/20400.jpg", code: "LA1-20400", ean: "21204005", category: "Akvaristika"},
+  { name: "Gara žlutopruhá", latin: "Garra flavatra", image: "ryby/20405.jpg", code: "LA1-20405", ean: "21204050", category: "Akvaristika"},  
   { name: "Halančík pestý", latin: "Aphyosemion australe", image: "ryby/13380.jpg", code: "LA1-13380", ean: "21133800", category: "Akvaristika"},
+  { name: "Hlaváč smaragdový", latin: "Stipohodon sp. blue", image: "ryby/16090.jpg", code: "LA1-16090", ean: "21160905", category: "Akvaristika"}, 
   { name: "Hlavačka čmeláčí", latin: "Brachygobius xanthozona", image: "ryby/20800.jpg", code: "LA1-20800", ean: "21208003", category: "Akvaristika"},
   { name: "Hrotočelec", latin: "Mastacembelus Sp.", image: "ryby/06250.jpg", code: "LA1-06250", ean: "21062506", category: "Akvaristika"},  
   { name: "Kančík červenooký", latin: "Heros severum", image: "ryby/32000.jpg", code: "LA1-32000", ean: "21320002", category: "Akvaristika"},
@@ -72,6 +77,7 @@ const items = [
   { name: "Krunýřovec velkoploutvý<br>XL", latin: "Pterygoplichtys gibbiceps", image: "ryby/10220.jpg", code: "LA1-10220", ean: "21102202", category: "Akvaristika"},  
   { name: "Krunýřovec zlatý", latin: "Ancistrus sp. gold", image: "ryby/00500.jpg", code: "LA1-00500", ean: "21005008", category: "Akvaristika"},
   { name: "Krunýřovec zlatý<br>XL", latin: "Ancistrus sp. gold", image: "ryby/00510.jpg", code: "LA1-00510", ean: "21005107", category: "Akvaristika"},
+  { name: "Lorikárie", latin: "Loricaria sp.", image: "ryby/21500.jpg", code: "LA1-21500", ean: "21215001", category: "Akvaristika"},  
   { name: "Mečovka mexická", latin: "Xiphophorus helleri", image: "ryby/11300.jpg", code: "LA1-11300", ean: "21113000", category: "Akvaristika"},
   { name: "Mečovka mexická<br>COLOR", latin: "Xiphophorus helleri", image: "ryby/11210.jpg", code: "LA1-11210", ean: "21112102", category: "Akvaristika"},
   { name: "Mečovka mexická<br>SPECIAL", latin: "Xiphophorus helleri", image: "ryby/11350.jpg", code: "LA1-11350", ean: "21113505", category: "Akvaristika"},  
@@ -124,6 +130,7 @@ const items = [
   { name: "Peřovec kukaččí", latin: "Synodontis multipunctatus", image: "ryby/13220.jpg", code: "LA1-13220", ean: "21132209", category: "Akvaristika"},
   { name: "Pestřenec červený", latin: "Pelvicachromis pulcher", image: "ryby/07900.jpg", code: "LA1-07900", ean: "21079009", category: "Akvaristika"},
   { name: "Piraňa Nattererova", latin: "Pygocentrus nattereri", image: "ryby/39000.jpg", code: "LA1-39000", ean: "21390005", category: "Akvaristika"},
+  { name: "Piraňa rostlinožravá", latin: "Colossoma brachypomum", image: "ryby/39100.jpg", code: "LA1-39100", ean: "21391002", category: "Akvaristika"},  
   { name: "Piskořka černá", latin: "Faunus ater", image: "ryby/13260.jpg", code: "LA1-13260", ean: "21132605", category: "Akvaristika"},
   { name: "Plata pestrá", latin: "Xiphophorus variatus", image: "ryby/11610.jpg", code: "LA1-11610", ean: "21116100", category: "Akvaristika"},
   { name: "Plata skvrnitá", latin: "Xiphophorus maculatus", image: "ryby/11500.jpg", code: "LA1-11500", ean: "21115004", category: "Akvaristika"},
@@ -148,6 +155,7 @@ const items = [
   { name: "Sekavka nádherná<br>L", latin: "Chromobotia macracanthus", image: "ryby/02610.jpg", code: "LA1-02610", ean: "21026102", category: "Akvaristika"},
   { name: "Sekavka pákistánská", latin: "Botia lohachata", image: "ryby/02500.jpg", code: "LA1-02500", ean: "21025006", category: "Akvaristika"},
   { name: "Sekernatka mramorová", latin: "Carnegiella strigata", image: "ryby/13570.jpg", code: "LA1-13570", ean: "21135705", category: "Akvaristika"},  
+  { name: "Sevelie pruhovaná", latin: "Sewellia lineolata", image: "ryby/16060.jpg", code: "LA1-16060", ean: "21160608", category: "Akvaristika"},    
   { name: "Skalára amazonská<br>SPECIAL", latin: "Pterophyllum scalare", image: "ryby/09850.jpg", code: "LA1-09850", ean: "21098505", category: "Akvaristika"},
   { name: "Skalára amazonská<br>COLOR", latin: "Pterophyllum scalare var. color", image: "ryby/10120.jpg", code: "LA1-10120", ean: "21101205", category: "Akvaristika"},
   { name: "Skalára amazonská<br>COLOR XL", latin: "Pterophyllum scalare var. color", image: "ryby/10130.jpg", code: "LA1-10130", ean: "21101304", category: "Akvaristika"},
@@ -160,6 +168,8 @@ const items = [
   { name: "Sumec sklovitý", latin: "Kryptopterus bicirrhis", image: "ryby/05800.jpg", code: "LA1-05800", ean: "21058004", category: "Akvaristika"},
   { name: "Surmovka vražedná", latin: "Anentome helena", image: "ryby/00700.jpg", code: "LA1-00700", ean: "21007002", category: "Akvaristika"},
   { name: "Terčovec", latin: "Symphysodon", image: "ryby/30800.jpg", code: "LA1-30800", ean: "21308000", category: "Akvaristika"},
+  { name: "Terčovec<br>M", latin: "Symphysodon", image: "ryby/30808.jpg", code: "LA1-30808", ean: "21308086", category: "Akvaristika"},
+  { name: "Terčovec<br>XL", latin: "Symphysodon", image: "ryby/30890.jpg", code: "LA1-30890", ean: "21308901", category: "Akvaristika"},  
   { name: "Tetra císařská", latin: "Nematobrycon palmeri", image: "ryby/07100.jpg", code: "LA1-07100", ean: "21071003", category: "Akvaristika"},
   { name: "Tetra citrónová", latin: "Hyphessobrycon pulchripinnis", image: "ryby/05400.jpg", code: "LA1-05400", ean: "21054006", category: "Akvaristika"},
   { name: "Tetra černá", latin: "Gymnocorymbus ternetzi", image: "ryby/04000.jpg", code: "LA1-04000", ean: "21040009", category: "Akvaristika"},
@@ -607,6 +617,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
