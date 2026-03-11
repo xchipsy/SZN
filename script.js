@@ -54,7 +54,8 @@ const items = [
   { name: "Krevetka oranžová", latin: "Neocaridina heteropoda<br>var. yellow/orange", image: "ryby/13290.jpg", code: "LA1-13290", ean: "21132902", category: "Akvaristika"},
   { name: "Krevetka račí", latin: "Atyopsis gabonensis", image: "ryby/13283.jpg", code: "LA1-13283", ean: "21132834", category: "Akvaristika"},
   { name: "Krunýřovec červený", latin: "Ancistrus sp. red", image: "ryby/00550.jpg", code: "LA1-00550", ean: "21005503", category: "Akvaristika"},
-  { name: "Krunýřovec guyanský", latin: "Hypostomus plecostomus", image: "ryby/05500.jpg", code: "LA1-05500", ean: "21055003", category: "Akvaristika"},
+  { name: "Krunýřovec guyanský (plochoústý)", latin: "Hypostomus plecostomus", image: "ryby/05500.jpg", code: "LA1-05500", ean: "21055003", category: "Akvaristika"},
+  { name: "Krunýřovec guyanský (plochoústý) XL", latin: "Hypostomus plecostomus", image: "ryby/05510.jpg", code: "LA1-05510", ean: "21055102", category: "Akvaristika"},
   { name: "Krunýřovec jednopruhý", latin: "Otocinclus affinis", image: "ryby/07400.jpg", code: "LA1-07400", ean: "21074004", category: "Akvaristika"},
   { name: "Krunýřovec<br>long fin", latin: "Ancistrus sp. long fin", image: "ryby/00540.jpg", code: "LA1-00540", ean: "21005404", category: "Akvaristika"},
   { name: "Krunýřovec", latin: "Ancistrus sp.", image: "ryby/00600.jpg", code: "LA1-00600", ean: "21006005", category: "Akvaristika"},
@@ -116,6 +117,7 @@ const items = [
   { name: "Přísavka thajská", latin: "Gyrinocheilus aymonieri", image: "ryby/04100.jpg", code: "LA1-04100", ean: "21041006", category: "Akvaristika"},
   { name: "Přísavník hřebenitý", latin: "Gastromyzon punctulatus", image: "ryby/20500.jpg", code: "LA1-20500", ean: "21205002", category: "Akvaristika"},
   { name: "Rájovec dlouhoploutvý", latin: "Macropodus opercularis", image: "ryby/06210.jpg", code: "LA1-06210", ean: "21062100", category: "Akvaristika"},
+  { name: "Rájovec dlouhoploutvý - COLOR", latin: "Macropodus opercularis", image: "ryby/06202.jpg", code: "LA1-06202", ean: "21062025", category: "Akvaristika"},  
   { name: "Razbora espei", latin: "Trigonostigma espei", image: "ryby/10430.jpg", code: "LA1-10430", ean: "21104305", category: "Akvaristika"},
   { name: "Razbora galaxy", latin: "Microrasbora galaxy", image: "ryby/13460.jpg", code: "LA1-13460", ean: "21134609", category: "Akvaristika"},
   { name: "Razbora hengeli", latin: "Trigonostigma hengeli", image: "ryby/10440.jpg", code: "LA1-10440", ean: "21104404", category: "Akvaristika"},
@@ -587,6 +589,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
