@@ -478,14 +478,14 @@ function render() {
     const qrCodeDiv = document.createElement("div");
     qrCodeDiv.className = "qrcode";
 
-    back.appendChild(idCode);
-
-if (item.status === "zruseno") {
+    if (item.status === "zruseno") {
   const statusDiv = document.createElement("div");
   statusDiv.className = "item-status";
   statusDiv.textContent = "ZRUŠENO – DOPRODEJ";
   back.appendChild(statusDiv);
 }
+
+back.appendChild(qrCodeDiv);
 
     card.appendChild(front);
     card.appendChild(back);
@@ -568,6 +568,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
