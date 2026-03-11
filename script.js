@@ -7,6 +7,7 @@ const items = [
   { name: "Akara modrá", latin: "Andinoacara pulcher var. electric blue", image: "ryby/00200.jpg", code: "LA1-00200", ean: "21002007", category: "Akvaristika"},
   { name: "Ampulárka argentinská", latin: "Ampullaria australis", image: "ryby/00400.jpg", code: "LA1-00400", ean: "21004001", category: "Akvaristika"},
   { name: "Ampulárka argentinská<br>COLOR", latin: "Ampullaria australis", image: "ryby/00450.jpg", code: "LA1-00450", ean: "21004506", category: "Akvaristika"},
+  { name: "Bichir senegalský", latin: "Polypterus senegalus", image: "ryby/09890.jpg", code: "LA1-09890", ean: "21098901", category: "Akvaristika"},  
   { name: "Bichirek kalabarský", latin: "Erpetoichthys calabaricus", image: "ryby/13191.jpg", code: "LA1-13191", ean: "21131912", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samice",  latin: "Betta splendens female",  image: "ryby/01900.jpg",  code: "LA1-01900", ean: "21019005", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samice<br>SPECIAL",  latin: "Betta splendens female",  image: "ryby/02410.jpg",  code: "LA1-02410", ean: "21024108", category: "Akvaristika"},
@@ -599,6 +600,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
