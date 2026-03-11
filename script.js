@@ -465,7 +465,7 @@ front.innerHTML = `
   <div class="item-name"><strong>${item.name}</strong></div>
   ${item.orderOnly ? '<div class="item-orderonly">Na objednávku</div>' : ''}
   <div class="item-latin"><em>${item.latin || ''}</em></div>
-  ${item.status === "zruseno" ? '<div class="item-status">ZRUŠENO – DOPRODEJ</div>' : ''}
+  ${item.status === "zruseno" ? '<div class="item-status">ZRUŠENO</div>' : ''}
 `;
 
 const back = document.createElement("div");
@@ -571,6 +571,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
