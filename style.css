@@ -537,11 +537,12 @@ img {
   text-align: center;       /* vycentrovaný text */
   color: #cc0000;           
   font-weight: bold;
-  font-size: 12px;          /* menší písmo, vejde se na jeden řádek */
+  font-size: 11px;          /* menší písmo, vejde se na jeden řádek */
   white-space: nowrap;      /* drží text na jednom řádku */
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 
 
 
