@@ -340,7 +340,7 @@ const items = [
   { name: "Trixie rolka plněná<span>se šunkou 12cm</span>", image: "pamlsky/rosu.jpg", code: "G14-2766", ean: "4011905027661", category: "Pamlsky" },
   { name: "Trixie buvolí míček baseball<span>4,5cm</span>", image: "pamlsky/tbm.jpg", code: "G14-2670", ean: "4011905026701", category: "Pamlsky" },
   { name: "Trixie buvolí tyčinka<span>kroucená 12cm</span>", image: "pamlsky/tbt.jpg", code: "G14-2615", ean: "4011905026152", category: "Pamlsky" },
-  { name: "Trixie buolí bota<span>7cm</span>", image: "pamlsky/bb7.jpg", code: "G14-2629", ean: "4011905026299", category: "Pamlsky" },
+  { name: "Trixie buvolí bota<span>7cm</span>", image: "pamlsky/bb7.jpg", code: "G14-2629", ean: "4011905026299", category: "Pamlsky" },
   { name: "Trixie buvolí bota<span>12cm</span>", image: "pamlsky/bb12.jpg", code: "G14-2630", ean: "4011905026305", category: "Pamlsky" },
   { name: "Trixie buvolí kost<span>32cm</span>", image: "pamlsky/tbk.jpg", code: "G14-2651", ean: "4011905026510", category: "Pamlsky" },
   { name: "Trixie placička z býčích penisů<span> 45g</span>", image: "pamlsky/cake2.jpg", code: "G14-2704", ean: "4011905027043", category: "Pamlsky" },
@@ -631,6 +631,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
