@@ -18,6 +18,7 @@ const items = [
   { name: "Brotia herculea", latin: "Brotia herculea", image: "ryby/00440.jpg", code: "LA1-00440", ean: "21004407", category: "Akvaristika"},
   { name: "Cichlida papouščí", latin: "Cichlasoma red parrot", image: "ryby/07800.jpg", code: "LA1-07800", ean: "21078002", category: "Akvaristika"},
   { name: "Cichlidka papouščí", latin: "Apistogramma cacatuoides<br>var. double red", image: "ryby/00910.jpg", code: "LA1-00910", ean: "21009105", category: "Akvaristika"},
+  { name: "Cichlidka papouščí - SPECIAL", latin: "Apistogramma cacatuoides<br>var. colour", image: "ryby/00920.jpg", code: "LA1-00920", ean: "21009204", category: "Akvaristika"}, 
   { name: "Cichlidka Ramirezova", latin: "Mikrogeophagus ramirezi", image: "ryby/07600.jpg", code: "LA1-07600", ean: "21076008", category: "Akvaristika"},
   { name: "Cichlidka ramirezova<br>var. electric blue", latin: "Mikrogeophagus ramirezi", image: "ryby/13330.jpg", code: "LA1-13330", ean: "21133305", category: "Akvaristika", status: "zruseno"},
   { name: "Clithon Sp.", latin: "Clithon Sp.", image: "ryby/00455.jpg", code: "LA1-00455", ean: "21004551", category: "Akvaristika"},
@@ -55,6 +56,7 @@ const items = [
   { name: "Krunýřovec jednopruhý", latin: "Otocinclus affinis", image: "ryby/07400.jpg", code: "LA1-07400", ean: "21074004", category: "Akvaristika"},
   { name: "Krunýřovec<br>long fin", latin: "Ancistrus sp. long fin", image: "ryby/00540.jpg", code: "LA1-00540", ean: "21005404", category: "Akvaristika"},
   { name: "Krunýřovec", latin: "Ancistrus sp.", image: "ryby/00600.jpg", code: "LA1-00600", ean: "21006005", category: "Akvaristika"},
+  { name: "Krunýřovec - SPECIAL", latin: "Ancistrus sp.", image: "ryby/00650.jpg", code: "LA1-00650", ean: "21006500", category: "Akvaristika"},
   { name: "Krunýřovec<br>L", latin: "Ancistrus sp.", image: "ryby/00520.jpg", code: "LA1-00520", ean: "21005206", category: "Akvaristika"},
   { name: "Krunýřovec<br>XL", latin: "Ancistrus sp.", image: "ryby/00560.jpg", code: "LA1-00560", ean: "21005602", category: "Akvaristika"},
   { name: "Krunýřovec velkoploutvý", latin: "Pterygoplichtys gibbiceps", image: "ryby/10200.jpg", code: "LA1-10200", ean: "21102004", category: "Akvaristika"},
@@ -163,6 +165,7 @@ const items = [
   { name: "Tylomelania sp.", latin: "Tylomelania sp.", image: "ryby/00420.jpg", code: "LA1-00420", ean: "21004209", category: "Akvaristika"},
   { name: "Vrubozubec paví", latin: "Astronotus ocellatus", image: "ryby/01100.jpg", code: "LA1-01100", ean: "21011009", category: "Akvaristika"},
   { name: "Vrubozubec paví<br>XL", latin: "Astronotus ocellatus XL", image: "ryby/01110.jpg", code: "LA1-01110", ean: "21011108", category: "Akvaristika"},
+  { name: "Vrubozubec paví - ALBÍN", latin: "Astronotus ocellatus albino", image: "ryby/01111.jpg", code: "LA1-01111", ean: "21011115", category: "Akvaristika"},
   { name: "Závojnatka čínská", latin: "Carassius auratus", image: "ryby/02900.jpg", code: "LA1-02900", ean: "21029004", category: "Akvaristika"},
   { name: "Závojnatka čínská<br>jezírko", latin: "Carassius auratus", image: "ryby/20100.jpg", code: "LA1-20100", ean: "21201004", category: "Akvaristika"},
   { name: "Závojnatka čínská<br>teleskop", latin: "Carassius auratus var. telescop", image: "ryby/02910.jpg", code: "LA1-02910", ean: "21029103", category: "Akvaristika"},
@@ -577,6 +580,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
