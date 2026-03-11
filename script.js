@@ -41,6 +41,7 @@ const items = [
   { name: "Kančík červenooký", latin: "Heros severum", image: "ryby/32000.jpg", code: "LA1-32000", ean: "21320002", category: "Akvaristika"},
   { name: "Kančík příčnopruhý", latin: "Cichlasoma nigrofasciatum", image: "ryby/03100.jpg", code: "LA1-03100", ean: "21031007", category: "Akvaristika"},
   { name: "Kančík zelenooký", latin: "Cichlasoma sajica", image: "ryby/03200.jpg", code: "LA1-03200", ean: "21032004", category: "Akvaristika"},
+  { name: "Kančík červenohrdlý", latin: "Cichlasoma meeki", image: "ryby/03150.jpg", code: "LA1-03150", ean: "21031502", category: "Akvaristika"},  
   { name: "Kardinálka čínská", latin: "Tanichthys albonubes", image: "ryby/10500.jpg", code: "LA1-10500", ean: "21105005", category: "Akvaristika"},
   { name: "Koi kapr", latin: "Cyprinus carpio carpio", image: "ryby/12100.jpg", code: "LA1-12100", ean: "21121005", category: "Akvaristika"},
   { name: "Koi kapr<br>XXL", latin: "Cyprinus carpio carpio", image: "ryby/12300.jpg", code: "LA1-12300", ean: "21123009", category: "Akvaristika"},
@@ -72,11 +73,14 @@ const items = [
   { name: "Neritina parallela", latin: "Neritina parallela", image: "ryby/07310.jpg", code: "LA1-07310", ean: "21073106", category: "Akvaristika"},
   { name: "Pancéřníček zlatopásý XL", latin: "Corydoras aeneus/shultzei", image: "ryby/03310.jpg", code: "LA1-03310", ean: "21033100", category: "Akvaristika", status: "zruseno"},
   { name: "Pancéřníček kropenatý", latin: "Hoplosternum thoracatum", image: "ryby/04700.jpg", code: "LA1-04700", ean: "21047008", category: "Akvaristika"},
+  { name: "Pancéřníček kropenatý XL", latin: "Hoplosternum thoracatum", image: "ryby/04710.jpg", code: "LA1-04710", ean: "21047107", category: "Akvaristika"},
+  { name: "Pancéřníček kropenatý - ALBÍN", latin: "Hoplosternum thoracatum", image: "ryby/04705.jpg", code: "LA1-04705", ean: "21047053", category: "Akvaristika"},
   { name: "Pancéřníček leopardí", latin: "Corydoras julii", image: "ryby/03400.jpg", code: "LA1-03400", ean: "21034008", category: "Akvaristika"},
   { name: "Pancéřníček malý", latin: "Corydoras pygmaeus", image: "ryby/03610.jpg", code: "LA1-03610", ean: "21036101", category: "Akvaristika"},
   { name: "Pancéřníček panda", latin: "Corydoras panda", image: "ryby/03700.jpg", code: "LA1-03700", ean: "21037009", category: "Akvaristika"},
   { name: "Pancéřníček skvrnitý", latin: "Corydoras paleatus", image: "ryby/03500.jpg", code: "LA1-03500", ean: "21035005", category: "Akvaristika"},
   { name: "Pancéřníček skvrnitý albín", latin: "Corydoras paleatus albin", image: "ryby/03600.jpg", code: "LA1-03600", ean: "21036002", category: "Akvaristika"},
+  { name: "Pancéřníček Sterbův", latin: "Corydoras sterbai", image: "ryby/03355.jpg", code: "LA1-03355", ean: "21033551", category: "Akvaristika"},
   { name: "Pancéřníček venezuelský", latin: "Corydoras black venezuela", image: "ryby/03320.jpg", code: "LA1-03320", ean: "21033209", category: "Akvaristika"},
   { name: "Pancéřníček zelený", latin: "Corydoras aeneus/schultzei", image: "ryby/03300.jpg", code: "LA1-03300", ean: "21033001", category: "Akvaristika"},
   { name: "Pangas spodnooký", latin: "Pangasius sutchi", image: "ryby/07500.jpg", code: "LA1-07500", ean: "21075001", category: "Akvaristika"},
@@ -580,6 +584,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
