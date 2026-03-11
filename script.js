@@ -457,8 +457,8 @@ function render() {
     card.className = "card";
 
     const front = document.createElement("div");
-    front.className = "front";
-    front.innerHTML = `
+front.className = "front";
+front.innerHTML = `
   <button class="toggle-stock ${inStock ? "instock" : "outstock"}">${inStock ? "✓" : "✗"}</button>
   <div class="item-code">${item.code}</div>
   <img src="${item.image}" alt="${item.name}" loading="lazy" />
@@ -468,53 +468,56 @@ function render() {
   ${item.status === "zruseno" ? '<div class="item-status">ZRUŠENO – DOPRODEJ</div>' : ''}
 `;
 
-    const back = document.createElement("div");
-    back.className = "back";
+const back = document.createElement("div");
+back.className = "back";
 
-    const idCode = document.createElement("div");
-    idCode.className = "item-code";
-    idCode.textContent = item.code;
+// --- vždy přidáme ID kód
+const idCode = document.createElement("div");
+idCode.className = "item-code";
+idCode.textContent = item.code;
+back.appendChild(idCode);
 
-    const qrCodeDiv = document.createElement("div");
-    qrCodeDiv.className = "qrcode";
-
-    if (item.status === "zruseno") {
+// --- status pouze u zrušených položek
+if (item.status === "zruseno") {
   const statusDiv = document.createElement("div");
   statusDiv.className = "item-status";
   statusDiv.textContent = "ZRUŠENO – DOPRODEJ";
   back.appendChild(statusDiv);
 }
 
+// --- QR kód nakonec
+const qrCodeDiv = document.createElement("div");
+qrCodeDiv.className = "qrcode";
 back.appendChild(qrCodeDiv);
 
-    card.appendChild(front);
-    card.appendChild(back);
-    itemDiv.appendChild(card);
-    container.appendChild(itemDiv);
+card.appendChild(front);
+card.appendChild(back);
+itemDiv.appendChild(card);
+container.appendChild(itemDiv);
 
-    // --- Klik pro otáčení a generování QR
-    let qrCreated = false;
-    itemDiv.addEventListener("click", e => {
-      if (!e.target.classList.contains("toggle-stock")) {
-        // zavřít ostatní
-        document.querySelectorAll(".item").forEach(el => {
-          if (el !== itemDiv) el.classList.remove("flipped");
-        });
-        itemDiv.classList.toggle("flipped");
-
-        if (!qrCreated && item.ean) {
-          new QRCode(qrCodeDiv, {
-            text: item.ean,
-            width: 150,
-            height: 150,
-            colorDark: "#000000",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-          });
-          qrCreated = true;
-        }
-      }
+// --- Klik pro otáčení a generování QR
+let qrCreated = false;
+itemDiv.addEventListener("click", e => {
+  if (!e.target.classList.contains("toggle-stock")) {
+    // zavřít ostatní
+    document.querySelectorAll(".item").forEach(el => {
+      if (el !== itemDiv) el.classList.remove("flipped");
     });
+    itemDiv.classList.toggle("flipped");
+
+    if (!qrCreated && item.ean) {
+      new QRCode(qrCodeDiv, {
+        text: item.ean,
+        width: 150,
+        height: 150,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+      });
+      qrCreated = true;
+    }
+  }
+});
 
     // --- Toggle skladem
     front.querySelector(".toggle-stock").addEventListener("click", e => {
@@ -568,6 +571,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
