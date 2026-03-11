@@ -400,8 +400,22 @@ const items = [
   { name: "Probiotika Purina ProPlan Fortiflora<span>KOČKA</span>", image: "ostatni/ffkocka.jpg", code: "343-025234", ean: "8445290025234", category: "Ostatní" },
   { name: "Trixie kalciový kámen<span>11cm / 40g</span>", image: "ostatni/kamen.jpg", code: "G12-50541", ean: "4011905505411", category: "Ostatní" },
   { name: "Rostlina JK malá<span>mix druhů 6cm</span>", image: "ostatni/jk.jpg", code: "8101-441269", ean: "8595159441269", category: "Ostatní" },
+  { name: "Cyklop + astaxantin<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49951", ean: "4035358199516", category: "Ostatní" },
+  { name: "Dafnie<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49963", ean: "4038358199639", category: "Ostatní" },
+  { name: "Discus<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49916", ean: "4038358199165", category: "Ostatní" },
+  { name: "Gammarus<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49995", ean: "4038358199950", category: "Ostatní" },
+  { name: "Kombo 4<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-40003", ean: "4038358200038", category: "Ostatní" },
+  { name: "Kombo 6<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-40000", ean: "4038358100007", category: "Ostatní" },
+  { name: "Malawi mix<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49997", ean: "4038358199974", category: "Ostatní" },
+  { name: "Mix pro želvy<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49996", ean: "4038358199967", category: "Ostatní" },
+  { name: "Nítěnky<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49992", ean: "4038358199929", category: "Ostatní" },
+  { name: "Patentky<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49968", ean: "4038358199684", category: "Ostatní" },
+  { name: "Patentky XL<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-40038", ean: "4038358199752", category: "Ostatní" },
+  { name: "Rybičky<span>6-8cm 70g</span>", image: "ostatni/mraz.jpg", code: "0211-42026", ean: "4038358220265", category: "Ostatní" },
+  { name: "Tanganika<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49998", ean: "4038358199981", category: "Ostatní" },
+  
 
- { name: "Braktické rybičky<span>6-8cm 70g</span>", image: "ostatni/mraz.jpg", code: "0211-42026", ean: "4038358220265", category: "Ostatní" },
+ 
 
 
 ];
@@ -617,6 +631,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
