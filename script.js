@@ -2,7 +2,7 @@ const items = [
   { name: "Africká cichlida<br>M", image: "ryby/30200.jpg", code: "LA1-30200", ean: "21302008", category: "Akvaristika"},
   { name: "Africká cichlida<br>L", image: "ryby/30100.jpg", code: "LA1-30100", ean: "21301001", category: "Akvaristika"},
   { name: "Africká cichlida<br>XL", image: "ryby/30300.jpg", code: "LA1-30300", ean: "21303005", category: "Akvaristika"},
-  { name: "Africká cichlida<br>XXL", image: "ryby/30400.jpg", code: "LA1-30400", ean: "21304002", category: "Akvaristika"},
+  { name: "Africká cichlida<br>XXL", image: "ryby/30400.jpg", code: "LA1-30400", ean: "21304002", category: "Akvaristika", status: "zruseno"},
   { name: "Akara hnědá", latin: "Cleithracara maronii", image: "ryby/00100.jpg", code: "LA1-00100", ean: "21001000", category: "Akvaristika"},
   { name: "Akara modrá", latin: "Andinoacara pulcher var. electric blue", image: "ryby/00200.jpg", code: "LA1-00200", ean: "21002007", category: "Akvaristika"},
   { name: "Ampulárka argentinská", latin: "Ampullaria australis", image: "ryby/00400.jpg", code: "LA1-00400", ean: "21004001", category: "Akvaristika"},
@@ -17,7 +17,7 @@ const items = [
   { name: "Cichlida papouščí", latin: "Cichlasoma red parrot", image: "ryby/07800.jpg", code: "LA1-07800", ean: "21078002", category: "Akvaristika"},
   { name: "Cichlidka papouščí", latin: "Apistogramma cacatuoides<br>var. double red", image: "ryby/00910.jpg", code: "LA1-00910", ean: "21009105", category: "Akvaristika"},
   { name: "Cichlidka Ramirezova", latin: "Mikrogeophagus ramirezi", image: "ryby/07600.jpg", code: "LA1-07600", ean: "21076008", category: "Akvaristika"},
-  { name: "Cichlidka ramirezova<br>var. electric blue<br>ZRUŠENO - DOPRODEJ", latin: "Mikrogeophagus ramirezi", image: "ryby/13330.jpg", code: "LA1-13330", ean: "21133305", category: "Akvaristika"},
+  { name: "Cichlidka ramirezova<br>var. electric blue", latin: "Mikrogeophagus ramirezi", image: "ryby/13330.jpg", code: "LA1-13330", ean: "21133305", category: "Akvaristika", status: "zruseno"},
   { name: "Čichavec perleťový", latin: "Trichogaster leeri", image: "ryby/10800.jpg", code: "LA1-10800", ean: "21108006", category: "Akvaristika"},
   { name: "Čichavec šedý", latin: "Trichogaster trichopterus", image: "ryby/10810.jpg", code: "LA1-10810", ean: "21108105", category: "Akvaristika"},
   { name: "Čichavec šedý<br>XL", latin: "Trichogaster trichopterus", image: "ryby/10820.jpg", code: "LA1-10820", ean: "21108204", category: "Akvaristika"},
@@ -40,8 +40,8 @@ const items = [
   { name: "Kardinálka čínská", latin: "Tanichthys albonubes", image: "ryby/10500.jpg", code: "LA1-10500", ean: "21105005", category: "Akvaristika"},
   { name: "Koi kapr", latin: "Cyprinus carpio carpio", image: "ryby/12100.jpg", code: "LA1-12100", ean: "21121005", category: "Akvaristika"},
   { name: "Koi kapr<br>XXL", latin: "Cyprinus carpio carpio", image: "ryby/12300.jpg", code: "LA1-12300", ean: "21123009", category: "Akvaristika"},
-  { name: "Krevetka<br>mix de luxe", latin: "Neocaridina mix de luxe", image: "ryby/13280.jpg", code: "LA1-13280", ean: "21132803", category: "Akvaristika"},
-  { name: "Krevetka červená", latin: "Neocaridina red", image: "ryby/07200.jpg", code: "LA1-07200", ean: "21072000", category: "Akvaristika"},
+  { name: "Krevetka<br>mix de luxe", latin: "Neocaridina mix de luxe", image: "ryby/13280.jpg", code: "LA1-13280", ean: "21132803", category: "Akvaristika", status: "zruseno"},
+  { name: "Krevetka červená", latin: "Neocaridina red", image: "ryby/07200.jpg", code: "LA1-07200", ean: "21072000", category: "Akvaristika", status: "zruseno"},
   { name: "Krevetka", latin: "Neocaridina heteropoda<br>var. green/blue", image: "ryby/13288.jpg", code: "LA1-13288", ean: "21132889", category: "Akvaristika"},
   { name: "Krevetka", latin: "Neocaridina heteropoda<br>var. sakura", image: "ryby/13289.jpg", code: "LA1-13289", ean: "21132896", category: "Akvaristika"},
   { name: "Krevetka japonská", latin: "Caridina japonica", image: "ryby/13285.jpg", code: "LA1-13285", ean: "21132858", category: "Akvaristika"},
@@ -63,9 +63,9 @@ const items = [
   { name: "Neonka červená", latin: "Paracheirodon axelrodi", image: "ryby/05600.jpg", code: "LA1-05600", ean: "21056000", category: "Akvaristika"},
   { name: "Neonka modrá", latin: "Paracheirodon simulans", image: "ryby/13150.jpg", code: "LA1-13150", ean: "21131509", category: "Akvaristika"},
   { name: "Neonka obecná", latin: "Paracheirodon innesi", image: "ryby/07700.jpg", code: "LA1-07700", ean: "21077005", category: "Akvaristika"},
-  { name: "Neritina natalensis", latin: "Neritina natalensis", image: "ryby/07300.jpg", code: "LA1-07300", ean: "21073007", category: "Akvaristika"},
+  { name: "Neritina natalensis", latin: "Neritina natalensis", image: "ryby/07300.jpg", code: "LA1-07300", ean: "21073007", category: "Akvaristika", status: "zruseno"},
   { name: "Neritina parallela", latin: "Neritina parallela", image: "ryby/07310.jpg", code: "LA1-07310", ean: "21073106", category: "Akvaristika"},
-  { name: "Pancéřníček zlatopásý XL", latin: "Corydoras aeneus/shultzei", status: "ZRUŠENO - DOPRODEJ", image: "ryby/03310.jpg", code: "LA1-03310", ean: "21033100", category: "Akvaristika"},
+  { name: "Pancéřníček zlatopásý XL", latin: "Corydoras aeneus/shultzei", image: "ryby/03310.jpg", code: "LA1-03310", ean: "21033100", category: "Akvaristika", status: "zruseno"},
   { name: "Pancéřníček kropenatý", latin: "Hoplosternum thoracatum", image: "ryby/04700.jpg", code: "LA1-04700", ean: "21047008", category: "Akvaristika"},
   { name: "Pancéřníček leopardí", latin: "Corydoras julii", image: "ryby/03400.jpg", code: "LA1-03400", ean: "21034008", category: "Akvaristika"},
   { name: "Pancéřníček malý", latin: "Corydoras pygmaeus", image: "ryby/03610.jpg", code: "LA1-03610", ean: "21036101", category: "Akvaristika"},
@@ -101,7 +101,7 @@ const items = [
   { name: "Plata pestrá", latin: "Xiphophorus variatus", image: "ryby/11610.jpg", code: "LA1-11610", ean: "21116100", category: "Akvaristika"},
   { name: "Plata skvrnitá", latin: "Xiphophorus maculatus", image: "ryby/11500.jpg", code: "LA1-11500", ean: "21115004", category: "Akvaristika"},
   { name: "Plata skvrnitá - COLOR", latin: "Xiphophorus maculatus color", image: "ryby/11600.jpg", code: "LA1-11600", ean: "21116001", category: "Akvaristika"},
-  { name: "Plata skvrnitá<br>var. korálová", latin: "Xiphophorus maculatus var. coral", image: "ryby/13490.jpg", code: "LA1-13490", ean: "21134906", category: "Akvaristika"},
+  { name: "Plata skvrnitá<br>var. korálová", latin: "Xiphophorus maculatus var. coral", image: "ryby/13490.jpg", code: "LA1-13490", ean: "21134906", category: "Akvaristika", status: "zruseno"},
   { name: "Přísavka thajská", latin: "Gyrinocheilus aymonieri", image: "ryby/04100.jpg", code: "LA1-04100", ean: "21041006", category: "Akvaristika"},
   { name: "Přísavník hřebenitý", latin: "Gastromyzon punctulatus", image: "ryby/20500.jpg", code: "LA1-20500", ean: "21205002", category: "Akvaristika"},
   { name: "Rájovec dlouhoploutvý", latin: "Macropodus opercularis", image: "ryby/06210.jpg", code: "LA1-06210", ean: "21062100", category: "Akvaristika"},
@@ -109,7 +109,7 @@ const items = [
   { name: "Razbora galaxy", latin: "Microrasbora galaxy", image: "ryby/13460.jpg", code: "LA1-13460", ean: "21134609", category: "Akvaristika"},
   { name: "Razbora hengeli", latin: "Trigonostigma hengeli", image: "ryby/10440.jpg", code: "LA1-10440", ean: "21104404", category: "Akvaristika"},
   { name: "Razbora klínoskvrnná", latin: "Rasbora heteromorpha", image: "ryby/10400.jpg", code: "LA1-10400", ean: "21104008", category: "Akvaristika"},
-  { name: "Razbora klínoskvrnná<br>černá", latin: "Rasbora heteromorpha black", image: "ryby/10410.jpg", code: "LA1-10410", ean: "21104107", category: "Akvaristika"},
+  { name: "Razbora klínoskvrnná<br>černá", latin: "Rasbora heteromorpha black", image: "ryby/10410.jpg", code: "LA1-10410", ean: "21104107", category: "Akvaristika", status: "zruseno"},
   { name: "Razbora ranongská", latin: "Rasbora kubotai", image: "ryby/13470.jpg", code: "LA1-13470", ean: "21134708", category: "Akvaristika"},
   { name: "Razborka bornejská", latin: "Rasbora brigitæ", image: "ryby/13440.jpg", code: "LA1-13440", ean: "21134401", category: "Akvaristika"},
   { name: "Razborka trpasličí", latin: "Rasbora maculata", image: "ryby/10420.jpg", code: "LA1-10420", ean: "21104206", category: "Akvaristika"},
@@ -119,9 +119,9 @@ const items = [
   { name: "Sekavka pákistánská", latin: "Botia lohachata", image: "ryby/02500.jpg", code: "LA1-02500", ean: "21025006", category: "Akvaristika"},
   { name: "Skalára amazonská - COLOR", latin: "Pterophyllum scalare var. color", image: "ryby/10120.jpg", code: "LA1-10120", ean: "21101205", category: "Akvaristika"},
   { name: "Skalára amazonská<br>M", latin: "Pterophyllum scalar", image: "ryby/10000.jpg", code: "LA1-10000", ean: "21100000", category: "Akvaristika"},
-  { name: "Skalára amazonská<br>L", latin: "Pterophyllum scalar", image: "ryby/09900.jpg", code: "LA1-09900", ean: "21099007", category: "Akvaristika"},
+  { name: "Skalára amazonská<br>L", latin: "Pterophyllum scalar", image: "ryby/09900.jpg", code: "LA1-09900", ean: "21099007", category: "Akvaristika", status: "zruseno"},
   { name: "Skalára amazonská<br>XL", latin: "Pterophyllum scalar", image: "ryby/10100.jpg", code: "LA1-10100", ean: "21101007", category: "Akvaristika"},
-  { name: "Skalára amazonská<br>XXL", latin: "Pterophyllum scalar", image: "ryby/09800.jpg", code: "LA1-09800", ean: "21098000", category: "Akvaristika"},
+  { name: "Skalára amazonská<br>XXL", latin: "Pterophyllum scalar", image: "ryby/09800.jpg", code: "LA1-09800", ean: "21098000", category: "Akvaristika", status: "zruseno"},
   { name: "Skalára vysoká", latin: "Pterophyllum altum", image: "ryby/10110.jpg", code: "LA1-10110", ean: "21101106", category: "Akvaristika"},
   { name: "Sumec sklovitý", latin: "Kryptopterus bicirrhis", image: "ryby/05800.jpg", code: "LA1-05800", ean: "21058004", category: "Akvaristika"},
   { name: "Surmovka vražedná", latin: "Anentome helena", image: "ryby/00700.jpg", code: "LA1-00700", ean: "21007002", category: "Akvaristika"},
@@ -137,7 +137,7 @@ const items = [
   { name: "Tetra fantomová (černá)", latin: "Megalamphodus megalopterus", image: "ryby/06400.jpg", code: "LA1-06400", ean: "21064005", category: "Akvaristika"},
   { name: "Tetra Fredcochuova", latin: "Boehlkea fredcochui", image: "ryby/13340.jpg", code: "LA1-13340", ean: "21133404", category: "Akvaristika"},
   { name: "Tetra konžská", latin: "Phenacogrammus interruptus", image: "ryby/08000.jpg", code: "LA1-08000", ean: "21080005", category: "Akvaristika"},
-  { name: "Tetra konžská<br>XL", latin: "Phenacogrammus interruptus", image: "ryby/08010.jpg", code: "LA1-08010", ean: "21080104", category: "Akvaristika"},
+  { name: "Tetra konžská<br>XL", latin: "Phenacogrammus interruptus", image: "ryby/08010.jpg", code: "LA1-08010", ean: "21080104", category: "Akvaristika", status: "zruseno"},
   { name: "Tetra kosočtverečná", latin: "Hemigrammus caudovittatus", image: "ryby/04400.jpg", code: "LA1-04400", ean: "21044007", category: "Akvaristika"},
   { name: "Tetra královská", latin: "Inpaichthys kerri", image: "ryby/05700.jpg", code: "LA1-05700", ean: "21057007", category: "Akvaristika"},
   { name: "Tetra královská superblue", latin: "Inpaichthys kerri var. superblue", image: "ryby/05710.jpg", code: "LA1-05710", ean: "21057106", category: "Akvaristika"},
@@ -459,13 +459,14 @@ function render() {
     const front = document.createElement("div");
     front.className = "front";
     front.innerHTML = `
-      <button class="toggle-stock ${inStock ? "instock" : "outstock"}">${inStock ? "✓" : "✗"}</button>
-      <div class="item-code">${item.code}</div>
-      <img src="${item.image}" alt="${item.name}" loading="lazy" />
-      <div class="item-name"><strong>${item.name}</strong></div>
-      ${item.orderOnly ? '<div class="item-orderonly">Na objednávku</div>' : ''}
-      <div class="item-latin"><em>${item.latin || ''}</em></div>
-    `;
+  <button class="toggle-stock ${inStock ? "instock" : "outstock"}">${inStock ? "✓" : "✗"}</button>
+  <div class="item-code">${item.code}</div>
+  <img src="${item.image}" alt="${item.name}" loading="lazy" />
+  <div class="item-name"><strong>${item.name}</strong></div>
+  ${item.orderOnly ? '<div class="item-orderonly">Na objednávku</div>' : ''}
+  <div class="item-latin"><em>${item.latin || ''}</em></div>
+  ${item.status === "zruseno" ? '<div class="item-status">ZRUŠENO – DOPRODEJ</div>' : ''}
+`;
 
     const back = document.createElement("div");
     back.className = "back";
@@ -478,7 +479,13 @@ function render() {
     qrCodeDiv.className = "qrcode";
 
     back.appendChild(idCode);
-    back.appendChild(qrCodeDiv);
+
+if (item.status === "zruseno") {
+  const statusDiv = document.createElement("div");
+  statusDiv.className = "item-status";
+  statusDiv.textContent = "ZRUŠENO – DOPRODEJ";
+  back.appendChild(statusDiv);
+}
 
     card.appendChild(front);
     card.appendChild(back);
@@ -561,6 +568,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
