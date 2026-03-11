@@ -17,9 +17,11 @@ const items = [
   { name: "Brotia pagodula", latin: "Brotia pagodula", image: "ryby/00410.jpg", code: "LA1-00410", ean: "21004100", category: "Akvaristika"},
   { name: "Brotia herculea", latin: "Brotia herculea", image: "ryby/00440.jpg", code: "LA1-00440", ean: "21004407", category: "Akvaristika"},
   { name: "Cichlida papouščí", latin: "Cichlasoma red parrot", image: "ryby/07800.jpg", code: "LA1-07800", ean: "21078002", category: "Akvaristika"},
+  { name: "Cichlida papouščí - COLOUR", latin: "Cichlasoma red parrot", image: "ryby/07810.jpg", code: "LA1-07810", ean: "21078101", category: "Akvaristika"},  
   { name: "Cichlidka papouščí", latin: "Apistogramma cacatuoides<br>var. double red", image: "ryby/00910.jpg", code: "LA1-00910", ean: "21009105", category: "Akvaristika"},
   { name: "Cichlidka papouščí - SPECIAL", latin: "Apistogramma cacatuoides<br>var. colour", image: "ryby/00920.jpg", code: "LA1-00920", ean: "21009204", category: "Akvaristika"}, 
   { name: "Cichlidka Ramirezova", latin: "Mikrogeophagus ramirezi", image: "ryby/07600.jpg", code: "LA1-07600", ean: "21076008", category: "Akvaristika"},
+  { name: "Cichlidka Ramirezova - COLOUR", latin: "Mikrogeophagus ramirezi", image: "ryby/07650.jpg", code: "LA1-07650", ean: "21076503", category: "Akvaristika"},  
   { name: "Cichlidka ramirezova<br>var. electric blue", latin: "Mikrogeophagus ramirezi", image: "ryby/13330.jpg", code: "LA1-13330", ean: "21133305", category: "Akvaristika", status: "zruseno"},
   { name: "Clithon Sp.", latin: "Clithon Sp.", image: "ryby/00455.jpg", code: "LA1-00455", ean: "21004551", category: "Akvaristika"},
   { name: "Čichavec perleťový", latin: "Trichogaster leeri", image: "ryby/10800.jpg", code: "LA1-10800", ean: "21108006", category: "Akvaristika"},
@@ -34,11 +36,13 @@ const items = [
   { name: "Dánio pruhované-dlouhoploutvé", latin: "Brachydanio rerio", image: "ryby/02800.jpg", code: "LA1-02800", ean: "21028007", category: "Akvaristika"},
   { name: "Drobnoústka pruhovaná", latin: "Nannostomus beckfordi", image: "ryby/07000.jpg", code: "LA1-07000", ean: "21070006", category: "Akvaristika"},
   { name: "Duhounek vidloocasý", latin: "Pseudomugil furcatus", image: "ryby/38000.jpg", code: "LA1-38000", ean: "21380006", category: "Akvaristika"},
+  { name: "Duhovka Boesemanova", latin: "Melanotaenia boesemani", image: "ryby/06550.jpg", code: "LA1-06550", ean: "21065507", category: "Akvaristika"},   
   { name: "Duhovka lososová", latin: "Glossolepis incisus", image: "ryby/03901.jpg", code: "LA1-03901", ean: "21039010", category: "Akvaristika"}, 
   { name: "Filopaludina sp.", latin: "Filopaludina sp.", image: "ryby/13270.jpg", code: "LA1-13270", ean: "21132704", category: "Akvaristika"},
   { name: "Gara rudohnědá", latin: "Garra rufa", image: "ryby/20400.jpg", code: "LA1-20400", ean: "21204005", category: "Akvaristika"},
   { name: "Halančík pestý", latin: "Aphyosemion australe", image: "ryby/13380.jpg", code: "LA1-13380", ean: "21133800", category: "Akvaristika"},
   { name: "Hlavačka čmeláčí", latin: "Brachygobius xanthozona", image: "ryby/20800.jpg", code: "LA1-20800", ean: "21208003", category: "Akvaristika"},
+  { name: "Hrotočelec", latin: "Mastacembelus Sp.", image: "ryby/06250.jpg", code: "LA1-06250", ean: "21062506", category: "Akvaristika"},  
   { name: "Kančík červenooký", latin: "Heros severum", image: "ryby/32000.jpg", code: "LA1-32000", ean: "21320002", category: "Akvaristika"},
   { name: "Kančík příčnopruhý", latin: "Cichlasoma nigrofasciatum", image: "ryby/03100.jpg", code: "LA1-03100", ean: "21031007", category: "Akvaristika"},
   { name: "Kančík zelenooký", latin: "Cichlasoma sajica", image: "ryby/03200.jpg", code: "LA1-03200", ean: "21032004", category: "Akvaristika"},
@@ -589,6 +593,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
