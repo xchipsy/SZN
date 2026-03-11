@@ -147,7 +147,7 @@ const items = [
   { name: "Razbora klínoskvrnná<br>COLOR", latin: "Rasbora heteromorpha", image: "ryby/10450.jpg", code: "LA1-10450", ean: "21104404", category: "Akvaristika"},  
   { name: "Razbora klínoskvrnná<br>černá", latin: "Rasbora heteromorpha black", image: "ryby/10410.jpg", code: "LA1-10410", ean: "21104107", category: "Akvaristika", status: "zruseno"},
   { name: "Razbora ranongská", latin: "Rasbora kubotai", image: "ryby/13470.jpg", code: "LA1-13470", ean: "21134708", category: "Akvaristika"},
-  { name: "Razborka bbarmská", latin: "Microrasbora erythromicron", image: "ryby/10520.jpg", code: "LA1-10520", ean: "21105203", category: "Akvaristika"},  
+  { name: "Razborka barmská", latin: "Microrasbora erythromicron", image: "ryby/10520.jpg", code: "LA1-10520", ean: "21105203", category: "Akvaristika"},  
   { name: "Razborka bornejská", latin: "Rasbora brigitæ", image: "ryby/13440.jpg", code: "LA1-13440", ean: "21134401", category: "Akvaristika"},
   { name: "Razborka trpasličí", latin: "Rasbora maculata", image: "ryby/10420.jpg", code: "LA1-10420", ean: "21104206", category: "Akvaristika"},
   { name: "Sekavec příčnopásý", latin: "Pangio kuhli kuhli", image: "ryby/36000.jpg", code: "LA1-36000", ean: "21360008", category: "Akvaristika"},
@@ -617,6 +617,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
