@@ -77,7 +77,10 @@ const items = [
   { name: "Neonka modrá", latin: "Paracheirodon simulans", image: "ryby/13150.jpg", code: "LA1-13150", ean: "21131509", category: "Akvaristika"},
   { name: "Neonka obecná", latin: "Paracheirodon innesi", image: "ryby/07700.jpg", code: "LA1-07700", ean: "21077005", category: "Akvaristika"},
   { name: "Neritina natalensis", latin: "Neritina natalensis", image: "ryby/07300.jpg", code: "LA1-07300", ean: "21073007", category: "Akvaristika", status: "zruseno"},
+  { name: "Neritina Black helmet", latin: "Neritina Black helmet", image: "ryby/07320.jpg", code: "LA1-07320", ean: "21073205", category: "Akvaristika"},  
   { name: "Neritina parallela", latin: "Neritina parallela", image: "ryby/07310.jpg", code: "LA1-07310", ean: "21073106", category: "Akvaristika"},
+  { name: "Neritina parallela - COLOR", latin: "Neritina parallela", image: "ryby/07330.jpg", code: "LA1-07330", ean: "21073304", category: "Akvaristika"},  
+  { name: "Nožovec velký", latin: "Notopterus chitala", image: "ryby/07550.jpg", code: "LA1-07550", ean: "21075506", category: "Akvaristika"},  
   { name: "Pancéřníček zlatopásý XL", latin: "Corydoras aeneus/shultzei", image: "ryby/03310.jpg", code: "LA1-03310", ean: "21033100", category: "Akvaristika", status: "zruseno"},
   { name: "Pancéřníček kropenatý", latin: "Hoplosternum thoracatum", image: "ryby/04700.jpg", code: "LA1-04700", ean: "21047008", category: "Akvaristika"},
   { name: "Pancéřníček kropenatý XL", latin: "Hoplosternum thoracatum", image: "ryby/04710.jpg", code: "LA1-04710", ean: "21047107", category: "Akvaristika"},
@@ -593,6 +596,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
