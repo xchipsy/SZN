@@ -6,6 +6,7 @@ const items = [
   { name: "Akara hnědá", latin: "Cleithracara maronii", image: "ryby/00100.jpg", code: "LA1-00100", ean: "21001000", category: "Akvaristika"},
   { name: "Akara modrá", latin: "Andinoacara pulcher var. electric blue", image: "ryby/00200.jpg", code: "LA1-00200", ean: "21002007", category: "Akvaristika"},
   { name: "Ampulárka argentinská", latin: "Ampullaria australis", image: "ryby/00400.jpg", code: "LA1-00400", ean: "21004001", category: "Akvaristika"},
+  { name: "Ampulárka argentinská - COLOUR", latin: "Ampullaria australis", image: "ryby/00450.jpg", code: "LA1-00450", ean: "21004506", category: "Akvaristika"},
   { name: "Bichirek kalabarský", latin: "Erpetoichthys calabaricus", image: "ryby/13191.jpg", code: "LA1-13191", ean: "21131912", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samice",  latin: "Betta splendens female",  image: "ryby/01900.jpg",  code: "LA1-01900", ean: "21019005", category: "Akvaristika"},
   { name: "Bojovnice pestrá - samice SPECIAL",  latin: "Betta splendens female",  image: "ryby/02410.jpg",  code: "LA1-02410", ean: "21024108", category: "Akvaristika"},
@@ -117,12 +118,15 @@ const items = [
   { name: "Sekavka nádherná", latin: "Chromobotia macracanthus", image: "ryby/02600.jpg", code: "LA1-02600", ean: "21026003", category: "Akvaristika"},
   { name: "Sekavka nádherná<br>L", latin: "Chromobotia macracanthus", image: "ryby/02610.jpg", code: "LA1-02610", ean: "21026102", category: "Akvaristika"},
   { name: "Sekavka pákistánská", latin: "Botia lohachata", image: "ryby/02500.jpg", code: "LA1-02500", ean: "21025006", category: "Akvaristika"},
+  { name: "Skalára amazonská - SPECIAL", latin: "Pterophyllum scalare", image: "ryby/09850.jpg", code: "LA1-09850", ean: "21098505", category: "Akvaristika"},
   { name: "Skalára amazonská - COLOR", latin: "Pterophyllum scalare var. color", image: "ryby/10120.jpg", code: "LA1-10120", ean: "21101205", category: "Akvaristika"},
+  { name: "Skalára amazonská XL - COLOR", latin: "Pterophyllum scalare var. color", image: "ryby/10130.jpg", code: "LA1-10130", ean: "21101304", category: "Akvaristika"},
   { name: "Skalára amazonská<br>M", latin: "Pterophyllum scalar", image: "ryby/10000.jpg", code: "LA1-10000", ean: "21100000", category: "Akvaristika"},
   { name: "Skalára amazonská<br>L", latin: "Pterophyllum scalar", image: "ryby/09900.jpg", code: "LA1-09900", ean: "21099007", category: "Akvaristika", status: "zruseno"},
   { name: "Skalára amazonská<br>XL", latin: "Pterophyllum scalar", image: "ryby/10100.jpg", code: "LA1-10100", ean: "21101007", category: "Akvaristika"},
   { name: "Skalára amazonská<br>XXL", latin: "Pterophyllum scalar", image: "ryby/09800.jpg", code: "LA1-09800", ean: "21098000", category: "Akvaristika", status: "zruseno"},
   { name: "Skalára vysoká", latin: "Pterophyllum altum", image: "ryby/10110.jpg", code: "LA1-10110", ean: "21101106", category: "Akvaristika"},
+  { name: "Skalára vysoká XL", latin: "Pterophyllum altum", image: "ryby/10150.jpg", code: "LA1-10150", ean: "21101502", category: "Akvaristika"},
   { name: "Sumec sklovitý", latin: "Kryptopterus bicirrhis", image: "ryby/05800.jpg", code: "LA1-05800", ean: "21058004", category: "Akvaristika"},
   { name: "Surmovka vražedná", latin: "Anentome helena", image: "ryby/00700.jpg", code: "LA1-00700", ean: "21007002", category: "Akvaristika"},
   { name: "Terčovec", latin: "Symphysodon", image: "ryby/30800.jpg", code: "LA1-30800", ean: "21308000", category: "Akvaristika"},
@@ -571,6 +575,7 @@ window.addEventListener("scroll", () => {
 });
 
 scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
 
 
 
