@@ -391,6 +391,7 @@ const items = [
   { name: "Taška látková<span>Superzoo</span>", image: "ostatni/tas3.jpg", code: "REK-S019", ean: "2001509999213", category: "Ostatní" },
   { name: "Krabička Superzoo<span>MALÁ</span>", image: "ostatni/sz1.jpg", code: "REK-S027", ean: "2001509990272", category: "Ostatní" },
   { name: "Krabička Superzoo<span>VELKÁ</span>", image: "ostatni/sz2.jpg", code: "REK-S028", ean: "2001509990289", category: "Ostatní" },
+  { name: "Krabička s víčkem na hmyz<span>perforovaná</span>", image: "ostatni/vanicka.jpg", code: "RM-S125", ean: "2001609991254", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>PTÁCI</span>", image: "ostatni/v1.jpg", code: "492-91461", ean: "4008239914613", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>KŘEČEK</span>", image: "ostatni/v2.jpg", code: "495-95032", ean: "4008239629913", category: "Ostatní" },
   { name: "Krabice Vitakraft transportní<span>MORČE / KRÁLÍK</span>", image: "ostatni/v3.jpg", code: "495-95033", ean: "4008239950338", category: "Ostatní" },
