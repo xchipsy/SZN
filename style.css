@@ -536,16 +536,18 @@ img {
 }
 
 .logo-wrapper {
+  width: 70px;
+  height: 70px;
   perspective: 1000px;
-  display: inline-block;
 }
 
 .logo-flip {
-  width: 70px;
-  height: 70px;
+  width: 100%;
+  height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
+  cursor: pointer;
 }
 
 .logo-wrapper:hover .logo-flip {
@@ -557,6 +559,8 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   backface-visibility: hidden;
   border-radius: 50%;
   display: flex;
@@ -564,27 +568,24 @@ img {
   justify-content: center;
 }
 
-/* přední strana (logo) */
+/* logo */
 .logo-front img {
   width: 70px;
   height: 70px;
+  display: block;
 }
 
-/* zadní strana (text) */
+/* zadní strana */
 .logo-back {
   background: #ffcc00;
   color: #333;
   font-weight: bold;
-  font-size: 12px;
-  text-align: center;
+  font-size: 11px;
   transform: rotateY(180deg);
+  text-align: center;
   padding: 5px;
   box-sizing: border-box;
 }
-
-
-
-
 
 
 
