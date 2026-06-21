@@ -28,6 +28,36 @@
       align-items: center;
       padding: 0;
     }
+  </style><!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Super zoo nápovědník</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  
+  <style>
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 50%;
+      background: #ffcc00;
+      cursor: pointer;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
   </style>
 </head>
 <body>
@@ -35,7 +65,17 @@
 <header>
   <div class="header-content">
     <h1>Super zoo nápovědník</h1>
-    <img src="logo.png" alt="Super zoo logo" class="logo" />
+
+    <div class="logo-wrapper">
+      <img
+        src="logo.png"
+        alt="Super zoo logo"
+        class="logo"
+        onclick="window.open('https://xchipsy.github.io/SZNean/', '_blank')"
+      />
+      <div class="logo-tooltip">Režim inventura</div>
+    </div>
+
   </div>
 </header>
 
