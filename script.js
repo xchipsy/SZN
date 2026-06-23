@@ -419,9 +419,9 @@ const items = [
   { name: "Rybičky<span>6-8cm 70g</span>", image: "ostatni/mraz.jpg", code: "0211-42026", ean: "4038358220265", category: "Ostatní" },
   { name: "Tanganika<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49998", ean: "4038358199981", category: "Ostatní" },
 
-  { name: "Řasokoule S<span>Aegagrophila spec. Linnaei</span>", image: "rostliny/rasos.jpg", code: "LA9-80020", ean: "8595092808129", category: "Rostliny" },
-  { name: "Řasokoule M<span>Aegagrophila spec. Linnaei</span>", image: "rostliny/rasom.jpg", code: "LA9-80025", ean: "8595092808099", category: "Rostliny" },
-  { name: "Řasokoule L<span>Aegagrophila spec. Linnaei</span>", image: "rostliny/rasol.jpg", code: "LA9-80030", ean: "8595092808075", category: "Rostliny" },
+  { name: "Řasokoule S<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasos.jpg", code: "LA9-80020", ean: "8595092808129", category: "Rostliny" },
+  { name: "Řasokoule M<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasom.jpg", code: "LA9-80025", ean: "8595092808099", category: "Rostliny" },
+  { name: "Řasokoule L<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasol.jpg", code: "LA9-80030", ean: "8595092808075", category: "Rostliny" },
 
   
 
