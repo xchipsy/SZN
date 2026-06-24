@@ -585,6 +585,16 @@ img {
   text-align: center;
   padding: 5px;
   box-sizing: border-box;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.logo-front,
+.logo-back,
+.logo-flip {
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 
