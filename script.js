@@ -373,10 +373,10 @@ const items = [
   { name: "Apetit srdce<span>pro hlodavce</span>", image: "pamlsky/asrd.jpg", code: "385-051", ean: "8595093500480", category: "Pamlsky" },
   { name: "Vitakraft lojová koule<span>pro ptáky</span>", image: "pamlsky/loj.jpg", code: "492-13567", ean: "3023610135679", category: "Pamlsky" },
 
-  { name: "Ontario šunková kost<span>S</span>", image: "kosti/onts.jpg", code: "214-5900", ean: "8595091776825", category: "Kosti", status: "doprodej" },
-  { name: "Ontario šunková kost<span>M</span>", image: "kosti/ontm.jpg", code: "214-5903", ean: "8595091776832", category: "Kosti", status: "doprodej" },
-  { name: "Ontario šunková kost<span>L</span>", image: "kosti/ontl.jpg", code: "214-5906", ean: "8595091776849", category: "Kosti", status: "doprodej" },
-  { name: "Ontario šunková kost<span>Brochette</span>", image: "kosti/ontb.jpg", code: "214-5910", ean: "8595091776856", category: "Kosti", status: "doprodej" },
+  { name: "Ontario šunková kost<span>S</span>", image: "kosti/onts.jpg", code: "214-5900", ean: "8595091776825", category: "Kosti", status: "zruseno" },
+  { name: "Ontario šunková kost<span>M</span>", image: "kosti/ontm.jpg", code: "214-5903", ean: "8595091776832", category: "Kosti", status: "zruseno" },
+  { name: "Ontario šunková kost<span>L</span>", image: "kosti/ontl.jpg", code: "214-5906", ean: "8595091776849", category: "Kosti", status: "zruseno" },
+  { name: "Ontario šunková kost<span>Brochette</span>", image: "kosti/ontb.jpg", code: "214-5910", ean: "8595091776856", category: "Kosti", status: "zruseno" },
   { name: "Ontario šunková kost<span>S</span>", image: "kosti/os.jpg", code: "214-859730", ean: "8595681859730", category: "Kosti" },
   { name: "Ontario šunková kost<span>M</span>", image: "kosti/om.jpg", code: "214-859709", ean: "8595681859709", category: "Kosti" },
   { name: "Ontario šunková kost<span>L</span>", image: "kosti/ol.jpg", code: "214-859723", ean: "8595681859723", category: "Kosti" },
@@ -389,7 +389,6 @@ const items = [
   { name: "Rasco koleno půlené<span>vakuované 2ks</span>", image: "kosti/rako.jpg", code: "4904-68589", ean: "8595091778409", category: "Kosti" },
   { name: "Kost Rasco šunková<span>střední M 1+1</span>", image: "kosti/rss.jpg", code: "4904-68592", ean: "8595091774678", category: "Kosti" },
   { name: "Kost Rasco šunková<span>velká L</span>", image: "kosti/rsv.jpg", code: "4904-68594", ean: "8595091774685", category: "Kosti" },
-  { name: "Kost Rasco Premium<span>šunková</span>", image: "kosti/rasun.jpg", code: "4904-68509", ean: "8595091774029", category: "Kosti" },
   { name: "Alpha Spirit kost šunková<span>malá</span>", image: "kosti/a1.jpg", code: "944-30903", ean: "8437013576116", category: "Kosti" },
   { name: "Alpha Spirit kost šunková<span>střední</span>", image: "kosti/a2.jpg", code: "944-30905", ean: "8437013576109", category: "Kosti" },
   { name: "Alpha Spirit kost šunková<span>velká</span>", image: "kosti/a3.jpg", code: "944-30907", ean: "8437013576123", category: "Kosti" },
@@ -541,6 +540,8 @@ front.innerHTML = `
   ${item.orderOnly ? '<div class="item-orderonly">Na objednávku</div>' : ''}
   <div class="item-latin"><em>${item.latin || ''}</em></div>
   ${item.status === "zruseno" ? '<div class="item-status">ZRUŠENO</div>' : ''}
+
+
 `;
 
 const back = document.createElement("div");
