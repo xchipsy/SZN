@@ -273,7 +273,7 @@ const items = [
   { name: "Žebrovník Waltlův",  latin: "Pleurodeles waltl",  image: "tera/zebrovnik.jpg",  code: "LA7-05600", ean: "27056004", category: "Teraristika"},
   { name: "Terarijní zvíře<br>na objednávku",  latin: "***",  image: "tera/rex.jpg",  code: "LA7-10000", category: "Teraristika"},
 
-  { name: "Cvrček domácí - 1 kus<br>M/L",  latin: "Acheta domestica",  image: "hmyz/cvr1.jpg",  code: "LA8-00140", ean: "28001409", category: "Hmyz"},
+  { name: "Cvrček domácí<br>1 kus<br>M/L",  latin: "Acheta domestica",  image: "hmyz/cvr1.jpg",  code: "LA8-00140", ean: "28001409", category: "Hmyz"},
   { name: "Cvrček - krabička<br>MIKRO",  latin: "Acheta domestica",  image: "hmyz/cvrcek-s.jpg",  code: "LA8-00120", ean: "28001201", category: "Hmyz"},
   { name: "Cvrček - krabička<br>MALÝ ",  latin: "Acheta domestica",  image: "hmyz/cvrcek-m.jpg",  code: "LA8-00110", ean: "28001102", category: "Hmyz"},
   { name: "Cvrček - krabička<br>STŘEDNÍ / VELKÝ",  latin: "Acheta domestica",  image: "hmyz/cvrcek-l.jpg",  code: "LA8-00130", ean: "28001300", category: "Hmyz"},
