@@ -426,6 +426,13 @@ const items = [
   { name: "Řasokoule S<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasos.jpg", code: "LA9-80030", ean: "8595092808075", category: "Rostliny" },
   { name: "Řasokoule M<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasom.jpg", code: "LA9-80025", ean: "8595092808099", category: "Rostliny" },
   { name: "Řasokoule L<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasol.jpg", code: "LA9-80020", ean: "8595092808129", category: "Rostliny" },
+  { name: "Aqua-Daho rostlina<span>ČERNÁ</span>", image: "Rostliny/cerna.jpg", code: "LA9-02140", ean: "29021406", category: "Rostliny" },
+  { name: "Aqua-Daho rostlina<span>ZELENÁ</span>", image: "Rostliny/zelena.jpg", code: "LA9-02100", ean: "29021000", category: "Rostliny" },
+  { name: "Aqua-Daho rostlina<span>MODRÁ</span>", image: "Rostliny/modra.jpg", code: "LA9-02120", ean: "29021208", category: "Rostliny" },
+  { name: "Aqua-Daho rostlina<span>STŘÍBRNÁ</span>", image: "Rostliny/stribrna.jpg", code: "LA9-02150", ean: "29021505", category: "Rostliny" },
+  { name: "Aqua-Daho rostlina<span>ZLATÁ</span>", image: "Rostliny/zlata.jpg", code: "LA9-02160", ean: "29021604", category: "Rostliny" },
+  { name: "Aqua-Daho rostlina<span>ČERVENÁ</span>", image: "Rostliny/cervena.jpg", code: "LA9-02130", ean: "29021307", category: "Rostliny" },
+
 
   
 
