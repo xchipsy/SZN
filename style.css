@@ -535,6 +535,20 @@ img {
   text-overflow: ellipsis;
 }
 
+.front .item-supp {
+  position: absolute;       /* absolutně vůči front */
+  bottom: 6px;              /* přilepeno ke spodní hraně */
+  left: 6px;
+  right: 6px;
+  text-align: center;       /* vycentrovaný text */
+  color: #3f7f3f;           
+  font-weight: bold;
+  font-size: 12px;          /* menší písmo, vejde se na jeden řádek */
+  white-space: nowrap;      /* drží text na jednom řádku */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .logo-wrapper {
   width: 70px;
   height: 70px;
