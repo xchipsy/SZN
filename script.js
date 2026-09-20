@@ -423,9 +423,9 @@ const items = [
   { name: "Rybičky<span>6-8cm 70g</span>", image: "ostatni/mraz.jpg", code: "0211-42026", ean: "4038358220265", category: "Ostatní" },
   { name: "Tanganika<span>100g</span>", image: "ostatni/mraz.jpg", code: "0211-49998", ean: "4038358199981", category: "Ostatní" },
 
-  { name: "Řasokoule S<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasos.jpg", code: "LA9-80030", ean: "8595092808075", category: "Rostliny" },
-  { name: "Řasokoule M<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasom.jpg", code: "LA9-80025", ean: "8595092808099", category: "Rostliny" },
-  { name: "Řasokoule L<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasol.jpg", code: "LA9-80020", ean: "8595092808129", category: "Rostliny" },
+  { name: "Řasokoule S<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasos.jpg", code: "LA9-80030", ean: "8595092808075", category: "Rostliny", supp: "Macenauer" },
+  { name: "Řasokoule M<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasom.jpg", code: "LA9-80025", ean: "8595092808099", category: "Rostliny", supp: "Macenauer" },
+  { name: "Řasokoule L<span>Aegagrophila spec. Linnaei</span>", image: "Rostliny/rasol.jpg", code: "LA9-80020", ean: "8595092808129", category: "Rostliny", supp: "Macenauer" },
   { name: "Aqua-Daho řasokoule<span>Cladophora</span>", image: "Rostliny/rasos.jpg", code: "LA9-02140", ean: "29021406", category: "Rostliny" },
   { name: "Aqua-Daho  řasokoule <span>Cladophora 2-3 cm</span>", image: "Rostliny/rasom.jpg", code: "LA9-02110", ean: "000290211094", category: "Rostliny" },
   { name: "Aqua-Daho řasokoule<span>Cladophora 3-5cm</span>", image: "Rostliny/rasol.jpg", code: "LA9-02111", ean: "29021116", category: "Rostliny" },
@@ -435,7 +435,7 @@ const items = [
   { name: "Aqua-Daho rostlina<span>STŘÍBRNÁ</span>", image: "Rostliny/stribrna.jpg", code: "LA9-02150", ean: "29021505", category: "Rostliny" },
   { name: "Aqua-Daho rostlina<span>ZLATÁ</span>", image: "Rostliny/zlata.jpg", code: "LA9-02160", ean: "29021604", category: "Rostliny" },
   { name: "Aqua-Daho rostlina<span>ČERVENÁ</span>", image: "Rostliny/cervena.jpg", code: "LA9-02130", ean: "29021307", category: "Rostliny" },
-{ name: "Alternanthera reineckii Mini", latin: "", image: "Rostliny/80040.jpg", code: "LA9-80040", ean: "1491615009705", category: "Rostliny" },
+{ name: "Alternanthera reineckii Mini", latin: "", image: "Rostliny/80040.jpg", code: "LA9-80040", ean: "1491615009705", category: "Rostliny", supp: "Petra-Aqua" },
 { name: "Alternanthera reineckii Red", latin: "", image: "Rostliny/80045.jpg", code: "LA9-80045", ean: "1491615030037", category: "Rostliny" },
 { name: "Anubias barteri <br> nana mehrtriebig", latin: "", image: "Rostliny/80055.jpg", code: "LA9-80055", ean: "1491615007817", category: "Rostliny" },
 { name: "Anubias barteri", latin: "", image: "Rostliny/80060.jpg", code: "LA9-80060", ean: "1491615001112", category: "Rostliny" },
@@ -609,7 +609,7 @@ front.innerHTML = `
   ${item.orderOnly ? '<div class="item-orderonly">Na objednávku</div>' : ''}
   <div class="item-latin"><em>${item.latin || ''}</em></div>
   ${item.status === "zruseno" ? '<div class="item-status">ZRUŠENO</div>' : ''}
-
+  ${item.supp ? `<div class="item-supp">${item.supp}</div>` : ''}
 
 `;
 
