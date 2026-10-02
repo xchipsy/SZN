@@ -287,6 +287,7 @@ const items = [
   { name: "Zophobas - krabička",  latin: "Zophobas morio",  image: "hmyz/zophobas_kr.jpg",  code: "LA8-00410", ean: "28004103", category: "Hmyz"},
 
   { name: "Ucho vepřové", image: "pamlsky/ucho.jpg", code: "074-405", ean: "8595091734405", category: "Pamlsky" },
+  { name: "Ontario Pure Nature <span>vepřové ucho</span>", image: "pamlsky/ucho2.jpg", code: "214-864581", ean: "8595681864581", category: "Pamlsky" },
   { name: "Rypáček vepřový", image: "pamlsky/rypacek.jpg", code: "074-186", ean: "8595091780068", category: "Pamlsky" },
   { name: "Jehněčí noha", image: "pamlsky/jehnenoha.jpg", code: "G14-27405", ean: "4011905027401", category: "Pamlsky" },
   { name: "Rasco sušenky<span>mikro kost 2,5cm</span>", image: "pamlsky/mikrokost.jpg", code: "4904-68010", ean: "8595091774623", category: "Pamlsky" },
@@ -332,6 +333,8 @@ const items = [
   { name: "Mlsoun čokosy<span>hovězí</span>", image: "pamlsky/hov.jpg", code: "664-25004", ean: "8590467250046", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>lososové</span>", image: "pamlsky/los.jpg", code: "664-250053", ean: "8590467250053", category: "Pamlsky" },
   { name: "Tlapky uzené", image: "pamlsky/tlapky.jpg", code: "664-99453", ean: "8590467994537", category: "Pamlsky" },
+  { name: "Trixie Halloween duch <span>s kuřecím/kachním prsem</span>", image: "pamlsky/duch.jpg", code: "G14-945408", ean: "4011905945408", category: "Pamlsky" },
+  { name: "Trixie Halloween kostlivec <span>s kuřecím prsem</span>", image: "pamlsky/kostra.jpg", code: "G14-9459880", ean: "4011905945880", category: "Pamlsky" },
   { name: "Trixie Valentine lízátko<span>kuře 12cm 15g</span>", image: "pamlsky/trixievalentyn.jpg", code: "G14-919942", ean: "4053032658370", category: "Pamlsky" },
   { name: "Trixie žebírko<span>s kuřecím masem 13cm</span>", image: "pamlsky/zebirko.jpg", code: "G14-836133", ean: "4011905836133", category: "Pamlsky" },
   { name: "Trixie kotleta<span>s kuřecím masem 13cm</span>", image: "pamlsky/kotleta.jpg", code: "G14-836119", ean: "4011905836119", category: "Pamlsky" },
