@@ -9,6 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 
   <style>
+    #ean-logo * { pointer-events: none; }
     #scrollTopBtn {
       position: fixed;
       bottom: 20px;
@@ -72,33 +73,26 @@
 
 <script>
   // Inventura se otevře jen dvojklikem skutečnou myší.
-  // Dotykové dvojťuknutí ani dvojklik simulovaný dotykovou obrazovkou nestačí.
+  // Inventura: pouze dva rychlé stisky fyzické myši na logo.
+  // Dotykové události se ignorují, včetně následného emulovaného kliknutí.
   const eanLogo = document.getElementById("ean-logo");
-  let mouseClicks = 0;
-  let lastMouseClick = 0;
+  let lastMouseDown = 0;
   let ignoreMouseUntil = 0;
 
   eanLogo.addEventListener("pointerdown", (event) => {
     if (event.pointerType !== "mouse") {
-      ignoreMouseUntil = performance.now() + 1000;
-      mouseClicks = 0;
+      ignoreMouseUntil = performance.now() + 1200;
+      lastMouseDown = 0;
+      return;
     }
-  });
-
-  eanLogo.addEventListener("click", (event) => {
-    if (event.detail === 0 || performance.now() < ignoreMouseUntil) return;
-    if (event.sourceCapabilities?.firesTouchEvents) return;
-
-    // PointerEvent u moderních prohlížečů rozlišuje myš od dotyku.
-    if ("pointerType" in event && event.pointerType !== "mouse") return;
+    if (event.button !== 0 || performance.now() < ignoreMouseUntil) return;
 
     const now = performance.now();
-    mouseClicks = now - lastMouseClick <= 600 ? mouseClicks + 1 : 1;
-    lastMouseClick = now;
-
-    if (mouseClicks >= 2) {
-      mouseClicks = 0;
-      window.open("https://xchipsy.github.io/SZNean/", "_blank", "noopener");
+    if (lastMouseDown && now - lastMouseDown <= 650) {
+      lastMouseDown = 0;
+      window.open("https://xchipsy.github.io/SZNean/", "_blank");
+    } else {
+      lastMouseDown = now;
     }
   });
 
