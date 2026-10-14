@@ -2,15 +2,14 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex,nofollow" />
   <title>Super zoo nápovědník</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-  
+
   <style>
     #scrollTopBtn {
-      display: none;
       position: fixed;
       bottom: 20px;
       left: 20px;
@@ -22,12 +21,18 @@
       background: #ffcc00;
       cursor: pointer;
       box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       padding: 0;
     }
+    #ean-logo {
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+    #ean-logo img { -webkit-user-drag: none; }
   </style>
 </head>
 <body>
@@ -35,24 +40,14 @@
 <header>
   <div class="header-content">
     <h1>Super zoo nápovědník</h1>
-
     <div class="logo-wrapper">
-  <div class="logo-flip" onclick="window.open('https://xchipsy.github.io/SZNean/', '_blank')">
-
-    <div class="logo-front">
-      <img src="logo.png" alt="Super zoo logo" class="logo" />
-    </div>
-
-    <div class="logo-back">
-      Režim EAN
-    </div>
-
-  </div>
-</div>
-
+      <div class="logo-flip" id="ean-logo" title="Podržte 3 sekundy pro Režim EAN">
+        <div class="logo-front">
+          <img src="logo.png" alt="Super zoo logo" class="logo" draggable="false" />
+        </div>
+        <div class="logo-back">Režim EAN</div>
       </div>
     </div>
-
   </div>
 </header>
 
@@ -76,56 +71,76 @@
 
 <button id="scrollTopBtn" title="Nahoru">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="42" height="42" fill="#5c3b00">
-    <path d="M12 4L6 10h4v6h4v-6h4z"/>
+    <path d="M12 4L6 10h4v6h4v-6h4z" />
   </svg>
 </button>
 
 <script src="script.js"></script>
 
-
 <script>
-  // Scroll tlačítko - zobrazí se po posunu dolů >300px
+  // Tlačítko pro návrat nahoru
   const scrollTopBtn = document.getElementById("scrollTopBtn");
-
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollTopBtn.style.display = "flex";  // flex kvůli centrování svg
-    } else {
-      scrollTopBtn.style.display = "none";
-    }
+    scrollTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
   });
-
-  // Při kliknutí scroll nahoru hladce
   scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
-</script>
 
-<!-- --- Nový skript: checkbox "Pouze skladem" zatržený po načtení --- -->
-<script>
+  // Filtr "Pouze skladem" – výchozí zapnutý, stav se pamatuje
   document.addEventListener("DOMContentLoaded", () => {
     const filterCheckbox = document.getElementById("filter-instock");
-
-    // Načteme uložený stav z localStorage
     const savedState = localStorage.getItem("filterInStockChecked");
-    if (savedState === null) {
-      // pokud nic není uloženo, checkbox zatrhneme
-      filterCheckbox.checked = true;
-    } else {
-      filterCheckbox.checked = savedState === "true";
-    }
-
-    // Uložíme změnu checkboxu do localStorage
+    filterCheckbox.checked = savedState === null ? true : savedState === "true";
     filterCheckbox.addEventListener("change", () => {
       localStorage.setItem("filterInStockChecked", filterCheckbox.checked);
     });
-
-    // Vyvoláme změnu, aby se okamžitě filtrovaly položky
     filterCheckbox.dispatchEvent(new Event("change"));
   });
+
+  // Inventura: otevře se v nové záložce po podržení loga 3 s
+  // a následném uvolnění prstu / tlačítka myši.
+  const eanLogo = document.getElementById("ean-logo");
+  const EAN_URL = "https://xchipsy.github.io/SZNean/";
+  let holdTimer = null;
+  let holdingPointerId = null;
+  let holdReady = false;
+
+  function resetHold() {
+    clearTimeout(holdTimer);
+    holdTimer = null;
+    holdingPointerId = null;
+    holdReady = false;
+  }
+
+  eanLogo.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0 || holdingPointerId !== null) return;
+    event.preventDefault();
+    holdingPointerId = event.pointerId;
+    holdReady = false;
+    holdTimer = setTimeout(() => {
+      holdReady = true;
+    }, 3000);
+  });
+
+  eanLogo.addEventListener("pointerup", (event) => {
+    if (event.pointerId !== holdingPointerId) return;
+    const shouldOpen = holdReady;
+    resetHold();
+    // Volání přímo při uvolnění je uživatelské gesto, takže nová
+    // záložka nebude blokovaná jako při window.open v setTimeout.
+    if (shouldOpen) window.open(EAN_URL, "_blank");
+  });
+
+  eanLogo.addEventListener("pointercancel", (event) => {
+    if (event.pointerId === holdingPointerId) resetHold();
+  });
+  eanLogo.addEventListener("pointerleave", (event) => {
+    if (event.pointerId === holdingPointerId) resetHold();
+  });
+  eanLogo.addEventListener("contextmenu", (event) => event.preventDefault());
+  eanLogo.addEventListener("click", (event) => event.preventDefault());
+
 </script>
 
 </body>
