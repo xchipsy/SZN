@@ -7,9 +7,9 @@
   <title>Super zoo nápovědník</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-
   <style>
     #scrollTopBtn {
+      display: none;
       position: fixed;
       bottom: 20px;
       left: 20px;
@@ -21,7 +21,6 @@
       background: #ffcc00;
       cursor: pointer;
       box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-      display: none;
       justify-content: center;
       align-items: center;
       padding: 0;
@@ -32,11 +31,10 @@
       -webkit-user-select: none;
       -webkit-touch-callout: none;
     }
-    #ean-logo img { -webkit-user-drag: none; }
+    #ean-logo img { -webkit-user-drag: none; user-drag: none; }
   </style>
 </head>
 <body>
-
 <header>
   <div class="header-content">
     <h1>Super zoo nápovědník</h1>
@@ -76,9 +74,36 @@
 </button>
 
 <script src="script.js"></script>
-
 <script>
-  // Tlačítko pro návrat nahoru
+  // Inventura: podržet logo alespoň 3 sekundy a pak pustit.
+  // window.open se volá přímo v pointerup, aby jej prohlížeč neblokoval.
+  const eanLogo = document.getElementById("ean-logo");
+  let holdStart = null;
+  let activePointer = null;
+
+  eanLogo.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    holdStart = performance.now();
+    activePointer = event.pointerId;
+    if (event.pointerType === "touch") event.preventDefault();
+  });
+
+  eanLogo.addEventListener("pointerup", (event) => {
+    if (activePointer !== event.pointerId || holdStart === null) return;
+    const duration = performance.now() - holdStart;
+    holdStart = null;
+    activePointer = null;
+    if (duration >= 3000) {
+      window.open("https://xchipsy.github.io/SZNean/", "_blank", "noopener");
+    }
+  });
+
+  function cancelHold() { holdStart = null; activePointer = null; }
+  eanLogo.addEventListener("pointercancel", cancelHold);
+  eanLogo.addEventListener("pointerleave", cancelHold);
+  eanLogo.addEventListener("contextmenu", (event) => event.preventDefault());
+  eanLogo.addEventListener("dragstart", (event) => event.preventDefault());
+
   const scrollTopBtn = document.getElementById("scrollTopBtn");
   window.addEventListener("scroll", () => {
     scrollTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
@@ -87,7 +112,6 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Filtr "Pouze skladem" – výchozí zapnutý, stav se pamatuje
   document.addEventListener("DOMContentLoaded", () => {
     const filterCheckbox = document.getElementById("filter-instock");
     const savedState = localStorage.getItem("filterInStockChecked");
@@ -97,51 +121,6 @@
     });
     filterCheckbox.dispatchEvent(new Event("change"));
   });
-
-  // Inventura: otevře se v nové záložce po podržení loga 3 s
-  // a následném uvolnění prstu / tlačítka myši.
-  const eanLogo = document.getElementById("ean-logo");
-  const EAN_URL = "https://xchipsy.github.io/SZNean/";
-  let holdTimer = null;
-  let holdingPointerId = null;
-  let holdReady = false;
-
-  function resetHold() {
-    clearTimeout(holdTimer);
-    holdTimer = null;
-    holdingPointerId = null;
-    holdReady = false;
-  }
-
-  eanLogo.addEventListener("pointerdown", (event) => {
-    if (event.button !== 0 || holdingPointerId !== null) return;
-    event.preventDefault();
-    holdingPointerId = event.pointerId;
-    holdReady = false;
-    holdTimer = setTimeout(() => {
-      holdReady = true;
-    }, 3000);
-  });
-
-  eanLogo.addEventListener("pointerup", (event) => {
-    if (event.pointerId !== holdingPointerId) return;
-    const shouldOpen = holdReady;
-    resetHold();
-    // Volání přímo při uvolnění je uživatelské gesto, takže nová
-    // záložka nebude blokovaná jako při window.open v setTimeout.
-    if (shouldOpen) window.open(EAN_URL, "_blank");
-  });
-
-  eanLogo.addEventListener("pointercancel", (event) => {
-    if (event.pointerId === holdingPointerId) resetHold();
-  });
-  eanLogo.addEventListener("pointerleave", (event) => {
-    if (event.pointerId === holdingPointerId) resetHold();
-  });
-  eanLogo.addEventListener("contextmenu", (event) => event.preventDefault());
-  eanLogo.addEventListener("click", (event) => event.preventDefault());
-
 </script>
-
 </body>
 </html>
