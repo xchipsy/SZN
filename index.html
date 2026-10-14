@@ -7,9 +7,9 @@
   <title>Super zoo nápovědník</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
   <style>
     #scrollTopBtn {
-      display: none;
       position: fixed;
       bottom: 20px;
       left: 20px;
@@ -21,25 +21,20 @@
       background: #ffcc00;
       cursor: pointer;
       box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+      display: none;
       justify-content: center;
       align-items: center;
       padding: 0;
     }
-    #ean-logo {
-      touch-action: none;
-      user-select: none;
-      -webkit-user-select: none;
-      -webkit-touch-callout: none;
-    }
-    #ean-logo img { -webkit-user-drag: none; user-drag: none; }
   </style>
 </head>
 <body>
+
 <header>
   <div class="header-content">
     <h1>Super zoo nápovědník</h1>
     <div class="logo-wrapper">
-      <div class="logo-flip" id="ean-logo" title="Podržte 3 sekundy pro Režim EAN">
+      <div class="logo-flip" id="ean-logo" title="Dvojklik myší: Režim EAN">
         <div class="logo-front">
           <img src="logo.png" alt="Super zoo logo" class="logo" draggable="false" />
         </div>
@@ -74,35 +69,38 @@
 </button>
 
 <script src="script.js"></script>
+
 <script>
-  // Inventura: podržet logo alespoň 3 sekundy a pak pustit.
-  // window.open se volá přímo v pointerup, aby jej prohlížeč neblokoval.
+  // Inventura se otevře jen dvojklikem skutečnou myší.
+  // Dotykové dvojťuknutí ani dvojklik simulovaný dotykovou obrazovkou nestačí.
   const eanLogo = document.getElementById("ean-logo");
-  let holdStart = null;
-  let activePointer = null;
+  let mouseClicks = 0;
+  let lastMouseClick = 0;
+  let ignoreMouseUntil = 0;
 
   eanLogo.addEventListener("pointerdown", (event) => {
-    if (event.pointerType === "mouse" && event.button !== 0) return;
-    holdStart = performance.now();
-    activePointer = event.pointerId;
-    if (event.pointerType === "touch") event.preventDefault();
-  });
-
-  eanLogo.addEventListener("pointerup", (event) => {
-    if (activePointer !== event.pointerId || holdStart === null) return;
-    const duration = performance.now() - holdStart;
-    holdStart = null;
-    activePointer = null;
-    if (duration >= 3000) {
-      window.open("https://xchipsy.github.io/SZNean/", "_blank", "noopener");
+    if (event.pointerType !== "mouse") {
+      ignoreMouseUntil = performance.now() + 1000;
+      mouseClicks = 0;
     }
   });
 
-  function cancelHold() { holdStart = null; activePointer = null; }
-  eanLogo.addEventListener("pointercancel", cancelHold);
-  eanLogo.addEventListener("pointerleave", cancelHold);
-  eanLogo.addEventListener("contextmenu", (event) => event.preventDefault());
-  eanLogo.addEventListener("dragstart", (event) => event.preventDefault());
+  eanLogo.addEventListener("click", (event) => {
+    if (event.detail === 0 || performance.now() < ignoreMouseUntil) return;
+    if (event.sourceCapabilities?.firesTouchEvents) return;
+
+    // PointerEvent u moderních prohlížečů rozlišuje myš od dotyku.
+    if ("pointerType" in event && event.pointerType !== "mouse") return;
+
+    const now = performance.now();
+    mouseClicks = now - lastMouseClick <= 600 ? mouseClicks + 1 : 1;
+    lastMouseClick = now;
+
+    if (mouseClicks >= 2) {
+      mouseClicks = 0;
+      window.open("https://xchipsy.github.io/SZNean/", "_blank", "noopener");
+    }
+  });
 
   const scrollTopBtn = document.getElementById("scrollTopBtn");
   window.addEventListener("scroll", () => {
@@ -122,5 +120,6 @@
     filterCheckbox.dispatchEvent(new Event("change"));
   });
 </script>
+
 </body>
 </html>
