@@ -333,6 +333,8 @@ const items = [
   { name: "Mlsoun čokosy<span>hovězí</span>", image: "pamlsky/hov.jpg", code: "664-25004", ean: "8590467250046", category: "Pamlsky" },
   { name: "Mlsoun čokosy<span>lososové</span>", image: "pamlsky/los.jpg", code: "664-250053", ean: "8590467250053", category: "Pamlsky" },
   { name: "Tlapky uzené", image: "pamlsky/tlapky.jpg", code: "664-99453", ean: "8590467994537", category: "Pamlsky" },
+  { name: "Trixie Xmas Star Lollipop<span>12cm</span>", image: "pamlsky/xmas2.jpg", code: "G14-871479", ean: "4011905874418", category: "Pamlsky" },
+  { name: "Trixie Xmas Figure Mix<span>65g</span>", image: "pamlsky/xmas1.jpg", code: "G14-871783", ean: "4011905872285", category: "Pamlsky" },
   { name: "Trixie Halloween duch <span>s kuřecím/kachním prsem</span>", image: "pamlsky/duch.jpg", code: "G14-945408", ean: "4011905947068", category: "Pamlsky" },
   { name: "Trixie Halloween kostlivec <span>s kuřecím prsem</span>", image: "pamlsky/kostra.jpg", code: "G14-945880", ean: "4011905946719", category: "Pamlsky" },
   { name: "Trixie Valentine lízátko<span>kuře 12cm 15g</span>", image: "pamlsky/trixievalentyn.jpg", code: "G14-919942", ean: "4053032658370", category: "Pamlsky" },
