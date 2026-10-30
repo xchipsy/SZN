@@ -341,7 +341,7 @@ const items = [
   { name: "Trixie žebírko<span>s kuřecím masem 13cm</span>", image: "pamlsky/zebirko.jpg", code: "G14-836133", ean: "4011905836133", category: "Pamlsky" },
   { name: "Trixie kotleta<span>s kuřecím masem 13cm</span>", image: "pamlsky/kotleta.jpg", code: "G14-836119", ean: "4011905836119", category: "Pamlsky" },
   { name: "Trixie nanuk Twister<span>40g</span>", image: "pamlsky/twister.jpg", code: "G14-826806", ean: "4011905826806", category: "Pamlsky" },
-  { name: "Trixie Denta Fun Ice Pop<span>žvýkací nanuk 12cm</span>", image: "pamlsky/nanuk.jpg", code: "G14-826707", ean: "4011905826707", category: "Pamlsky" },
+  { name: "Trixie Denta Fun<br>Ice Pop<span>žvýkací nanuk 12cm</span>", image: "pamlsky/nanuk.jpg", code: "G14-826707", ean: "4011905826707", category: "Pamlsky" },
   { name: "Trixie Velikonoční zajíček<span>10cm 30g</span>", image: "pamlsky/trixiezaj.jpg", code: "G14-839684", ean: "4011905656397", category: "Pamlsky" },
   { name: "Trixie Premio Picknicks<span>hovězí 8cm</span>", image: "pamlsky/parho.jpg", code: "G14-2748", ean: "4011905274812", category: "Pamlsky" },
   { name: "Trixie Premio Picknicks<span>jehněčí 8cm</span>", image: "pamlsky/parje.jpg", code: "G14-2755", ean: "4011905275512", category: "Pamlsky" },
