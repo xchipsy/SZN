@@ -185,7 +185,7 @@ function vytvorKartu(b, target) {
       const inputName = document.createElement("input");
       inputName.type = "text";
       inputName.placeholder = "Název";
-      inputName.readOnly = true;
+      inputName.readOnly = false;
       inputName.className = "name";
 
       // --- Naplnění hodnot
